@@ -1,0 +1,100 @@
+.conteudo-principal {
+    margin-left: 70px; /* Deixando espaço para o menu lateral */
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #662549;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.lista-funcionarios {
+    width: 25%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    width: 85%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.search-bar i {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+.funcionario {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.funcionario i {
+    font-size: 2rem;
+    color: #662549;
+    margin-right: 10px;
+}
+
+.funcionario span {
+    font-size: 1rem;
+}
+
+.detalhes-funcionario {
+    width: 70%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+}
+
+.detalhes-funcionario h2, .detalhes-funcionario p {
+    color: #662549;
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+.detalhes-funcionario h3 {
+    color: #662549;
+    font-size: 20px;
+    margin-top: 40px;
+    margin-left: 20px
+}
+
+.detalhes-funcionario ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detalhes-funcionario ul li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalhes-funcionario ul li span {
+    color: #662549;
+    font-weight: 600;
+}
