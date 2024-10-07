@@ -1,0 +1,129 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body
+{
+    height: 100vh;
+}
+
+.menu-lateral
+{
+    width: 60px;
+    height: 100%;
+    background-color: #662549;
+    padding: 40px 0px 40px 1%;
+    border-radius: 0 15px 15px 0;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.expandir
+{
+    width: 280px;
+}
+
+.menu-lateral.expandir .logo
+{
+    width: 80%;
+    margin-left: 2%;
+    margin-right: 0%;
+    margin-bottom: 0%;
+    transition: width 0.5s ease;
+}
+
+.menu-lateral.expandir #btn-exp > i
+{
+    transform: rotate(180deg);
+    transition: transform 0.5s ease;
+}
+
+.menu-lateral.expandir ul
+{
+    margin-top: 20%;
+}
+
+.logo
+{
+    width: 127%;
+    margin: auto;
+    margin-left: -10px;
+    margin-top: 10px;    
+    margin-bottom: 20px;
+}
+
+.btn-expandir
+{
+    width: 100%;
+    padding-left: 10px;
+}
+
+
+.btn-expandir > i
+{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul
+{
+    height: 100%;
+    list-style-type: none;
+    margin-left: 5%;
+    margin-top: 170%;
+    transition: margin-top 0.5s;
+}
+
+ul li.item-menu
+{
+    transition: .2s;
+}
+
+ul li.ativo
+{
+    background-color: #974c76;
+}
+
+ul li.item-menu:hover
+{
+    background-color: #974c76;
+}
+
+ul li.item-menu a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px 4%; 
+    display: flex;
+    margin-bottom: 0%;
+    line-height: 40px;
+}
+
+ul li.item-menu a .txt-link
+{
+    margin-left: 33px;
+}
+
+ul li.item-menu a .icon > i
+{
+    font-size: 27px;
+    padding-left: 2%;
+}
+
+ul li.item-menu a .icon-seta > i
+{
+    margin-left: 180%;
+    font-size: 24px;
+}
+

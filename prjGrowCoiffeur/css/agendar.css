@@ -1,0 +1,143 @@
+body
+{
+    font-family: 'Poppins', sans-serif;
+    background-color: #fde3e3;
+    color: #662549;
+    margin: 0;
+    padding: 0;
+}
+
+.conteudo
+{
+    padding: 20px;
+    margin-left: 27%;
+    margin-right: 27%;
+    margin-top: 2%;
+}
+h1
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.form-group
+{
+    margin-bottom: 15px;
+}
+.form-group label
+{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.form-group input,
+.form-group select
+{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+.calendar {
+    margin-left: 0;
+    margin-right: 58%;
+    margin-bottom: 3%;
+}
+
+
+#cmbMeses {
+    width: 350px;
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 4px;
+}
+#calendario {
+    display: flex;
+    flex-wrap: wrap;
+    width: 350px;
+    margin: auto;
+    gap:5px;
+}
+.dia {
+    width: calc((100% / 7) - 5px);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.vazio {
+    background-color: unset;
+}
+
+.dia.predefinido {
+    background-color: #951299; 
+    background-color: #662549; 
+    cursor:pointer;
+    color: #fff;
+}
+
+.dias button,
+.horarios button {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+/*.dias button.active,
+.horarios button:hover {
+    background-color: #662549;
+    color: white;
+}*/
+.agendar {
+    display: block;
+    width: 100%;
+    background-color: #662549;
+    color: white;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.agendar:hover {
+    background-color: #4e1c37;
+}
+.periodo-btn, .horario-btn {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+    .horario-btn.selected {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.horarios-lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.periodo-btn.selecionado {
+    background-color: #662549;
+    color: white;
+}
+
+.horario-btn.selecionado {
+    background-color: #662549;
+    color: white;
+}
