@@ -24,7 +24,7 @@ namespace prjGrowCoiffeur.APIs
             DateTime data;
             if (!DateTime.TryParse(dataStr, out data))
             {
-                Response.StatusCode = 400; 
+                Response.StatusCode = 400;
                 Response.Write("{\"error\":\"Data inválida\"}");
                 return;
             }
@@ -36,10 +36,8 @@ namespace prjGrowCoiffeur.APIs
                 Response.Write("{\"error\":\"Hora inválida\"}");
                 return;
             }
-
-            
-            int servico = 0; 
-            if (!string.IsNullOrEmpty(servicoStr) && !int.TryParse(servicoStr, out servico))
+            int servico;
+            if (!int.TryParse(servicoStr, out servico))
             {
                 Response.StatusCode = 400;
                 Response.Write("{\"error\":\"Serviço inválido\"}");
@@ -48,10 +46,10 @@ namespace prjGrowCoiffeur.APIs
 
             GiServico giServico = new GiServico();
 
-           
+
             bool agendado = giServico.AgendarServico(cliente, servico, hora, data, funcionario);
 
-        
+
             if (agendado)
             {
                 Response.Write("{\"message\":\"Serviço agendado com sucesso\"}");
@@ -62,5 +60,6 @@ namespace prjGrowCoiffeur.APIs
                 Response.Write("{\"error\":\"Erro ao agendar o serviço\"}");
             }
         }
+
     }
 }

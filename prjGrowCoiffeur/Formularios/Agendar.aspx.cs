@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-// Gereciamento Interno
+
 
 namespace prjGrowCoiffeur.Formularios
 {
@@ -18,19 +18,18 @@ namespace prjGrowCoiffeur.Formularios
         public Funcionario Funcionario { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-           if (Session["TipoUsuario"] != null && Session["TipoUsuario"].ToString() == "funcionario")
+            if (Session["TipoUsuario"] != null && Session["TipoUsuario"].ToString() == "funcionario")
             {
                 pnlCliente.Visible = true;
                 Cliente cliente = new Cliente();
                 cliente.Email = txtCliente.Text.Trim().ToLower();
                 this.Cliente = cliente;
-             
             }
             else
             {
                 Cliente cliente = new Cliente();
                 cliente.Email = Session["EmailUsuario"].ToString();
-                pnlCliente.Visible = false; 
+                pnlCliente.Visible = false;
                 this.Cliente = cliente;
             }
 
@@ -52,7 +51,7 @@ namespace prjGrowCoiffeur.Formularios
                 }
             }
 
-            int currentMonth = DateTime.Now.Month; 
+            int currentMonth = DateTime.Now.Month;
             int currentYear = DateTime.Now.Year;
 
 
@@ -60,100 +59,40 @@ namespace prjGrowCoiffeur.Formularios
 
         private void GerarMeses()
         {
-           
+
             cmbMeses.Items.Add(new ListItem("Outubro", "10"));
             cmbMeses.Items.Add(new ListItem("Novembro", "11"));
             cmbMeses.Items.Add(new ListItem("Dezembro", "12"));
         }
 
-        protected void ddlCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ddlservico_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ddlservico.Enabled = true;
             ddlservico.Items.Clear();
             ddlservico.Items.Add(new ListItem("Selecionar Serviço", "-1"));
-            ddlservico.Enabled = false;
-            ddlprofissional.Items.Clear();
-            ddlprofissional.Items.Add(new ListItem("Selecionar Profissional", "-1"));
-            ddlprofissional.Enabled = false; 
-
+            GiServico servicos = new GiServico();
             if (ddlcategoriaServico.SelectedValue != "-1")
-            {
-                GiServico servicos = new GiServico();
-                var servicosPorCategoria = servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue));
-
-                if (servicosPorCategoria.Count > 0)
+                foreach (Servico servico in servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue)))
                 {
-                    foreach (Servico servico in servicosPorCategoria)
-                    {
-                        ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
-                    }
-                    ddlservico.Enabled = true;
+
+                    ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
                 }
 
-                
-                GiFuncionarios funcionarios = new GiFuncionarios();
-                var funcionariosPorCategoria = funcionarios.ConsultarFuncionariosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue));
-
-                if (funcionariosPorCategoria.Count > 0)
-                {
-                    foreach (Modelo.Funcionario funcionario in funcionariosPorCategoria)
-                    {
-                        ddlprofissional.Items.Add(new ListItem(funcionario.Nome, funcionario.Email.ToString()));
-                    }
-                    ddlprofissional.Enabled = true; 
-                }
-            }
-
-            cmbMeses.Enabled = true;
         }
 
-            protected void ddlservico_SelectedIndexChanged1(object sender, EventArgs e)
+        protected void ddlservico_SelectedIndexChanged1(object sender, EventArgs e)
         {
             litDias.Text = "";
-            ddlprofissional.Items.Clear(); 
-            ddlprofissional.Items.Add(new ListItem("Selecionar Profissional", "-1")); 
-            ddlprofissional.Enabled = false; 
+            ddlprofissional.Enabled = true;
+            ddlprofissional.Items.Clear();
 
             GiFuncionarios funcionarios = new GiFuncionarios();
-            GiServico servicos = new GiServico();
-            GiCategoria categorias = new GiCategoria(); 
-
             if (ddlservico.SelectedValue != "-1")
-            {
-                
-                var funcionariosPorServico = funcionarios.ConsultarFuncionariosPorServico(int.Parse(ddlservico.SelectedValue));
-
-                if (funcionariosPorServico.Count > 0)
+                foreach (Modelo.Funcionario funcionario in funcionarios.ConsultarFuncionariosPorServico(int.Parse(ddlservico.SelectedValue)))
                 {
-                    foreach (Modelo.Funcionario funcionario in funcionariosPorServico)
-                    {
-                        ddlprofissional.Items.Add(new ListItem(funcionario.Nome, funcionario.Email.ToString()));
-                    }
-                    ddlprofissional.Enabled = true;
+                    ddlprofissional.Items.Add(new ListItem(funcionario.Nome, funcionario.Email.ToString()));
                 }
-
-               
-                Categoria categoria = categorias.ConsultarCategoriaPorServico(int.Parse(ddlservico.SelectedValue)); 
-                if (categoria != null)
-                {
-                    var funcionariosPorCategoria = funcionarios.ConsultarFuncionariosPorCategoria(categoria.Codigo);
-
-                    foreach (Modelo.Funcionario funcionario in funcionariosPorCategoria)
-                    {
-                        if (!ddlprofissional.Items.Cast<ListItem>().Any(item => item.Value == funcionario.Email))
-                        {
-                            ddlprofissional.Items.Add(new ListItem(funcionario.Nome, funcionario.Email.ToString()));
-                        }
-                    }
-                }
-
-               
-                if (ddlprofissional.Items.Count > 1) 
-                {
-                    ddlprofissional.Enabled = true; 
-                }
-            }
-
-            cmbMeses.Enabled = true; 
+            cmbMeses.Enabled = true;
         }
 
         protected void cmbMeses_SelectedIndexChanged(object sender, EventArgs e)
@@ -186,4 +125,3 @@ namespace prjGrowCoiffeur.Formularios
     }
 }
 
-    

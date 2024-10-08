@@ -58,7 +58,7 @@
 
             <div class="form-group">
                 <label for="ddlcategoriaServico">Categorias:</label>
-                <asp:DropDownList ID="ddlcategoriaServico" runat="server" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
+                <asp:DropDownList ID="ddlcategoriaServico" runat="server" OnSelectedIndexChanged="ddlservico_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
             </div>
 
             <div class="form-group">
@@ -91,13 +91,13 @@
 
             <div id="containerHorarios" class="horarios">
                 <div id="horariosManha" class="horarios-lista">
-                    <!-- Os botões de horário serão adicionados aqui -->
+                   
                 </div>
                 <div id="horariosTarde" class="horarios-lista">
-                    <!-- Os botões de horário da tarde podem ser adicionados aqui se necessário -->
+                   
                 </div>
                 <div id="horariosNoite" class="horarios-lista">
-                    <!-- Os botões de horário da noite podem ser adicionados aqui se necessário -->
+                   
                 </div>
             </div>
 

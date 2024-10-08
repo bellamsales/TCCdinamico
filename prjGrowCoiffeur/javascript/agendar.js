@@ -103,17 +103,17 @@ let funcionarioAG = null;
 let dataAG = null;
 let servicoAG = null;
 let horaAG = null;
-let clienteAG = null;
-
+let clienteAG = null
 function handleDiaClick(dia, funcionario, mes, servico, cliente) {
     diaSelecionado = dia;
     funcionarioAG = funcionario;
     clienteAG = cliente;
-    servicoAG = servico; // pode ser null ou um valor de serviço
+    servicoAG = servico;
     document.getElementById('btn-manha').disabled = false;
     document.getElementById('btn-tarde').disabled = false;
     document.getElementById('btn-noite').disabled = false;
 
+    
     document.getElementById('btn-manha').addEventListener('click', function () {
         capturarPeriodo('Manhã');
     });
@@ -124,12 +124,15 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente) {
         capturarPeriodo('Noite');
     });
 
+
     function formatarMinutosParaHoras(minutos) {
         const horas = Math.floor(minutos / 60);
-        const minutosRestantes = minutos % 60;
+        const minutosRestantes = minutos % 60; 
+
         const horasFormatadas = String(horas).padStart(2, '0');
         const minutosFormatados = String(minutosRestantes).padStart(2, '0');
-        return `${horasFormatadas}:${minutosFormatados}`;
+
+        return `${horasFormatadas}:${minutosFormatados}`; 
     }
 
     function capturarPeriodo(periodo) {
@@ -138,7 +141,8 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente) {
         }
 
         const dataSelecionada = new Date(new Date().getFullYear(), mes - 1, diaSelecionado);
-        const dataFormatada = dataSelecionada.toISOString().split('T')[0];
+        const dataFormatada = dataSelecionada.toISOString().split('T')[0]; 
+
         dataAG = dataFormatada;
 
         const url = `../APIs/ConsultaHoraDisponibilidade.aspx?funcionario=${encodeURIComponent(funcionario)}&data=${encodeURIComponent(dataFormatada)}&periodo=${encodeURIComponent(periodo)}`;
@@ -148,68 +152,82 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente) {
                 if (!response.ok) {
                     throw new Error('Erro na requisição: ' + response.status);
                 }
-                return response.json();
+                return response.json(); 
             })
             .then(data => {
-                console.log(data);
+                console.log(data); 
+
                 const horariosDiv = document.getElementById("horariosManha");
-                horariosDiv.innerHTML = '';
+                horariosDiv.innerHTML = ''; 
 
                 data.forEach(d => {
                     const button = document.createElement("button");
                     button.type = "button";
                     button.className = "horario-btn";
-                    button.textContent = `${formatarMinutosParaHoras(d.HoraInicial.TotalMinutes)} - ${formatarMinutosParaHoras(d.HoraFinal.TotalMinutes)}`;
+                    console.log(d.HoraInicial);
+                    button.textContent = `${formatarMinutosParaHoras(d.HoraInicial.TotalMinutes)} - ${formatarMinutosParaHoras(d.HoraFinal.TotalMinutes) }`; // Adiciona o horário como texto no botão
+                    
+                   button.addEventListener('click', function () {
+    
+    if (this.classList.contains('selecionado')) {
+        
+        this.classList.remove('selecionado');
+        horaAG = null; 
+    } else {
+    
+        this.classList.add('selecionado');
+        horaAG = formatarMinutosParaHoras(d.HoraInicial.TotalMinutes); 
+    }
+});
 
-                    button.addEventListener('click', function () {
-                        if (this.classList.contains('selecionado')) {
-                            this.classList.remove('selecionado');
-                            horaAG = null;
-                        } else {
-                            this.classList.add('selecionado');
-                            horaAG = formatarMinutosParaHoras(d.HoraInicial.TotalMinutes);
-                        }
-                    });
-
-                    horariosDiv.appendChild(button);
+                    horariosDiv.appendChild(button); 
                 });
             })
             .catch(error => {
-                console.error('Erro:', error);
+                console.error('Erro:', error); 
             });
     }
-}
-
-function agendarServico() {
     
-    const servicoParam = servicoAG ? encodeURIComponent(servicoAG) : '0';
-    const url = `../APIs/AgendarServicoAPI.aspx?funcionario=${encodeURIComponent(funcionarioAG)}&cliente=${encodeURIComponent(clienteAG)}&servico=${servicoParam}&data=${encodeURIComponent(dataAG)}&hora=${encodeURIComponent(horaAG)}`;
+}
+function agendarServico() {
+
+    const url = `../APIs/AgendarServicoAPI.aspx?funcionario=${encodeURIComponent(funcionarioAG)}&cliente=${encodeURIComponent(clienteAG)}&servico=${encodeURIComponent(servicoAG)}&data=${encodeURIComponent(dataAG)}&hora=${encodeURIComponent(horaAG)}`;
     console.log(url);
 
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Erro na requisição: ' + response.status);
+                throw new Error('Erro na requisição: ' + response.status); 
             }
             return response.json();
         })
         .then(data => {
-            alert(data.message || data.error);
+            alert(data.message || data.error); 
         })
         .catch(error => {
             console.error('Erro:', error);
             alert('Erro ao agendar o serviço. Tente novamente.');
         });
+    
 }
 
 const periodoButtons = document.querySelectorAll('.periodo-btn');
+
+
 periodoButtons.forEach(button => {
     button.addEventListener('click', function () {
+       
         if (this.classList.contains('selecionado')) {
+           
             this.classList.remove('selecionado');
+           
         } else {
+            
             periodoButtons.forEach(btn => btn.classList.remove('selecionado'));
+
+           
             this.classList.add('selecionado');
+           
         }
     });
 });

@@ -35,65 +35,66 @@
                 </ul>
                 
             </header>
-            <main>
-                <div id="banner"> 
-                    <img src="../images/banner.png" id="fotobanner" /> 
+                       <main>
+                <div id="banner">
+                    <img src="../images/banner.png" id="fotobanner" />
                     <h1>
                         <p>Desperte sua beleza interior com o brilho da </p>
                         <p id="titulo">GLOW COIFFEUR</p>
                     </h1>
-                    <div id="endereço">
-                         <img src="../images/local.png" />
-                         <p> Endereço aleatório n°75, Sant Cardoso-SP</p>
+                    <div id="endereco">
+                        <img src="../images/local.png" />
+                        <p>Endereço aleatório n°75, Sant Cardoso-SP</p>
                     </div>
-                </div>  
-                <div>
+                </div>
 
-                <h2> Nosso Salão</h2>
+                <h2>Nosso Salão</h2>
                 <div id="nossosalao">
                     <div id="ladoesquerdotexto">
-                      
-                        <div id="textonossosalao">  
+                        <div id="textonossosalao">
                             <p>
-                                Bem-vindo ao Beauty Glow, onde cada visita é uma jornada para iluminar sua beleza interior e exterior! 
+                                Bem-vindo ao Beauty Glow, onde cada visita é uma jornada para iluminar sua beleza interior e exterior!
                                 Em nosso salão, não apenas transformamos cabelos e unhas, mas também renovamos confianças e elevamos espíritos.
                             </p>
                             <p>
                                 No Beauty Glow, acreditamos que a verdadeira beleza reside na confiança e no bem-estar.
                             </p>
                             <p>
-                                Nossa equipe de especialistas altamente qualificados está aqui para ajudá-lo a alcançar seus objetivos de beleza, 
+                                Nossa equipe de especialistas altamente qualificados está aqui para ajudá-lo a alcançar seus objetivos de beleza,
                                 seja através de cortes e cores de cabelo que refletem sua personalidade única, manicures e pedicures que mimam suas mãos e pés.
                             </p>
                             <p>
-                                Entre em nosso salão e deixe-se envolver pela atmosfera relaxante e acolhedora . 
-                            </p> 
-
+                                Entre em nosso salão e deixe-se envolver pela atmosfera relaxante e acolhedora.
+                            </p>
                         </div>
                     </div>
                     <div id="ladodireito">
                         <img src="../images/imagemnossosalao.png" id="imgnossosalao" />
                     </div>
                 </div>
-                </div>
+
                 <div id="paiservicos">
-                 <h2> Serviços de excelência</h2>
-                                <div id="servicosdeexcelencia">
-                                       <div class="alinhar">
-                                          <img  src="../images/cortemasc.png"/><p> corte masculino </p>
-                                       </div>
-                                       <div  class="alinhar">
-                                          <img  src="../images/unha.png"/>   <p> Unha de fibra</p>
-                                       </div>
-                                        <div  class="alinhar">
-                                         <img src="../images/cabelo.png"/><p>Relachamento capilar</p>
-                                        </div>
-                                       <div  class="alinhar">   
-                                         <img  src="../images/cabeloloiro.png"/><p>Luzes</p>
-                                       </div>
-                                </div>
-                               
+                    <h2>Serviços de excelência</h2>
+                    <div id="servicosdeexcelencia">
+                        <div class="alinhar">
+                            <img src="../images/cortemasc.png" />
+                            <p>Corte masculino</p>
+                        </div>
+                        <div class="alinhar">
+                            <img src="../images/unha.png" />
+                            <p>Unha de fibra</p>
+                        </div>
+                        <div class="alinhar">
+                            <img src="../images/cabelo.png" />
+                            <p>Relaxamento capilar</p>
+                        </div>
+                        <div class="alinhar">
+                            <img src="../images/cabeloloiro.png" />
+                            <p>Luzes</p>
+                        </div>
+                    </div>
                 </div>
+
                 <div>
                     <h2>Diferenciais</h2>
                     <div id="listadiferenciais">
@@ -101,7 +102,7 @@
                             <img src="../images/boneco (2).png" />
                             <p>Atendimento de Qualidade</p>
                         </div>
-                         <div class="alinhar">
+                        <div class="alinhar">
                             <img src="../images/ambiente.png" />
                             <p>Ambiente acolhedor</p>
                         </div>
@@ -109,35 +110,31 @@
                             <img src="../images/produtos.png" />
                             <p>Produtos de qualidade</p>
                         </div>
-                         <div class="alinhar">
+                        <div class="alinhar">
                             <img src="../images/tecnologia.jpg" />
                             <p>Tecnologia e Inovação</p>
                         </div>
-                         <div class="alinhar">
+                        <div class="alinhar">
                             <img src="../images/acessibilidade.png" />
-                            <p>acessibilidade</p>
+                            <p>Acessibilidade</p>
                         </div>
                     </div>
-                    
-                    </div>
-                
+                </div>
             </main>
+
             <footer>
                 <div id="ladologo">
                     <img src="../images/logo-branca.png" />
-                </div> 
-                <div id="endereco">
-                        <img src="../images/local.png" />
-                       <p> Endereço aleatório n°75, Sant Cardoso - SP</p> 
                 </div>
-              
-                   
-                    <div id="redessociais">
-                        <img src="../images/instagram.png" />
-                        <img src="../images/whatsapp.png" />
-                        <img src="../images/facebook.png" />
-                    </div>
-                
+                <div id="endereco">
+                    <img src="../images/local.png" />
+                    <p>Endereço aleatório n°75, Sant Cardoso - SP</p>
+                </div>
+                <div id="redessociais">
+                    <img src="../images/instagram.png" />
+                    <img src="../images/whatsapp.png" />
+                    <img src="../images/facebook.png" />
+                </div>
             </footer>
         </div>
     </form>

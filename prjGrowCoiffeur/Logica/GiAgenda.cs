@@ -15,7 +15,7 @@ namespace prjGrowCoiffeur.Logica
             List<Agendamento> agendamentos = new List<Agendamento>();
             List<Parametro> parametros = new List<Parametro>();
 
-            // Adiciona os parâmetros para a procedure
+           
             parametros.Add(new Parametro("p_funcionario_email", emailFuncionario));
             parametros.Add(new Parametro("p_data_agendamento", dataAgendamento.ToString("yyyy-MM-dd")));
 

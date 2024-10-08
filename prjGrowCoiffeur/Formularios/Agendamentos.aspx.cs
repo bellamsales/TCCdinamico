@@ -25,7 +25,7 @@ namespace prjGrowCoiffeur.Formularios
             List<Funcionario> funcionarios = giFuncionarios.ConsultarFuncionarios();
 
             ddlFuncionarios.Items.Clear();
-            ddlFuncionarios.Items.Add(new ListItem("Selecionar Funcionário", "-1")); // Opção padrão
+            ddlFuncionarios.Items.Add(new ListItem("Selecionar Funcionário", "-1")); 
 
             foreach (Funcionario funcionario in funcionarios)
             {
@@ -79,7 +79,7 @@ namespace prjGrowCoiffeur.Formularios
             DateTime dataAgendamento;
             if (!DateTime.TryParse(txtDataAgendamento.Text, out dataAgendamento))
             {
-                return; // TODO: tratar Eventual Erro
+                return; 
             }
             PreencherAgendamentos(dataAgendamento, emailFuncionario);
         }

@@ -36,30 +36,6 @@ namespace prjGrowCoiffeur.Logica
             return funcionarios;
         }
 
-        public List<Funcionario> ConsultarFuncionariosPorCategoria(int codigo)
-        {
-            List<Funcionario> funcionarios = new List<Funcionario>();
-            List<Parametro> parametros = new List<Parametro>();
-            Parametro parametro = new Parametro("p_cd_categoria", codigo.ToString());
-            parametros.Add(parametro);
-
-            MySqlDataReader dadosBanco = Consultar("ConsultarFuncionariosPorCategoria", parametros);
-            if (dadosBanco.HasRows)
-            {
-                while (dadosBanco.Read())
-                {
-                    Funcionario funcionario = new Funcionario();
-                    funcionario.Email = dadosBanco["nm_email_funcionario"].ToString();
-                    funcionario.Nome = dadosBanco["nm_funcionario"].ToString();
-                    funcionarios.Add(funcionario);
-                }
-            }
-            if (!dadosBanco.IsClosed)
-                dadosBanco.Close();
-            Desconectar();
-            return funcionarios;
-        }
-
         public List<Disponibilidade> ConsultarDisponibilidadeFuncionario(string funcionario)
         {
             List<Disponibilidade> disponibilidades = new List<Disponibilidade>();
@@ -90,7 +66,7 @@ namespace prjGrowCoiffeur.Logica
             List<Parametro> parametros = new List<Parametro>();
             Parametro parametro = new Parametro("p_funcionario", funcionario);
             Parametro parametro2 = new Parametro("p_data", dataMySQL);
-            Parametro parametro3= new Parametro("p_periodo", periodo);
+            Parametro parametro3 = new Parametro("p_periodo", periodo);
             parametros.Add(parametro);
             parametros.Add(parametro2);
             parametros.Add(parametro3);

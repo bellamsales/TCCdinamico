@@ -38,8 +38,6 @@ namespace prjGrowCoiffeur.Logica
             return servicos;
         }
 
-
-
         public bool AgendarServico(string cliente, int servico, TimeSpan hora, DateTime data, string funcionario)
         {
             List<Parametro> parametros = new List<Parametro>
@@ -60,7 +58,7 @@ namespace prjGrowCoiffeur.Logica
             }
             catch (Exception)
             {
-                return false; 
+                return false;
             }
 
         }

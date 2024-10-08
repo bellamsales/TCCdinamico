@@ -179,21 +179,7 @@ Select * from cliente where nm_email_cliente = p_nm_email_cliente;
 END $$
 
 
-CREATE PROCEDURE ConsultarFuncionariosPorCategoria(IN p_cd_categoria INT)
-BEGIN
-    SELECT f.nm_email_funcionario, f.nm_funcionario 
-    FROM Funcionario f
-    JOIN Especialidade_funcionario_categoria e ON f.nm_email_funcionario = e.nm_email_funcionario
-    WHERE e.cd_categoria = p_cd_categoria;
-END$$
 
-CREATE PROCEDURE ConsultarCategoriaPorServico(IN p_cd_servico INT)
-BEGIN
-    SELECT c.cd_categoria, c.nm_categoria 
-    FROM Categoria c
-    JOIN Servico s ON c.cd_categoria = s.cd_categoria 
-    WHERE s.cd_servico = p_cd_servico;
-END$$
 
 DELIMITER ;
 call ConsultarFuncionarios();
