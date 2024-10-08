@@ -15,17 +15,31 @@ header {
     flex-wrap: nowrap;
     width: 100%;
     position: fixed;
+    z-index: 1;
+    
 }
 
 #logobrancaheader {
     width: 100px;
     height: 74px;
 }
+a {
+    color: white;
+    text-decoration:none;
+}
 
-il {
+li {
     margin-left: 12px;
     margin-right: 8px;
     cursor: pointer;
+    list-style-type: none;
+    
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 #btnagendar {
@@ -40,7 +54,7 @@ il {
 
 h1 {
     color: white;
-    margin-top: -409px;
+    margin-top: -399px;
     font-size: 46px;
     margin-left: 10%;
     position: relative;
@@ -49,16 +63,17 @@ h1 {
 
 #fotobanner {
     width: 100%;
-    opacity: 0.5;
     background-color: #662549;
-    height: 400px;
+    height: auto
 }
 
 #banner {
-    width: 100%;
-    opacity: 0.8;
+   
     background-color: #662549;
-    height: 400px;
+    height: 600px ;
+    background-image: url(../images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #titulo {
@@ -66,7 +81,7 @@ h1 {
     text-shadow: 2px 2px black;
 }
 
-#endereço {
+#enderecobanner{
     margin-left: 23px;
     color: white;
     position: relative;
@@ -83,7 +98,6 @@ h1 {
 #nossosalao {
     margin-left: 10%;
     margin-right: 10%;
-    height: 500px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -95,7 +109,7 @@ h2 {
     color: #662549;
     font-size: 35px;
     margin-left: 10%;
-    margin-bottom: -4%;
+  
 }
 
 #ladoesquerdotexto {
@@ -126,12 +140,11 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    
     margin-left: 10%;
     margin-right: 10%;
-    height: 500px;
+   
 }
-
     #servicosdeexcelencia img {
         width: 100%;
         height: 200px;
@@ -147,16 +160,14 @@ h2 {
 #listadiferenciais {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
     gap: 2%;
-    margin-top: 7%;
     margin-bottom: 80px;
     margin-right: 10%;
-    width: 100%;
+    margin-left: 10%;
 }
-
 ul il a {
     color: white;
     text-decoration: none;
@@ -179,13 +190,17 @@ footer {
     margin-right: 40px;
 }
 
-#endereco {
+#enderecofooter
+{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+   
+    color: white;
 }
+
 
 #redessociais {
     display: flex;
@@ -206,7 +221,7 @@ footer {
 }
 
 /*responsivo*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 730px) {
     header {
         display: flex;
         flex-direction: column;
@@ -214,6 +229,7 @@ footer {
         align-items: center;
         height: 240px;
         width: 100%;
+        position: unset;
     }
 
     il {
@@ -227,28 +243,115 @@ footer {
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        margin-left: -20px;
+        margin-left: -36px;
     }
 
     #btnagendar {
         width: 333px;
     }
 
-    #banner {
-        width: 100%;
-        opacity: 0.8;
-        background-color: #662549;
-        height: 400px;
-    }
-
     #fotobanner {
         width: 100%;
-        opacity: 0.5;
+        
         background-color: #662549;
-        height: 400px;
+        height: 300px;
+    }
+
+    #banner {
+        width: 100%;
+        background-color: none;
+        height: 300px;
+    }
+
+    #titulo {
+        font-size: 28px;
+        text-shadow: 2px 2px black;
     }
 
     h1 {
-        font-size: 30px;
+        color: white;
+        font-size: 25px;
+        margin-left: 10%;
+        position: relative;
+        width: 60%;
+    }
+
+    #nossosalao {
+        margin-left: 10%;
+        margin-right: 10%;
+        height: unset;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    #ladoesquerdotexto {
+        width: 100%;
+        border-right: unset;
+    }
+
+    #ladodireito {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        height: unset;
+        margin-left: unset;
+    }
+
+    #listadiferenciais {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 2%;
+        margin-top: 7%;
+        margin-bottom: 80px;
+        margin-right: 10%;
+        width: unset;
+    }
+
+    #servicosdeexcelencia {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: unset;
+        align-items: center;
+    }
+
+    h2 {
+        color: #662549;
+        font-size: 20px;
+        margin-left: unset;
+        margin-bottom: unset;
+        text-align: center;
+    }
+
+    footer {
+        width: 100%;
+        display: flex;
+        background-color: #662549;
+        color: white;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #ladologo img {
+        width: 100%;
+    }
+    #ladologo {
+        margin-left: unset;
+    }
+    #redessociais{
+        margin-bottom:10px;
     }
 }
+    
+
+
+
+
+
