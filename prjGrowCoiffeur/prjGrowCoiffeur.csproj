@@ -146,9 +146,11 @@
     <Content Include="css\login.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\produto.css" />
+    <Content Include="Formularios\AdicionarFuncionario.aspx" />
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
+    <Content Include="Formularios\Funcionario.aspx" />
     <Content Include="Formularios\index.aspx" />
     <Content Include="Formularios\Login.aspx" />
     <Content Include="images\acessibilidade.png" />
@@ -211,6 +213,13 @@
     <Compile Include="Banco\Banco.cs" />
     <Compile Include="Banco\Conexao.cs" />
     <Compile Include="Banco\Parametro.cs" />
+    <Compile Include="Formularios\AdicionarFuncionario.aspx.cs">
+      <DependentUpon>AdicionarFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdicionarFuncionario.aspx.designer.cs">
+      <DependentUpon>AdicionarFuncionario.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Agendamentos.aspx.cs">
       <DependentUpon>Agendamentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -231,6 +240,13 @@
     </Compile>
     <Compile Include="Formularios\Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Funcionario.aspx.cs">
+      <DependentUpon>Funcionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Funcionario.aspx.designer.cs">
+      <DependentUpon>Funcionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
