@@ -62,7 +62,9 @@ CREATE TABLE Produto (
     qt_ml_produto DECIMAL(10 , 2 ),
     qt_kg_produto DECIMAL(10 , 2 ),
     qt_li_produto DECIMAL(10 , 2 ),
+    ds_produto TEXT,
     nm_fornecedor_produto VARCHAR(100),
+
     CONSTRAINT pk_produto PRIMARY KEY (cd_produto)
 );
 
@@ -946,6 +948,7 @@ END $$
 -- Consultar Produtos
 DELIMITER $$
 
+DROP PROCEDURE IF EXISTS ConsultarProdutos$$
 CREATE PROCEDURE ConsultarProdutos()
 BEGIN
     SELECT cd_produto, nm_produto, ds_produto, vl_produto, qt_estoque

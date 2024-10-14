@@ -267,11 +267,15 @@
     <Compile Include="Logica\GiFuncionarios.cs" />
     <Compile Include="Logica\GiServico.cs" />
     <Compile Include="Logica\Login.cs" />
+    <Compile Include="Logica\Produtos.cs" />
     <Compile Include="Modelo\Agendamento.cs" />
     <Compile Include="Modelo\Categoria.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Disponibilidade.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
+    <Compile Include="Modelo\Produto.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
