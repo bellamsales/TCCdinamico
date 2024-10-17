@@ -155,6 +155,7 @@
     <Content Include="Formularios\Login.aspx" />
     <Content Include="Formularios\LoginFuncionario.aspx" />
     <Content Include="Formularios\LoginGerente.aspx" />
+    <Content Include="Formularios\Produto.aspx" />
     <Content Include="images\acessibilidade.png" />
     <Content Include="images\adicionar.png" />
     <Content Include="images\ambiente.png" />
@@ -264,17 +265,28 @@
     <Compile Include="Formularios\LoginGerente.aspx.designer.cs">
       <DependentUpon>LoginGerente.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Produto.aspx.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produto.aspx.designer.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Logica\GiAgenda.cs" />
     <Compile Include="Logica\GiCategoria.cs" />
     <Compile Include="Logica\GiFuncionarios.cs" />
     <Compile Include="Logica\GiServico.cs" />
     <Compile Include="Logica\Login.cs" />
+    <Compile Include="Logica\Produtos.cs" />
     <Compile Include="Modelo\Agendamento.cs" />
     <Compile Include="Modelo\Categoria.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Disponibilidade.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Gerente.cs" />
+    <Compile Include="Modelo\Produto.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -11,11 +11,11 @@
         <link rel="stylesheet" href="../css/menu.css"/>
         <meta charset="UTF-8" />
         <link rel="shortcut icon" href="../images/logo.png" type="image" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
         <title>Produto</title>
    
     </head>
@@ -28,7 +28,7 @@
             </div>
 
             <a href="index.html">
-                <img src="../images/logo-branca.png" alt="Logo" class="logo">
+                <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
                 <li class="item-menu">
@@ -86,16 +86,16 @@
            </header>
            <section class="listadeprodutos">
              <div class="caixaprodutos">
-                 <asp:Literal ID="LitProdutos" runat="server"></asp:Literal>
-     <%--<div class="linhadecima">
-                    <p><strong> Nome :</strong><asp:Literal ID="litnomeproduto" runat="server"></asp:Literal>  bdfb gbhyebhbhe5 </p>
-                   <p><strong> Preço :</strong> <asp:Literal ID="litprecoproduto" runat="server"></asp:Literal>dfbnyghv </p>
+                 <asp:Literal ID="LitProdutos" runat="server"></asp:Literal><asp:TextBox ID="txtprodutos" runat="server"></asp:TextBox>
+     <div class="linhadecima">
+                    <p><strong> Nome :</strong><asp:Literal ID="litnomeproduto" runat="server"></asp:Literal> </p>
+                   <p><strong> Preço :</strong> <asp:Literal ID="litprecoproduto" runat="server"></asp:Literal></p>
                 </div>
                 <div class="linhadebaixo">
-                    <p><strong>Marca :</strong> <asp:Literal ID="litmarcaproduto" runat="server">etrvgn</asp:Literal> </p>
-                    <p><strong>Categoria :</strong> <asp:Literal ID="litcategoriaproduto" runat="server">tynrt thbfgh uynujt</asp:Literal></p>
+                    <p><strong>Marca :</strong> <asp:Literal ID="litmarcaproduto" runat="server"></asp:Literal> </p>
+                 <%--   <p><strong>Categoria :</strong> <asp:Literal ID="litcategoriaproduto" runat="server"></asp:Literal></p>--%>
            
-                </div>  --%>
+                </div>  
                  
            
              </div>
@@ -103,10 +103,10 @@
         </div>
         <div class="btns">
            <a href="editarproduto.html">
-               <img src="../images/editar.svg" id="imgedit">
+               <img src="../images/editar.svg" id="imgedit" />
            </a>
            <a href="adicionarproduto.html">
-               <img src="../images/mais.svg" id="imgadd">
+               <img src="../images/mais.svg" id="imgadd" />
            </a>
      
         </div>

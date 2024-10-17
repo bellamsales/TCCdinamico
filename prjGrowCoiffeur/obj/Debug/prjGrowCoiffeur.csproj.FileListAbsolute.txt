@@ -916,3 +916,7 @@ C:\tcc-04\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompi
 C:\tcc-04\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CopyComplete
 C:\tcc-04\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
 C:\tcc-04\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+D:\Glow\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+D:\Glow\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+D:\Glow\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+D:\Glow\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb

@@ -21,8 +21,7 @@ public class Produtos:Banco
                     dados.GetInt32(0),
                     dados.GetString(1),
                     dados.GetString(2),
-                    dados.GetInt32(3),
-                    dados.GetInt32(4));
+                    dados.GetInt32(3));
 
 
                 lista.Add(clProduto);
