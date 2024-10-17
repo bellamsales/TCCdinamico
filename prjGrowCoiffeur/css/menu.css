@@ -75,7 +75,7 @@ body
     cursor: pointer;
 }
 
- nav ul
+ul
 {
     height: 100%;
     list-style-type: none;

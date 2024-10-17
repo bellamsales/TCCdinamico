@@ -19,51 +19,59 @@
             <header>
                 <img src="../images/logo-branca.png"  id="logobrancaheader"/>
                 <ul>
-                    <li>
+                    <il>
                          <a href="#nossosalao">Nosso salão </a> 
-                    </li>
-                    <li>
+                    </il>
+                    <il>
                        <a href="#servicosdeexcelencia"> Serviços de excelencia </a>
-                    </li>
-                     <li>
+                    </il>
+                     <il>
                          <a href="#listadiferenciais"> Diferenciais </a>
-                    </li>
-                    <li> 
+                    </il>
+                    <il> 
                      <asp:Button ID="btnagendar" runat="server" Text="Agende aqui" OnClick="btnagendar_Click" /> 
-                    </li>
+                    </il>
                  
                 </ul>
                 
             </header>
                        <main>
                 <div id="banner">
+                    <img src="../images/banner.png" id="fotobanner" />
+                    <h1>
+                        <p>Desperte sua beleza interior com o brilho da </p>
+                        <p id="titulo">GLOW COIFFEUR</p>
+                    </h1>
+                    <div id="endereco">
+                        <img src="../images/local.png" />
+                        <p>Endereço aleatório n°75, Sant Cardoso-SP</p>
+                    </div>
                 </div>
-                <div>
-                   <h2>Nosso Salão</h2>
-                                <div id="nossosalao">
-                                    <div id="ladoesquerdotexto">
-                                        <div id="textonossosalao">
-                                            <p>
-                                                Bem-vindo ao Beauty Glow, onde cada visita é uma jornada para iluminar sua beleza interior e exterior!
-                                                Em nosso salão, não apenas transformamos cabelos e unhas, mas também renovamos confianças e elevamos espíritos.
-                                            </p>
-                                            <p>
-                                                No Beauty Glow, acreditamos que a verdadeira beleza reside na confiança e no bem-estar.
-                                            </p>
-                                            <p>
-                                                Nossa equipe de especialistas altamente qualificados está aqui para ajudá-lo a alcançar seus objetivos de beleza..
-                                            </p>
-                                            <p>
-                                                Entre em nosso salão e deixe-se envolver pela atmosfera relaxante e acolhedora.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div id="ladodireito">
-                                        <img src="../images/imagemnossosalao.png" id="imgnossosalao" />
-                                    </div>
-                                </div>
+
+                <h2>Nosso Salão</h2>
+                <div id="nossosalao">
+                    <div id="ladoesquerdotexto">
+                        <div id="textonossosalao">
+                            <p>
+                                Bem-vindo ao Beauty Glow, onde cada visita é uma jornada para iluminar sua beleza interior e exterior!
+                                Em nosso salão, não apenas transformamos cabelos e unhas, mas também renovamos confianças e elevamos espíritos.
+                            </p>
+                            <p>
+                                No Beauty Glow, acreditamos que a verdadeira beleza reside na confiança e no bem-estar.
+                            </p>
+                            <p>
+                                Nossa equipe de especialistas altamente qualificados está aqui para ajudá-lo a alcançar seus objetivos de beleza,
+                                seja através de cortes e cores de cabelo que refletem sua personalidade única, manicures e pedicures que mimam suas mãos e pés.
+                            </p>
+                            <p>
+                                Entre em nosso salão e deixe-se envolver pela atmosfera relaxante e acolhedora.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="ladodireito">
+                        <img src="../images/imagemnossosalao.png" id="imgnossosalao" />
+                    </div>
                 </div>
-             
 
                 <div id="paiservicos">
                     <h2>Serviços de excelência</h2>
@@ -118,14 +126,14 @@
                 <div id="ladologo">
                     <img src="../images/logo-branca.png" />
                 </div>
-                <div id="enderecofooter">
-                     <img src="../images/local.png" />
-                  <a href="https://www.google.com/maps/@-23.9797535,-46.3096565,21z?entry=ttu&g_ep=EgoyMDI0MTAwMi4xIKXMDSoASAFQAw%3D%3D"> <p>Endereço aleatório n°75, Sant Cardoso - SP</p></a>
+                <div id="endereco">
+                    <img src="../images/local.png" />
+                    <p>Endereço aleatório n°75, Sant Cardoso - SP</p>
                 </div>
                 <div id="redessociais">
-                    <a href="https://www.instagram.com/"><img src="../images/instagram.png" /> </a>
-                   <a href="https://web.whatsapp.com/"><img src="../images/whatsapp.png" /> </a> 
-                    <a href="https://www.facebook.com/?locale=pt_BR"><img src="../images/facebook.png" /></a>
+                    <img src="../images/instagram.png" />
+                    <img src="../images/whatsapp.png" />
+                    <img src="../images/facebook.png" />
                 </div>
             </footer>
         </div>

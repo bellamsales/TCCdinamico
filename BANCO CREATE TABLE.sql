@@ -25,6 +25,16 @@ CREATE TABLE Funcionario (
     CONSTRAINT pk_funcionario PRIMARY KEY (nm_email_funcionario)
 );
 
+CREATE TABLE Gerente (
+    nm_email_gerente VARCHAR(50),
+    nm_gerente VARCHAR(200),
+    nm_senha VARCHAR(8),
+    nm_telefone VARCHAR(13),
+    nm_endereco VARCHAR(300),
+    nm_departamento VARCHAR(100),
+    CONSTRAINT pk_gerente PRIMARY KEY (nm_email_gerente)
+);
+
 CREATE TABLE Disponibilidade (
   cd_disponibilidade INT,
   dt_inicio_disponibilidade DATE,
@@ -62,9 +72,7 @@ CREATE TABLE Produto (
     qt_ml_produto DECIMAL(10 , 2 ),
     qt_kg_produto DECIMAL(10 , 2 ),
     qt_li_produto DECIMAL(10 , 2 ),
-    ds_produto TEXT,
     nm_fornecedor_produto VARCHAR(100),
-
     CONSTRAINT pk_produto PRIMARY KEY (cd_produto)
 );
 
@@ -92,14 +100,6 @@ CREATE TABLE Especialidade_funcionario (
 
     CONSTRAINT fk_especialidade_funcionario_servico FOREIGN KEY (cd_servico)
         REFERENCES Servico (cd_servico)
-);
-
-CREATE TABLE Especialidade_funcionario_categoria (
-    nm_email_funcionario VARCHAR(255),
-    cd_categoria INT,
-    PRIMARY KEY (nm_email_funcionario, cd_categoria),
-    FOREIGN KEY (nm_email_funcionario) REFERENCES Funcionario(nm_email_funcionario),
-    FOREIGN KEY (cd_categoria) REFERENCES Categoria(cd_categoria)
 );
 
 
@@ -204,13 +204,11 @@ END $$
 -- Consultar Funcionarios
 DELIMITER $$
 
-CREATE PROCEDURE ConsultarFuncionarios(
-    IN p_nm_cargo VARCHAR(100)
-)
+CREATE PROCEDURE ConsultarFuncionarios()
 BEGIN
     SELECT nm_email_funcionario, nm_funcionario, nm_telefone, nm_endereco
-    FROM Funcionario
-    WHERE nm_cargo = p_nm_cargo;
+    FROM Funcionario;
+
 END $$
 
 
@@ -332,12 +330,13 @@ DELIMITER $$
 CREATE PROCEDURE CadastrarCliente(
     IN p_nm_email_cliente VARCHAR(50),
     IN p_nm_cliente VARCHAR(200),
-    IN p_nm_senha VARCHAR(8)
-  
+    IN p_nm_senha VARCHAR(8),
+    IN p_nm_endereco VARCHAR(300),
+    IN p_ds_historico_cliente TEXT
 )
 BEGIN
-    INSERT INTO Cliente (nm_email_cliente, nm_cliente, nm_senha)
-    VALUES (p_nm_email_cliente, p_nm_cliente, p_nm_senha);
+    INSERT INTO Cliente (nm_email_cliente, nm_cliente, nm_senha, nm_endereco, ds_historico_cliente)
+    VALUES (p_nm_email_cliente, p_nm_cliente, p_nm_senha, p_nm_endereco, p_ds_historico_cliente);
 END $$
 
 
@@ -948,7 +947,6 @@ END $$
 -- Consultar Produtos
 DELIMITER $$
 
-DROP PROCEDURE IF EXISTS ConsultarProdutos$$
 CREATE PROCEDURE ConsultarProdutos()
 BEGIN
     SELECT cd_produto, nm_produto, ds_produto, vl_produto, qt_estoque
@@ -1212,6 +1210,27 @@ BEGIN
 END $$
 
 -- Procedures Categoria acaba aqui --
+
+
+DROP PROCEDURE IF EXISTS LoginGerente$$
+CREATE PROCEDURE LoginGerente(
+    IN p_email_gerente VARCHAR(50),
+    IN p_senha_gerente VARCHAR(8)
+)
+BEGIN
+    DECLARE v_mensagem BOOLEAN DEFAULT FALSE;
+
+    IF EXISTS (
+        SELECT 1 FROM Gerente
+        WHERE nm_email_gerente = p_email_gerente 
+        AND nm_senha = p_senha_gerente 
+    ) THEN
+        SET v_mensagem = TRUE;
+    END IF;
+
+    -- Retorna o resultado da verificação
+    SELECT v_mensagem AS mensagem;
+END $$
 
 
 Delimiter ;

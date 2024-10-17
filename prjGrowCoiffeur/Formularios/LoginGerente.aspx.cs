@@ -7,11 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace prjGrowCoiffeur.Formularios
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class LoginGerente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (!IsPostBack)
+            {
+                lblMensagem.Text = string.Empty;
+            }
         }
 
         protected void btnEntrar_Click(object sender, EventArgs e)
@@ -20,26 +23,22 @@ namespace prjGrowCoiffeur.Formularios
             string email = txtEmail.Text.Trim().ToLower();
             string senha = txtSenha.Text.Trim();
 
-
-            bool clienteLogado = login.LoginCliente(email, senha);
-
-            if (clienteLogado)
+           
+            bool gerenteLogado = login.LoginGerente(email, senha);
+            if (gerenteLogado)
             {
-
-                Session["TipoUsuario"] = "cliente";
+               
+                Session["TipoUsuario"] = "gerente";
                 Session["EmailUsuario"] = email;
 
-                Response.Redirect("Agendar.aspx");
+               
+                Response.Redirect("Agendamentos.aspx");
             }
-          
-                else
-                {
-
-                    lblMensagem.Text = "Email ou senha incorretos!";
-                }
+            else
+            {
+               
+                lblMensagem.Text = "Email ou senha incorretos!";
             }
-        }   
+        }
+    }
 }
-
-        
-    

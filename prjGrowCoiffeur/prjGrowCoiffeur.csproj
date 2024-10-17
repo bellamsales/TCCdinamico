@@ -144,15 +144,17 @@
     <Content Include="css\funcionario.css" />
     <Content Include="css\index.css" />
     <Content Include="css\login.css" />
+    <Content Include="css\loginFuncionario.css" />
+    <Content Include="css\loginGerente.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\produto.css" />
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
-    <Content Include="Formularios\Funcionario.aspx" />
     <Content Include="Formularios\index.aspx" />
     <Content Include="Formularios\Login.aspx" />
-    <Content Include="Formularios\Produto.aspx" />
+    <Content Include="Formularios\LoginFuncionario.aspx" />
+    <Content Include="Formularios\LoginGerente.aspx" />
     <Content Include="images\acessibilidade.png" />
     <Content Include="images\adicionar.png" />
     <Content Include="images\ambiente.png" />
@@ -234,13 +236,6 @@
     <Compile Include="Formularios\Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Funcionario.aspx.cs">
-      <DependentUpon>Funcionario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\Funcionario.aspx.designer.cs">
-      <DependentUpon>Funcionario.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Formularios\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,27 +250,31 @@
     <Compile Include="Formularios\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Produto.aspx.cs">
-      <DependentUpon>Produto.aspx</DependentUpon>
+    <Compile Include="Formularios\LoginFuncionario.aspx.cs">
+      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Formularios\Produto.aspx.designer.cs">
-      <DependentUpon>Produto.aspx</DependentUpon>
+    <Compile Include="Formularios\LoginFuncionario.aspx.designer.cs">
+      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\LoginGerente.aspx.cs">
+      <DependentUpon>LoginGerente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\LoginGerente.aspx.designer.cs">
+      <DependentUpon>LoginGerente.aspx</DependentUpon>
     </Compile>
     <Compile Include="Logica\GiAgenda.cs" />
     <Compile Include="Logica\GiCategoria.cs" />
     <Compile Include="Logica\GiFuncionarios.cs" />
     <Compile Include="Logica\GiServico.cs" />
     <Compile Include="Logica\Login.cs" />
-    <Compile Include="Logica\Produtos.cs" />
     <Compile Include="Modelo\Agendamento.cs" />
     <Compile Include="Modelo\Categoria.cs" />
     <Compile Include="Modelo\Cliente.cs" />
     <Compile Include="Modelo\Disponibilidade.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
-    <Compile Include="Modelo\Produto.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Modelo\Gerente.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

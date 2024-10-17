@@ -1,9 +1,5 @@
-.conteudo {
-   
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
+.conteudo{
+    margin-left: 58px;
 }
 *{
     margin: 0;
@@ -16,7 +12,7 @@
     margin-top: 20px;
     border:solid 1px #5A203F;
     border-radius:15px;
-    width:100%;
+    width:80%;
     margin-bottom: 2%;
    
 }
@@ -31,12 +27,12 @@
     width: 96%;
     border-radius: 15px;
   }
-header {
+  header
+  {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 80%;
-}
+  }
   .listadeprodutos{
     width: 90%;
     border-radius: 5px;

@@ -32,7 +32,7 @@ CREATE PROCEDURE ConsultarCategorias()
 BEGIN
     SELECT cd_categoria, nm_categoria
     FROM Categoria;
-END $$
+END$$
 
 DROP PROCEDURE IF EXISTS ConsultarServicosPorCategoria$$
 CREATE PROCEDURE ConsultarServicosPorCategoria(
@@ -72,88 +72,92 @@ join disponibilidade_funcionario df on (d.cd_disponibilidade = df.cd_disponibili
     Where dt_inicio_disponibilidade >= curdate() and df.nm_email_funcionario = p_funcionario and dt_inicio_disponibilidade = p_data and nm_periodo_disponibilidade=p_periodo;
 END$$
 
-DROP PROCEDURE IF EXISTS ConsultarFuncionarios$$
-CREATE PROCEDURE ConsultarFuncionarios()
+
+DROP PROCEDURE IF EXISTS ConsultarDisponibilidadeFuncionario$$
+CREATE PROCEDURE ConsultarDisponibilidadeFuncionario(p_funcionario varchar(50), p_mes INT)
 BEGIN
-    select f.nm_funcionario, f.nm_email_funcionario
-from funcionario f;
+    SELECT 
+        d.dt_inicio_disponibilidade AS Data,
+        d.nm_periodo_disponibilidade AS Periodo
+    FROM 
+        Disponibilidade d
+    JOIN 
+        Disponibilidade_funcionario df ON d.cd_disponibilidade = df.cd_disponibilidade_funcionario 
+    WHERE 
+        df.nm_email_funcionario = p_funcionario
+        AND MONTH(d.dt_inicio_disponibilidade) = p_mes;
+END$$
+ 
+DROP PROCEDURE IF EXISTS ListarHorariosPorPeriodo$$
+CREATE PROCEDURE ListarHorariosPorPeriodo(IN funcionario_email VARCHAR(255))
+BEGIN
+    SELECT 
+        d.dt_inicio_disponibilidade AS Data_Inicio,
+        d.hr_inicio_disponibilidade AS Hora_Inicio,
+        d.dt_fim_disponibilidade AS Data_Fim,
+        d.hr_fim_disponibilidade AS Hora_Fim,
+        d.nm_periodo_disponibilidade AS Periodo,
+        df.nm_email_funcionario AS Email_Funcionario
+    FROM 
+        Disponibilidade d
+    JOIN 
+        Disponibilidade_funcionario df ON d.cd_disponibilidade = df.cd_disponibilidade_funcionario
+    WHERE 
+        df.nm_email_funcionario = funcionario_email -- Filtra pelo e-mail do funcionário
+    ORDER BY 
+        d.dt_inicio_disponibilidade, d.hr_inicio_disponibilidade;
 END $$
-DROP PROCEDURE IF EXISTS ConsultarAgendamentosPorFuncionarioData$$
-CREATE PROCEDURE ConsultarAgendamentosPorFuncionarioData(
-    IN p_funcionario_email VARCHAR(50),
-    IN p_data_agendamento DATE
+
+DROP PROCEDURE IF EXISTS sp_ObterHorariosDisponiveis$$
+CREATE PROCEDURE sp_ObterHorariosDisponiveis(
+    IN data DATE,
+    IN periodo INT,
+    IN funcionarioEmail VARCHAR(255)
 )
 BEGIN
     SELECT 
-        a.hr_agendamento, 
-        s.nm_servico, 
-        c.nm_cliente
+        h.horario AS Horario
     FROM 
-        agendamento a
+        Horarios h
     JOIN 
-        servico s ON s.cd_servico = a.cd_servico
+        Disponibilidade d ON h.id_disponibilidade = d.id_disponibilidade
     JOIN 
-        cliente c ON c.nm_email_cliente = a.nm_email_cliente
+        Disponibilidade_funcionario df ON d.cd_disponibilidade = df.cd_disponibilidade_funcionario
     WHERE 
-        a.nm_email_funcionario = p_funcionario_email
-        AND a.dt_agendamento = p_data_agendamento;
-END$$
+        df.nm_email_funcionario = funcionarioEmail
+        AND d.dt_inicio_disponibilidade <= data
+        AND d.dt_fim_disponibilidade >= data
+        AND d.nm_periodo_disponibilidade = CASE 
+            WHEN periodo = 1 THEN 'Manhã'   -- Exemplo: período 1 representa manhã
+            WHEN periodo = 2 THEN 'Tarde'   -- Exemplo: período 2 representa tarde
+            WHEN periodo = 3 THEN 'Noite'   -- Exemplo: período 3 representa noite
+            ELSE NULL
+        END
+        AND h.disponivel = 1 -- Assume que existe uma coluna 'disponivel' que indica se o horário está disponível
+    ORDER BY 
+        h.horario;
+END $$
 
-DROP PROCEDURE IF EXISTS LoginCliente$$
-CREATE PROCEDURE LoginCliente (
-    IN p_email_cliente VARCHAR(50),
-    IN p_senha_cliente VARCHAR(8)
-)
+
+DROP PROCEDURE IF EXISTS BuscarPeriodoPorDia$$
+CREATE PROCEDURE BuscarPeriodoPorDia(in pEmail varchar(200) , in pData Date)
 BEGIN
-    DECLARE v_count INT;
-
-    -- Verifica se o email e senha estão corretos
-    SELECT COUNT(*)
-    INTO v_count
-    FROM Cliente
-    WHERE nm_email_cliente = p_email_cliente
-      AND nm_senha = p_senha_cliente;
-
-    -- Se o resultado for maior que 0, o login está correto
-    IF v_count > 0 THEN
-        SELECT true AS mensagem;
-    ELSE
-        SELECT false AS mensagem;
-    END IF;
-END$$
-
-DROP PROCEDURE IF EXISTS LoginCliente$$
-CREATE PROCEDURE LoginCliente(
-    IN p_email_cliente VARCHAR(50),
-    IN p_senha_cliente VARCHAR(8)
-)
-BEGIN
-    DECLARE v_mensagem BOOLEAN DEFAULT FALSE;
-
-    -- Verifica se existe um cliente com o e-mail e senha fornecidos
-    IF EXISTS (
-        SELECT 1 FROM cliente 
-        WHERE nm_email_cliente = p_email_cliente 
-        AND nm_senha = p_senha_cliente
-    ) THEN
-        SET v_mensagem = TRUE;
-    END IF;
-
-    -- Retorna o resultado da verificação
-    SELECT v_mensagem AS mensagem;
+	Select df.cd_disponibilidade_funcionario, df.nm_email_funcionario, d.dt_inicio_disponibilidade, d.nm_periodo_disponibilidade from disponibilidade_funcionario df
+	join disponibilidade d on (d.cd_disponibilidade = df.cd_disponibilidade_funcionario)
+	where df.nm_email_funcionario = pEmail and d.dt_inicio_disponibilidade = pData;
 END $$
 
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS LoginFuncionario$$
 CREATE PROCEDURE LoginFuncionario(
-    IN p_email_funcionario VARCHAR(255),
-    IN p_senha_funcionario VARCHAR(255)
+    IN p_email_funcionario VARCHAR(50),
+    IN p_senha_funcionario VARCHAR(8)
 )
 BEGIN
     DECLARE v_mensagem BOOLEAN DEFAULT FALSE;
 
-    -- Verifica se existe um funcionário com o e-mail e senha fornecidos
+ 
     IF EXISTS (
         SELECT 1 FROM funcionario 
         WHERE nm_email_funcionario = p_email_funcionario 
@@ -164,34 +168,57 @@ BEGIN
 
     -- Retorna o resultado da verificação
     SELECT v_mensagem AS mensagem;
-END$$
-
+END $$
 
 DELIMITER $$
 
-CREATE PROCEDURE VerificarCliente(
-    IN p_nm_email_cliente VARCHAR(50)
+CREATE PROCEDURE LoginCliente(
+    IN p_email_cliente VARCHAR(50),
+    IN p_senha_cliente VARCHAR(8)
 )
 BEGIN
-    
-Select * from cliente where nm_email_cliente = p_nm_email_cliente;
+    DECLARE v_mensagem BOOLEAN DEFAULT FALSE;
 
-END $$
+   
+    IF EXISTS (
+        SELECT 1 FROM cliente 
+        WHERE nm_email_cliente = p_email_cliente 
+        AND nm_senha = p_senha_cliente
+    ) THEN
+        SET v_mensagem = TRUE;
+    END IF;
+
+    -- Retorna o resultado da verificação
+    SELECT v_mensagem AS mensagem;
+END $$ 
 
 
-
+CREATE PROCEDURE CadastroFuncionario (
+    IN p_email_funcionario VARCHAR(50),
+    IN p_nome_funcionario VARCHAR(200),
+    IN p_senha_funcionario VARCHAR(8),
+    IN p_telefone_funcionario VARCHAR(13),
+    IN p_endereco_funcionario VARCHAR(300),
+    IN p_cargo_funcionario VARCHAR(100)
+)
+BEGIN
+    INSERT INTO Funcionario (nm_email_funcionario, nm_funcionario, nm_senha, nm_telefone, nm_endereco, nm_cargo)
+    VALUES (p_email_funcionario, p_nome_funcionario, p_senha_funcionario, p_telefone_funcionario, p_endereco_funcionario, p_cargo_funcionario);
+END$$
 
 DELIMITER ;
-call ConsultarFuncionarios();
+
 call AgendarServico("ana.oliveira@email.com", 0, current_time(), curdate(), "anaclara@gmail.com");
+call ConsultarDataDisponibilidadeFuncionario('anaclara@gmail.com');
+call sp_ObterHorariosDisponiveis();
+
+select hr_inicio_disponibilidade
+    from disponibilidade d
+join disponibilidade_funcionario df on (d.cd_disponibilidade = df.cd_disponibilidade_funcionario)
+    Where dt_inicio_disponibilidade >= curdate() and df.nm_email_funcionario = "roberto.pereira@email.com" and dt_inicio_disponibilidade = "2024-11-14" and nm_periodo_disponibilidade="Tarde";
+
+select * from disponibilidade_funcionario;
 
 
-call ConsultarHoraDisponibilidadeFuncionario('anaclara@gmail.com', '2024-01-02', 'Manhã');
-CALL ConsultarAgendamentosPorFuncionarioData('anaclara@gmail.com', '2024-01-02');
 
-
-select a.hr_agendamento, s.nm_servico, c.nm_cliente from agendamento a 
-join servico s on s.cd_servico = a.cd_servico 
-join cliente c on c.nm_email_cliente = a.nm_email_cliente
-where nm_email_funcionario = 'anaclara@gmail.com' and dt_agendamento = '2024-01-02';
-CALL ConsultarDisponibilidadeFuncionarioPorData('anaclara@gmail.com', '2024-01-02');
+CALL ConsultarDisponibilidadeFuncionario('ana.oliveira@email.com', 1);

@@ -81,16 +81,10 @@ h1 {
     margin-left: 20px
 }
 
-    .detalhes-funcionario ul {
-        list-style: none;
-        padding: 0;
-        height: 100%;
-        list-style-type: none;
-        margin-left: 5%;
-       margin-top: unset;
-        transition: margin-top 0.5s;
+.detalhes-funcionario ul {
+    list-style: none;
+    padding: 0;
 }
-
 
 .detalhes-funcionario ul li {
     font-size: 1.1rem;
