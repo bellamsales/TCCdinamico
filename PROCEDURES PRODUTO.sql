@@ -1,11 +1,13 @@
 USE bancotcc04;
 
-delimiter $$
+DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarProdutos$$
 CREATE PROCEDURE ConsultarProdutos()
 BEGIN
-    SELECT cd_produto, nm_produto, ds_produto_estoque, vl_produto_estoque,   qt_produto_estoque
+    SELECT cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
+           qt_produto_estoque, qt_produto_utilizado, vl_produto_estoque,
+           nm_fornecedor_produto
     FROM Produto;
 END $$
 
-delimiter ;
+DELIMITER ;

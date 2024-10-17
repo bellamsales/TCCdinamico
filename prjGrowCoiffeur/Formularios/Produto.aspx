@@ -1,9 +1,9 @@
-﻿    <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Produto.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.Produto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Produto.aspx.cs" Inherits="prjGrowCoiffeur.Produto" %>
 
-    <!DOCTYPE html>
+<!DOCTYPE html>
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head runat="server">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
          <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -19,8 +19,9 @@
         <title>Produto</title>
    
     </head>
-    <body>
+<body>
         <form id="form1" runat="server">
+            <asp:Literal ID="litTeste" runat="server"></asp:Literal>
             <div>
                  <nav class="menu-lateral"> 
             <div class="btn-expandir">
@@ -86,7 +87,9 @@
            </header>
            <section class="listadeprodutos">
              <div class="caixaprodutos">
-                 <asp:Literal ID="LitProdutos" runat="server"></asp:Literal><asp:TextBox ID="txtprodutos" runat="server"></asp:TextBox>
+                 <asp:Literal ID="litProdutos" runat="server" />
+                 <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                 <asp:TextBox ID="txtprodutos" runat="server"></asp:TextBox>
      <div class="linhadecima">
                     <p><strong> Nome :</strong><asp:Literal ID="litnomeproduto" runat="server"></asp:Literal> </p>
                    <p><strong> Preço :</strong> <asp:Literal ID="litprecoproduto" runat="server"></asp:Literal></p>

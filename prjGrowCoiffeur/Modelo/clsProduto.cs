@@ -5,7 +5,7 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-partial class Produto
+public partial class clsProduto
 {
     public int CdProduto { get; set; }
     public string NmProduto { get; set; }
@@ -14,16 +14,11 @@ partial class Produto
     public int QtProdutoEstoque { get; set; }
     public int QtProdutoUtilizado { get; set; }
     public decimal VlProdutoEstoque { get; set; }
-    public decimal QtMlProduto { get; set; }
-    public decimal QtKgProduto { get; set; }
-    public decimal QtLiProduto { get; set; }
     public string NmFornecedorProduto { get; set; }
     public string DsProduto { get; set; }
 
-
-    public Produto(int cdProduto, string nmProduto, string nmMarcaProduto, DateTime dtValidadeProduto,
-                       int qtProdutoEstoque, int qtProdutoUtilizado, decimal vlProdutoEstoque, string dsproduto,
-                       decimal qtMlProduto, decimal qtKgProduto, decimal qtLiProduto, string nmFornecedorProduto)
+    public clsProduto(int cdProduto, string nmProduto, string nmMarcaProduto, DateTime dtValidadeProduto,
+                      int qtProdutoEstoque, int qtProdutoUtilizado, decimal vlProdutoEstoque, string nmFornecedorProduto)
     {
         CdProduto = cdProduto;
         NmProduto = nmProduto;
@@ -32,25 +27,23 @@ partial class Produto
         QtProdutoEstoque = qtProdutoEstoque;
         QtProdutoUtilizado = qtProdutoUtilizado;
         VlProdutoEstoque = vlProdutoEstoque;
-        QtMlProduto = qtMlProduto;
-        QtKgProduto = qtKgProduto;
-        QtLiProduto = qtLiProduto;
         NmFornecedorProduto = nmFornecedorProduto;
-        DsProduto = dsproduto;
+        
     }
-    public Produto()
+
+public clsProduto()
     {
 
 
     }
 
 
-    public Produto(int cdProduto, string nmProduto, string nmMarcaProduto, decimal vlProdutoEstoque)
+    public clsProduto(int cdProduto, string nmProduto, string nmMarcaProduto, decimal vlProdutoEstoque)
     {
         CdProduto = cdProduto;
         NmProduto = nmProduto;
         NmMarcaProduto = nmMarcaProduto;
-        VlProdutoEstoque = vlProdutoEstoque;
+        //VlProdutoEstoque = vlProdutoEstoque;
 
     }
 }

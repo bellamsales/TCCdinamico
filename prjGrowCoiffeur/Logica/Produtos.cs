@@ -6,32 +6,36 @@ using System.Linq;
 using System.Web;
 
 
-public class Produtos:Banco
+public class Produtos: Banco
 {
-    public List<Produto> Listar()
+    public List<clsProduto> Listar()
     {
         try
         {
-            List<Produto> lista = new List<Produto>();
+            List<clsProduto> lista = new List<clsProduto>();
 
             MySqlDataReader dados = Consultar("ConsultarProdutos", null);
             while (dados.Read())
             {
-                Produto clProduto = new Produto(
+                clsProduto clProduto = new clsProduto(
                     dados.GetInt32(0),
                     dados.GetString(1),
                     dados.GetString(2),
-                    dados.GetInt32(3));
+                    dados.GetDateTime(3),
+                    dados.GetInt32(4),
+                    dados.GetInt32(5),
+                    dados.GetDecimal(6),
+                    dados.GetString(7)
+
+                ) ;
 
 
                 lista.Add(clProduto);
             }
-            if (dados != null)
+
+            if (dados != null && !dados.IsClosed)
             {
-                if (!dados.IsClosed)
-                {
-                    dados.Close();
-                }
+                dados.Close();
             }
             Desconectar();
 
@@ -43,4 +47,3 @@ public class Produtos:Banco
         }
     }
 }
-   

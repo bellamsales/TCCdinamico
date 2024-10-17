@@ -155,7 +155,6 @@
     <Content Include="Formularios\Login.aspx" />
     <Content Include="Formularios\LoginFuncionario.aspx" />
     <Content Include="Formularios\LoginGerente.aspx" />
-    <Content Include="Formularios\Produto.aspx" />
     <Content Include="images\acessibilidade.png" />
     <Content Include="images\adicionar.png" />
     <Content Include="images\ambiente.png" />
@@ -196,6 +195,7 @@
     <Content Include="javascript\agendar.js" />
     <Content Include="javascript\funcionario.js" />
     <Content Include="javascript\menu.js" />
+    <Content Include="Formularios\Produto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -265,13 +265,6 @@
     <Compile Include="Formularios\LoginGerente.aspx.designer.cs">
       <DependentUpon>LoginGerente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\Produto.aspx.cs">
-      <DependentUpon>Produto.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\Produto.aspx.designer.cs">
-      <DependentUpon>Produto.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Logica\GiAgenda.cs" />
     <Compile Include="Logica\GiCategoria.cs" />
     <Compile Include="Logica\GiFuncionarios.cs" />
@@ -284,11 +277,16 @@
     <Compile Include="Modelo\Disponibilidade.cs" />
     <Compile Include="Modelo\Funcionario.cs" />
     <Compile Include="Modelo\Gerente.cs" />
-    <Compile Include="Modelo\Produto.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="Modelo\clsProduto.cs" />
     <Compile Include="Modelo\Servico.cs" />
     <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Formularios\Produto.aspx.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Produto.aspx.designer.cs">
+      <DependentUpon>Produto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
