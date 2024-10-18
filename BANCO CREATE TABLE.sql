@@ -945,13 +945,13 @@ END $$
 
 
 -- Consultar Produtos
-DELIMITER $$
+/*DELIMITER $$
 
 CREATE PROCEDURE ConsultarProdutos()
 BEGIN
     SELECT cd_produto, nm_produto, ds_produto, vl_produto, qt_estoque
     FROM Produto;
-END $$
+END $$*/
 
 
 -- Consultar produtos e verificar estoque

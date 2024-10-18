@@ -83,36 +83,26 @@
             <div id="divBusca">
                 <input type="text" id="txtBusca" placeholder="Buscar..."/>
                 <img src="../images/procurar.png" id="btnBusca" alt="Buscar"/>
-              </div>
+                  </div>  
+                   <asp:Button ID="btnaddproduto" runat="server" OnClick="btnaddproduto_Click" Text="Adicionar Produto" />
+                 
            </header>
            <section class="listadeprodutos">
              <div class="caixaprodutos">
                  <asp:Literal ID="litProdutos" runat="server" />
                  <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                 <asp:TextBox ID="txtprodutos" runat="server"></asp:TextBox>
-     <div class="linhadecima">
-                    <p><strong> Nome :</strong><asp:Literal ID="litnomeproduto" runat="server"></asp:Literal> </p>
-                   <p><strong> Preço :</strong> <asp:Literal ID="litprecoproduto" runat="server"></asp:Literal></p>
-                </div>
-                <div class="linhadebaixo">
-                    <p><strong>Marca :</strong> <asp:Literal ID="litmarcaproduto" runat="server"></asp:Literal> </p>
+                
+    
                  <%--   <p><strong>Categoria :</strong> <asp:Literal ID="litcategoriaproduto" runat="server"></asp:Literal></p>--%>
            
-                </div>  
+                
                  
            
              </div>
            </section>
+           
         </div>
-        <div class="btns">
-           <a href="editarproduto.html">
-               <img src="../images/editar.svg" id="imgedit" />
-           </a>
-           <a href="adicionarproduto.html">
-               <img src="../images/mais.svg" id="imgadd" />
-           </a>
-     
-        </div>
+       
      <script src="../javascript/menu.js"></script>    
             </div>
 

@@ -12,7 +12,7 @@
     margin-top: 20px;
     border:solid 1px #5A203F;
     border-radius:15px;
-    width:80%;
+    width:70%;
     margin-bottom: 2%;
    
 }
@@ -25,19 +25,27 @@
     border:none;
     height:100%;
     width: 96%;
-    border-radius: 15px;
+    border-radius: 10px;
   }
-  header
-  {
+header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-  }
+    gap: 5%;
+    align-items: center;
+}
+#btnaddproduto {
+    height: 40px;
+    background-color: #5A203F;
+    color: white;
+    border: 1px solid #5A203F;
+    border-radius: 10px;
+    padding:5px;
+    cursor:pointer;
+}
   .listadeprodutos{
     width: 90%;
-    border-radius: 5px;
-    border: solid 2px #5a203f;
-    height: 700px;
+    height: 750px;
     padding-left: 5px;
     overflow-y: scroll;
     margin-left: 50px;
@@ -50,29 +58,36 @@
   ::-webkit-scrollbar-thumb {
     background-color: #E8BCB9;
      border-radius: 10px;
-     border: solid 1px #5A203F;
-  }
-  .linhadecima{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 1%;
-  }
-  .caixaprodutos{
-    border-bottom: solid 1px #5A203F;
    
   }
-  .btns{
+  
+  .caixaprodutos{
+   
+   
+  }
+
+  .imgtabela{
+    width:40px;
+    cursor: pointer;
+  }
+
+  .table th {
+      background-color:#E8BCB9;
+  }
+  tr{
+      background-color:lightgray;
+  }
+  .table{
+      width:100%;
+      
+
+  }
+#tdlinks {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 1%;
-  }
-  #imgedit{
-    margin: 5px;
-    cursor: pointer;
-  }
-  #imgadd{
-    margin: 5px;
-    cursor: pointer;
-  }
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.alinhartabcentro
+{
+    text-align:center;
+}

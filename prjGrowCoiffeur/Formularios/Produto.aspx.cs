@@ -26,15 +26,25 @@ namespace prjGrowCoiffeur
 
                 if (lista_produtos.Count > 0)
                 {
-                    string html = "<table class='table'><tr><th>Código</th><th>Nome</th><th>Marca</th><th>Preço</th></tr>";
+                    string html = "<table class='table'><tr><th>Código</th><th>Nome</th><th>Marca</th>" +
+                        "<th>Preço</th><th></th></tr>";
 
                     foreach (var produto in lista_produtos)
                     {
                         html += $@"<tr>
-                                    <td>{produto.CdProduto}</td>
+                                    <td class='alinhartabcentro'>{produto.CdProduto}</td>
                                     <td>{produto.NmProduto}</td>
                                     <td>{produto.NmMarcaProduto}</td>
-                                    <td>{produto.VlProdutoEstoque.ToString("C")}</td>
+                                    <td class='alinhartabcentro'>{produto.VlProdutoEstoque.ToString("C")}</td>
+                                    <td id='tdlinks'> 
+                                   <a href='editarproduto.html'>
+                                        <img src='../images/editar.svg' class='imgtabela'/>
+                                    </a>
+                                   
+                                    <a href='excluirproduto.html'>
+                                        <img src='../images/lixo.png' class='imgtabela'/>
+                                    </a>
+                                    </td>
                                 </tr>";
                     }
                     html += "</table>";
@@ -49,6 +59,11 @@ namespace prjGrowCoiffeur
             {
                 Response.Redirect("erro.html");
             }
+        }
+
+        protected void btnaddproduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
