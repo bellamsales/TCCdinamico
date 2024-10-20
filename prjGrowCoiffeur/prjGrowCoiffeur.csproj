@@ -151,6 +151,7 @@
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
+    <Content Include="Formularios\editarProduto.aspx" />
     <Content Include="Formularios\index.aspx" />
     <Content Include="Formularios\Login.aspx" />
     <Content Include="Formularios\LoginFuncionario.aspx" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="Formularios\Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\editarProduto.aspx.cs">
+      <DependentUpon>editarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\editarProduto.aspx.designer.cs">
+      <DependentUpon>editarProduto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>

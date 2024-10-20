@@ -37,12 +37,8 @@ namespace prjGrowCoiffeur
                                     <td>{produto.NmMarcaProduto}</td>
                                     <td class='alinhartabcentro'>{produto.VlProdutoEstoque.ToString("C")}</td>
                                     <td id='tdlinks'> 
-                                   <a href='editarproduto.html'>
+                                   <a href='editarProduto.aspx?c={produto.CdProduto}'>
                                         <img src='../images/editar.svg' class='imgtabela'/>
-                                    </a>
-                                   
-                                    <a href='excluirproduto.html'>
-                                        <img src='../images/lixo.png' class='imgtabela'/>
                                     </a>
                                     </td>
                                 </tr>";
