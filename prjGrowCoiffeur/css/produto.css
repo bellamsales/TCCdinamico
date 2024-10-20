@@ -74,9 +74,9 @@ header {
   .table th {
       background-color:#E8BCB9;
   }
-  tr{
-      background-color:lightgray;
-  }
+tr {
+    background-color: #e3e3e3;
+}
   .table{
       width:100%;
       

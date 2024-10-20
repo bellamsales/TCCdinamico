@@ -174,20 +174,24 @@
      <label for="txtmarca">Marca:</label>
      <asp:TextBox ID="txtmarca" runat="server" placeholder="infome a marca do produto" ></asp:TextBox>
       </p>
-     <p>
-       <label for="ddlserviços">Serviços:</label>
-        <asp:DropDownList ID="ddlservicos" runat="server"></asp:DropDownList>
-      </p>
       <p>
        <label for="txtdata">Data:</label>
        <asp:TextBox ID="txtdata" runat="server" placeholder="infome a data do produto" ></asp:TextBox>
       </p>
-       <p>
-            <div class="btns">
-                     <asp:Button ID="btnexcluir" runat="server" Text="Excluir Produto" />
-                     <asp:Button ID="btnedit" runat="server" Text="Editar produto" />
-             </div>
+      <p>
+         <label for="txtquantidadenoestoque">Quantidade no estoque:</label>
+         <asp:TextBox ID="txtquantidadenoestoque" runat="server" placeholder="infome a data do produto" ></asp:TextBox>
       </p>
+       <p  class="btns">
+            
+                     <%--<asp:Button ID="btnexcluir" runat="server" OnClick="btnexcluir_Click" Text="Excluir Produto" />--%>
+                     <asp:Button ID="btnedit" runat="server" OnClick="btnedit_Click" Text="Editar produto" />
+       
+      </p>
+     <div class="rodape">
+    <asp:Literal ID="litMsg" runat="server"></asp:Literal>
+    <%--<h2 class="aviso erro">Código Inválido</h2>--%>
+    </div>
 <%-- 
      <p> <%--  <asp:Button ID="btnSalvar" CssClass="botao" runat="server" Text="Salvar" OnClick="btnSalvar_Click" /> </p>--%>
      

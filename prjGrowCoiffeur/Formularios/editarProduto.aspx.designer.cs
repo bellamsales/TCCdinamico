@@ -60,15 +60,6 @@ namespace prjGrowCoiffeur.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtmarca;
 
         /// <summary>
-        /// Controle ddlservicos.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlservicos;
-
-        /// <summary>
         /// Controle txtdata.
         /// </summary>
         /// <remarks>
@@ -78,13 +69,13 @@ namespace prjGrowCoiffeur.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtdata;
 
         /// <summary>
-        /// Controle btnexcluir.
+        /// Controle txtquantidadenoestoque.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnexcluir;
+        protected global::System.Web.UI.WebControls.TextBox txtquantidadenoestoque;
 
         /// <summary>
         /// Controle btnedit.
@@ -94,5 +85,14 @@ namespace prjGrowCoiffeur.Formularios
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnedit;
+
+        /// <summary>
+        /// Controle litMsg.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litMsg;
     }
 }

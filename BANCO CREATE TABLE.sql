@@ -892,7 +892,6 @@ END $$
 
 -- Procedures Serviço acaba aqui --
 
--- Procedures Produto acaba aqui --
 
 
 -- Procedures Agendamento --

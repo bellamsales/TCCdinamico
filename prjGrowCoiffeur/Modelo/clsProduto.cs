@@ -38,13 +38,23 @@ public clsProduto()
     }
 
 
-    public clsProduto(int cdProduto, string nmProduto, string nmMarcaProduto, decimal vlProdutoEstoque)
+    public clsProduto(int cdProduto, string nmProduto, string nmMarcaProduto)
     {
         CdProduto = cdProduto;
         NmProduto = nmProduto;
         NmMarcaProduto = nmMarcaProduto;
-        //VlProdutoEstoque = vlProdutoEstoque;
+       
 
+    }
+    public clsProduto(int cdProduto, string nmProduto, string nmMarcaProduto,
+    DateTime dtValidadeProduto,int qtProdutoEstoque,decimal vlProdutoEstoque)
+    {
+        CdProduto = cdProduto;
+        NmProduto = nmProduto;
+        NmMarcaProduto = nmMarcaProduto;
+        DtValidadeProduto = dtValidadeProduto;
+        QtProdutoEstoque = qtProdutoEstoque;
+        VlProdutoEstoque = vlProdutoEstoque;
     }
 }
 

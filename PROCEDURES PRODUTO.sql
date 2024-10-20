@@ -11,10 +11,17 @@ BEGIN
 END $$
 
 DELIMITER ;
-
--- Procedures Produto --
-
-
+/*BuscarDadosProdutoPorCodigo*/
+DELIMITER $$
+Drop Procedure if exists buscarDadosProdutoPorCodigo$$
+Create Procedure buscarDadosProdutoPorCodigo(pCodigo int)
+begin
+	Select cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
+           qt_produto_estoque,vl_produto_estoque
+		    from produto 
+		where cd_produto = pCodigo;
+end$$
+DELIMITER ;
 -- Excluir Produto
 DELIMITER $$
 

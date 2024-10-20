@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using prjGrowCoiffeur;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -45,5 +46,73 @@ public class Produtos: Banco
         {
             throw new Exception("Erro na listagem de produtos");
         }
+    }
+    //public Produto BuscarDadosProduto(int codigoProduto)
+    //{
+    //    clsProduto produto = null;
+    //    try
+    //    {
+    //        List<MySqlParameter> parametros = new List<MySqlParameter>();
+    //        parametros.Add(new MySqlParameter("pCodigo", codigoProduto.ToString()));
+    //        MySqlDataReader dados = Consultar("buscarDadosProdutoPorCodigo", parametros);
+
+    //        if (dados.Read())
+    //        {
+
+    //            produto = new clsProduto(
+    //            codigoProduto,
+    //            dados.GetString(0),
+    //            dados.GetString(1),
+    //            dados.GetDateTime(2),
+    //            dados.GetInt32(3),
+    //            dados.GetDecimal(4)
+    //            );
+    //        }
+    //        if (dados != null)
+    //        {
+    //            if (!dados.IsClosed)
+    //            {
+    //                dados.Close();
+    //            }
+    //        }
+    //        Desconectar();
+    //    }
+    //    catch
+    //    {
+    //        throw new Exception("Erro ao buscar dados do Produto");
+    //    }
+    //    return produto;
+    //}
+    public clsProduto BuscarDadosProduto(int codigoProduto)
+    {
+        clsProduto produto = null;
+        try
+        {
+            List<MySqlParameter> parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("pCodigo", codigoProduto.ToString()));
+            MySqlDataReader dados = Consultar("buscarDadosProdutoPorCodigo", parametros);
+
+            if (dados.Read())
+            {
+                produto = new clsProduto(
+                    codigoProduto,
+                    dados.GetString(0),
+                    dados.GetString(1),
+                    dados.GetDateTime(2),
+                    dados.GetInt32(3),
+                    dados.GetDecimal(5)
+                );
+            }
+            if (dados != null && !dados.IsClosed)
+            {
+                dados.Close();
+            }
+            Desconectar();
+        }
+        catch
+        {
+            throw new Exception("Erro ao buscar dados do Produto");
+        }
+        return produto;
     }
 }
