@@ -121,6 +121,8 @@ namespace prjGrowCoiffeur.Formularios
                 bool isDisponivel = diasDisponiveis.Contains(dia);
                 return $"<div class=\"{(isDisponivel ? "dia predefinido" : "dia indisponivel")}\" onclick=\"handleDiaClick({dia}, '{ddlprofissional.SelectedValue}', {cmbMeses.SelectedValue}, '{ddlservico.SelectedValue}', '{Cliente.Email}')\">{dia}</div>";
             }));
+
+            Console.WriteLine("Dias Disponíveis para Outubro: " + string.Join(", ", diasDisponiveis));
         }
     }
 }

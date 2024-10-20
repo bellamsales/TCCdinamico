@@ -52,12 +52,12 @@ namespace prjGrowCoiffeur.APIs
 
             if (agendado)
             {
-                Response.Write("{\"message\":\"Serviço agendado com sucesso\"}");
+                Response.Write($"{{\"success\":true,\"message\":\"Agendamento realizado com sucesso para {cliente}\", \"servico\":\"{servicoStr}\", \"data\":\"{data:dd/MM/yyyy}\", \"hora\":\"{hora}\", \"funcionario\":\"{funcionario}\"}}");
             }
             else
             {
                 Response.StatusCode = 500;
-                Response.Write("{\"error\":\"Erro ao agendar o serviço\"}");
+                Response.Write("{\"success\":false,\"error\":\"Ocorreu um erro ao tentar agendar o serviço. Tente novamente mais tarde.\"}");
             }
         }
 

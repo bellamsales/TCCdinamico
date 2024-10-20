@@ -73,11 +73,14 @@
 
             <label for="horario">Selecionar dia e horário:</label>
             <div class="calendar">
+
+               
                 <asp:DropDownList ID="cmbMeses" runat="server" OnSelectedIndexChanged="cmbMeses_SelectedIndexChanged" AutoPostBack="true"></asp:DropDownList>
 
                 <div id="calendario">
                     <asp:Literal ID="litDias" runat="server"></asp:Literal>
                 </div>
+                 <h3 id="dia-da-semana"></h3>
             </div>
 
             <div class="calendario">

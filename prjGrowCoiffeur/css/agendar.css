@@ -145,3 +145,52 @@ h1 {
     background-color: #662549;
     color: white;
 }
+
+.confirmation-box, .error-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+    .confirmation-box h2 {
+        color: #4caf50;
+    }
+
+    .error-box h2 {
+        color: #f44336;
+    }
+
+.ok-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .ok-button:hover {
+        background-color: #45a049;
+    }
+
+.dias-da-semana {
+    display: flex;
+    justify-content: space-around; /* Espaça os botões uniformemente */
+    margin-bottom: 10px; /* Espaço entre os botões e o calendário */
+}
+
+.dia-btn {
+    flex: 1; /* Para que os botões ocupem o mesmo espaço */
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0; /* Cor de fundo */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .dia-btn:hover {
+        background-color: #d1d1d1; /* Efeito de hover */
+    }
