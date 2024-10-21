@@ -1,36 +1,27 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Funcionario.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.Funcionario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EditarFuncionario.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.EditarFuncionario" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="../css/editarproduto.css">
-    <link rel="stylesheet" href="../css/menu.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <title>Editar produto</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
 </head>
 <body>
     <form id="form1" runat="server">
-       
+  
         <div>
-                 <nav class="menu-lateral"> 
+            <nav class="menu-lateral"> 
             <div class="btn-expandir">
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
-            <a href="index.html">
+            <a href="index.aspx">
                 <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
                 <li class="item-menu">
-                    <a href="index.aspx">
+                    <a href="index.html">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
                         <span class="txt-link">Agenda</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -75,10 +66,6 @@
            
             </ul>
         </nav>
-
-
-                 <script src="../javascript/menu.js"></script>   
-
 
     </form>
 </body>
