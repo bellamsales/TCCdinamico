@@ -22,16 +22,15 @@ namespace prjGrowCoiffeur.Formularios
         private void CarregarFuncionarios()
         {
             GiFuncionarios giFuncionarios = new GiFuncionarios();
-            //List<Funcionario> funcionarios = giFuncionarios.ConsultarFuncionarios();
+            List<Funcionario> funcionarios = giFuncionarios.ConsultarFuncionarios();
 
             ddlFuncionarios.Items.Clear();
-            ddlFuncionarios.Items.Add(new ListItem("Selecionar Funcionário", "-1"));
+            ddlFuncionarios.Items.Add(new ListItem("Selecionar Funcionário", "-1")); 
 
-            //foreach (Funcionario funcionario in funcionarios)
-            //{
-            //    ddlFuncionarios.Items.Add(new ListItem(funcionario.Nome, funcionario.Email));
-            //}
-
+            foreach (Funcionario funcionario in funcionarios)
+            {
+                ddlFuncionarios.Items.Add(new ListItem(funcionario.Nome, funcionario.Email));
+            }
         }
 
         protected void ddlFuncionarios_SelectedIndexChanged(object sender, EventArgs e)

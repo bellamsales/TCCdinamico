@@ -1,5 +1,4 @@
-﻿ot
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="editarProduto.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.editarProduto" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="editarProduto.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.editarProduto" %>
 
 <!DOCTYPE html>
 <html lang="pt-br"/>
