@@ -78,6 +78,15 @@ namespace prjGrowCoiffeur.Formularios
         protected global::System.Web.UI.WebControls.TextBox txtquantidadenoestoque;
 
         /// <summary>
+        /// Controle btnexcluir.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnexcluir;
+
+        /// <summary>
         /// Controle btnedit.
         /// </summary>
         /// <remarks>

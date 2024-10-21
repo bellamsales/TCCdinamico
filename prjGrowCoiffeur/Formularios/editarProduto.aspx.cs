@@ -30,9 +30,15 @@ namespace prjGrowCoiffeur.Formularios
                         txtCodigo.Text = codigoProduto.ToString();
                         txtNome.Text = produto.NmProduto;
                         txtmarca.Text = produto.NmMarcaProduto;
-                        txtPreco.Text = produto.VlProdutoEstoque.ToString("C");
-                        txtdata.Text = produto.DtValidadeProduto.ToString("C");
-                        txtquantidadenoestoque.Text = produto.QtProdutoEstoque.ToString("C");
+
+                        // Para preço, use "C" para valores decimais
+                        txtPreco.Text = produto.VlProdutoEstoque.ToString("C", System.Globalization.CultureInfo.CurrentCulture);
+
+                        // Para a data, use um formato adequado para datetime
+                        txtdata.Text = produto.DtValidadeProduto.ToString("yyyy-MM-dd"); // ou "d", dependendo do formato desejado
+
+                        // Para quantidade, se é um inteiro, não use "C"
+                        txtquantidadenoestoque.Text = produto.QtProdutoEstoque.ToString();
                     }
                 }
                 catch

@@ -7,11 +7,11 @@ using System.Web;
 public class Parametro
 {
     public string Nome { get; set; }
-    public string Valor { get; set; }
+    public object Valor { get; set; }  
 
-    public Parametro(string nome, string valor)
-    { 
-        this.Nome = nome;
-        this.Valor = valor;
+    public Parametro(string nome, object valor)  
+    {
+        Nome = nome;
+        Valor = valor;
     }
 }

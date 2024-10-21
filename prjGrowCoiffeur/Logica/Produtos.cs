@@ -7,7 +7,7 @@ using System.Linq;
 using System.Web;
 
 
-public class Produtos: Banco
+public class Produtos : Banco
 {
     public List<clsProduto> Listar()
     {
@@ -28,7 +28,7 @@ public class Produtos: Banco
                     dados.GetDecimal(6),
                     dados.GetString(7)
 
-                ) ;
+                );
 
 
                 lista.Add(clProduto);
@@ -88,30 +88,34 @@ public class Produtos: Banco
         clsProduto produto = null;
         try
         {
-            List<MySqlParameter> parametros = new List<MySqlParameter>();
-            parametros.Add(new MySqlParameter("pCodigo", codigoProduto.ToString()));
+            List<Parametro> parametros = new List<Parametro>
+        {
+            new Parametro("pCodigo", codigoProduto)
+        };
+
             MySqlDataReader dados = Consultar("buscarDadosProdutoPorCodigo", parametros);
 
             if (dados.Read())
             {
                 produto = new clsProduto(
-                    codigoProduto,
-                    dados.GetString(0),
-                    dados.GetString(1),
-                    dados.GetDateTime(2),
-                    dados.GetInt32(3),
-                    dados.GetDecimal(5)
+                    dados.GetInt32(0), // cd_produto
+                    dados.GetString(1), // nm_produto
+                    dados.GetString(2), // nm_marca_produto
+                    dados.GetDateTime(3), // dt_validade_produto
+                    dados.GetInt32(4), // qt_produto_estoque
+                    dados.GetDecimal(5) // vl_produto_estoque
                 );
             }
+
             if (dados != null && !dados.IsClosed)
             {
                 dados.Close();
             }
             Desconectar();
         }
-        catch
+        catch (Exception ex)
         {
-            throw new Exception("Erro ao buscar dados do Produto");
+            throw new Exception("Erro ao buscar dados do Produto: " + ex.Message);
         }
         return produto;
     }

@@ -25,7 +25,7 @@
         </div>
 
         <a href="entrada.html">
-            <img src="../imagens/logo-branca.png" alt="Logo" class="logo">
+            <img src="../images/logo-branca.png" alt="Logo" class="logo">
         </a>
         <ul>
             <li class="item-menu">
@@ -184,10 +184,9 @@
       </p>
        <p  class="btns">
             
-                     <%--<asp:Button ID="btnexcluir" runat="server" OnClick="btnexcluir_Click" Text="Excluir Produto" />--%>
+                     <asp:Button ID="btnexcluir" runat="server" OnClick="btnexcluir_Click" Text="Excluir Produto" />
                      <asp:Button ID="btnedit" runat="server" OnClick="btnedit_Click" Text="Editar produto" />
-       
-      </p>
+       </p>
      <div class="rodape">
     <asp:Literal ID="litMsg" runat="server"></asp:Literal>
     <%--<h2 class="aviso erro">Código Inválido</h2>--%>

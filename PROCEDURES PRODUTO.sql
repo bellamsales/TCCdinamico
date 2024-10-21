@@ -10,18 +10,16 @@ BEGIN
     FROM Produto;
 END $$
 
-DELIMITER ;
+
 /*BuscarDadosProdutoPorCodigo*/
-DELIMITER $$
-Drop Procedure if exists buscarDadosProdutoPorCodigo$$
-Create Procedure buscarDadosProdutoPorCodigo(pCodigo int)
-begin
-	Select cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
-           qt_produto_estoque,vl_produto_estoque
-		    from produto 
-		where cd_produto = pCodigo;
-end$$
-DELIMITER ;
+CREATE PROCEDURE buscarDadosProdutoPorCodigo(pCodigo int)
+BEGIN
+    SELECT cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
+           qt_produto_estoque, vl_produto_estoque
+    FROM produto 
+    WHERE cd_produto = pCodigo;
+END;
+
 -- Excluir Produto
 DELIMITER $$
 
@@ -57,7 +55,7 @@ END $$
 
 -- Inserir Produto
 DELIMITER $$
-
+DROP PROCEDURE IF EXISTS InserirProduto$$
 CREATE PROCEDURE InserirProduto(
     IN p_nm_produto VARCHAR(100),
     IN p_ds_produto TEXT,
@@ -146,7 +144,7 @@ END $$
 
 -- Consultar Produtos em Baixo Estoque
 DELIMITER $$
-
+DROP PROCEDURE IF EXISTS ConsultarProdutosBaixoEstoque$$
 CREATE PROCEDURE ConsultarProdutosBaixoEstoque(
     IN p_nivel_estoque INT
 )
@@ -181,3 +179,6 @@ BEGIN
     FROM Produto
     WHERE cd_categoria = p_cd_categoria;
 END $$
+
+DELIMITER ;
+
