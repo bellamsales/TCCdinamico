@@ -14,37 +14,41 @@ public class Produtos : Banco
         try
         {
             List<clsProduto> lista = new List<clsProduto>();
-
             MySqlDataReader dados = Consultar("ConsultarProdutos", null);
-            while (dados.Read())
+
+            // Verifica se há dados antes de tentar ler
+            if (dados != null && dados.HasRows)
             {
-                clsProduto clProduto = new clsProduto(
-                    dados.GetInt32(0),
-                    dados.GetString(1),
-                    dados.GetString(2),
-                    dados.GetDateTime(3),
-                    dados.GetInt32(4),
-                    dados.GetInt32(5),
-                    dados.GetDecimal(6),
-                    dados.GetString(7)
+                while (dados.Read())
+                {
+                    // Verifica se os valores não são nulos antes de acessá-los
+                    clsProduto clProduto = new clsProduto(
+                        dados.IsDBNull(0) ? 0 : dados.GetInt32(0),
+                        dados.IsDBNull(1) ? "N/A" : dados.GetString(1),
+                        dados.IsDBNull(2) ? "N/A" : dados.GetString(2),
+                        dados.IsDBNull(3) ? DateTime.MinValue : dados.GetDateTime(3),
+                        dados.IsDBNull(4) ? 0 : dados.GetInt32(4),
+                        dados.IsDBNull(5) ? 0 : dados.GetInt32(5),
+                        dados.IsDBNull(6) ? 0 : dados.GetDecimal(6),
+                        dados.IsDBNull(7) ? "N/A" : dados.GetString(7)
+                    );
 
-                );
-
-
-                lista.Add(clProduto);
+                    lista.Add(clProduto);
+                }
             }
 
             if (dados != null && !dados.IsClosed)
             {
                 dados.Close();
             }
+
             Desconectar();
 
             return lista;
         }
-        catch
+        catch (Exception ex)
         {
-            throw new Exception("Erro na listagem de produtos");
+            throw new Exception("Erro na listagem de produtos: " + ex.Message);
         }
     }
     //public Produto BuscarDadosProduto(int codigoProduto)

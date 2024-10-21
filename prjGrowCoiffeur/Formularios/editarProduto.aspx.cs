@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -50,60 +51,103 @@ namespace prjGrowCoiffeur.Formularios
 
         protected void btnexcluir_Click(object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            int codigoProduto = int.Parse(txtCodigo.Text);
+            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                // Call the stored procedure ExcluirProduto
+                string query = "CALL ExcluirProduto(@cd_produto)";
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@cd_produto", codigoProduto);
+
+                try
+                {
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        litMsg.Text = "<h2 class='sucesso'>Produto excluído com sucesso</h2>";
+                        Response.Redirect("produto.aspx", false); // Redirecionar para produto.aspx
+                        Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
+                    }
+                    else
+                    {
+                        litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto. Produto não encontrado.</h2>";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto: " + ex.Message + "</h2>";
+                }
+            }
         }
+
 
         protected void btnedit_Click(object sender, EventArgs e)
         {
             #region Validações
-            string textoPreco = "";
-            double preco = 0.0;
-
-            if (String.IsNullOrEmpty(txtNome.Text))
+            string textoPreco = txtPreco.Text.Replace("R$", "").Trim().Replace(".", ",");
+            double preco;
+            if (!double.TryParse(textoPreco, out preco))
             {
-                litMsg.Text = $@"<h2 class='aviso erro'>Nome é obrigatório</h2>";
-                txtNome.Focus();
-                return;
-            }
-            if (String.IsNullOrEmpty(txtmarca.Text))
-            {
-                litMsg.Text = $@"<h2 class='aviso erro'>Marca é obrigatório</h2>";
-                txtmarca.Focus();
-                return;
-            }
-            if (String.IsNullOrEmpty(txtquantidadenoestoque.Text))
-            {
-                litMsg.Text = $@"<h2 class='aviso erro'>Marca é obrigatório</h2>";
-                txtquantidadenoestoque.Focus();
-                return;
-            }
-            if (String.IsNullOrEmpty(txtdata.Text))
-            {
-                litMsg.Text = $@"<h2 class='aviso erro'>Marca é obrigatório</h2>";
-                txtdata.Focus();
+                litMsg.Text = "<h2 class='erro'>Preço inválido</h2>";
                 return;
             }
 
-            if (String.IsNullOrEmpty(txtPreco.Text))
+            int quantidadeEstoque;
+            if (!int.TryParse(txtquantidadenoestoque.Text, out quantidadeEstoque))
             {
-                litMsg.Text = $@"<h2 class='aviso erro'>Preço é obrigatório</h2>";
-                txtPreco.Focus();
+                litMsg.Text = "<h2 class='erro'>Quantidade no estoque inválida</h2>";
                 return;
             }
 
-            textoPreco = txtPreco.Text.Replace("R$", "").Trim().Replace(".", ",");
-            try
+            DateTime dataValidade;
+            if (!DateTime.TryParse(txtdata.Text, out dataValidade))
             {
-                preco = double.Parse(textoPreco);
-            }
-            catch
-            {
-                litMsg.Text = $@"<h2 class='aviso erro'>Preço Inválido</h2>";
-                txtPreco.Focus();
+                litMsg.Text = "<h2 class='erro'>Data de validade inválida</h2>";
                 return;
             }
             #endregion
 
+            int codigoProduto = int.Parse(txtCodigo.Text);
+            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                // Atualize a query para incluir a data de validade
+                string query = "CALL AtualizarProduto(@cd_produto, @nm_produto, @nm_marca_produto, @vl_produto_estoque, @qt_produto_estoque, @dt_validade_produto)";
+
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@cd_produto", codigoProduto);
+                cmd.Parameters.AddWithValue("@nm_produto", txtNome.Text);
+                cmd.Parameters.AddWithValue("@nm_marca_produto", txtmarca.Text);
+                cmd.Parameters.AddWithValue("@vl_produto_estoque", preco);
+                cmd.Parameters.AddWithValue("@qt_produto_estoque", quantidadeEstoque);
+                cmd.Parameters.AddWithValue("@dt_validade_produto", dataValidade); // Adicione a data de validade
+
+                try
+                {
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        litMsg.Text = "<h2 class='sucesso'>Produto atualizado com sucesso</h2>";
+                        Response.Redirect("produto.aspx", false); // Redirecionar para produto.aspx
+                        Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
+                    }
+                    else
+                    {
+                        litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto. Produto não encontrado.</h2>";
+                    }
+                }
+                catch (Exception ex)
+                {
+                    litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto: " + ex.Message + "</h2>";
+                }
+            }
         }
     }
 }

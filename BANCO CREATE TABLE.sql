@@ -1,6 +1,6 @@
-Drop Schema if exists BancoTCC04;
-Create Schema BancoTCC04;
-use BancoTCC04;
+Drop Schema if exists bancotcc04;
+Create Schema bancotcc04;
+use bancotcc04;
 
 
 CREATE TABLE Cliente (

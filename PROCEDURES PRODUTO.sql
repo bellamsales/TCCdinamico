@@ -11,15 +11,6 @@ BEGIN
 END $$
 
 
-/*BuscarDadosProdutoPorCodigo*/
-CREATE PROCEDURE buscarDadosProdutoPorCodigo(pCodigo int)
-BEGIN
-    SELECT cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
-           qt_produto_estoque, vl_produto_estoque
-    FROM produto 
-    WHERE cd_produto = pCodigo;
-END;
-
 -- Excluir Produto
 DELIMITER $$
 
@@ -39,33 +30,37 @@ DELIMITER $$
 CREATE PROCEDURE AtualizarProduto(
     IN p_cd_produto INT,
     IN p_nm_produto VARCHAR(100),
-    IN p_ds_produto TEXT,
-    IN p_vl_produto DECIMAL(10,2),
-    IN p_qt_estoque INT
+    IN p_nm_marca_produto VARCHAR(100),
+    IN p_vl_produto_estoque DECIMAL(10,2),
+    IN p_qt_produto_estoque INT,
+    IN p_dt_validade_produto DATE  -- Adicione o parâmetro de data de validade
 )
 BEGIN
     UPDATE Produto
     SET nm_produto = p_nm_produto,
-        ds_produto = p_ds_produto,
-        vl_produto = p_vl_produto,
-        qt_estoque = p_qt_estoque
+        nm_marca_produto = p_nm_marca_produto, -- Para marca do produto
+        vl_produto_estoque = p_vl_produto_estoque,
+        qt_produto_estoque = p_qt_produto_estoque,
+        dt_validade_produto = p_dt_validade_produto -- Adicione a data de validade
     WHERE cd_produto = p_cd_produto;
 END $$
 
+DELIMITER ;
 
--- Inserir Produto
+
 DELIMITER $$
-DROP PROCEDURE IF EXISTS InserirProduto$$
 CREATE PROCEDURE InserirProduto(
+    IN p_cd_produto INT,
     IN p_nm_produto VARCHAR(100),
-    IN p_ds_produto TEXT,
-    IN p_vl_produto DECIMAL(10,2),
-    IN p_qt_estoque INT
+    IN p_vl_produto_estoque DECIMAL(10,2),
+    IN p_nm_marca_produto VARCHAR(100),
+    IN p_dt_validade_produto DATE,
+    IN p_qt_produto_estoque INT
 )
 BEGIN
-    INSERT INTO Produto (nm_produto, ds_produto, vl_produto, qt_estoque)
-    VALUES (p_nm_produto, p_ds_produto, p_vl_produto, p_qt_estoque);
-END $$
+    INSERT INTO Produto(cd_produto, nm_produto, vl_produto_estoque, nm_marca_produto, dt_validade_produto, qt_produto_estoque)
+    VALUES (p_cd_produto, p_nm_produto, p_vl_produto_estoque, p_nm_marca_produto, p_dt_validade_produto, p_qt_produto_estoque);
+END$$
 
 
 -- Consultar Produtos
@@ -179,6 +174,17 @@ BEGIN
     FROM Produto
     WHERE cd_categoria = p_cd_categoria;
 END $$
+
+DELIMITER $$
+/*BuscarDadosProdutoPorCodigo*/
+DROP PROCEDURE IF EXISTS buscarDadosProdutoPorCodigo$$
+CREATE PROCEDURE buscarDadosProdutoPorCodigo(pCodigo int)
+BEGIN
+    SELECT cd_produto, nm_produto, nm_marca_produto, dt_validade_produto, 
+           qt_produto_estoque, vl_produto_estoque
+    FROM produto 
+    WHERE cd_produto = pCodigo;
+END$$
 
 DELIMITER ;
 

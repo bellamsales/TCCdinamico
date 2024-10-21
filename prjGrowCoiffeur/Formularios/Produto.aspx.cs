@@ -27,21 +27,23 @@ namespace prjGrowCoiffeur
                 if (lista_produtos.Count > 0)
                 {
                     string html = "<table class='table'><tr><th>Código</th><th>Nome</th><th>Marca</th>" +
-                        "<th>Preço</th><th></th></tr>";
+                        "<th>Preço</th><th>Data de Validade</th><th>Quantidade no Estoque</th><th>Ações</th></tr>";
 
                     foreach (var produto in lista_produtos)
                     {
                         html += $@"<tr>
-                                    <td class='alinhartabcentro'>{produto.CdProduto}</td>
-                                    <td>{produto.NmProduto}</td>
-                                    <td>{produto.NmMarcaProduto}</td>
-                                    <td class='alinhartabcentro'>{produto.VlProdutoEstoque.ToString("C")}</td>
-                                    <td id='tdlinks'> 
-                                   <a href='editarProduto.aspx?c={produto.CdProduto}'>
-                                        <img src='../images/editar.svg' class='imgtabela'/>
-                                    </a>
-                                    </td>
-                                </tr>";
+                    <td class='alinhartabcentro'>{produto.CdProduto}</td>
+                    <td>{produto.NmProduto ?? "N/A"}</td>
+                    <td>{produto.NmMarcaProduto ?? "N/A"}</td>
+                    <td class='alinhartabcentro'>{produto.VlProdutoEstoque.ToString("C")}</td>
+                    <td class='alinhartabcentro'>{produto.DtValidadeProduto.ToString("dd/MM/yyyy")}</td>
+                    <td class='alinhartabcentro'>{produto.QtProdutoEstoque}</td>
+                    <td id='tdlinks'> 
+                        <a href='editarProduto.aspx?c={produto.CdProduto}'>
+                            <img src='../images/editar.svg' class='imgtabela'/>
+                        </a>
+                    </td>
+                </tr>";
                     }
                     html += "</table>";
                     litProdutos.Text = html;
@@ -51,15 +53,16 @@ namespace prjGrowCoiffeur
                     litProdutos.Text = "<p>Nenhum produto encontrado.</p>";
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                Response.Redirect("erro.html");
+                throw new Exception("Erro na listagem de produtos: " + ex.Message);
             }
         }
 
+
         protected void btnaddproduto_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("AdicionarProduto.aspx");
         }
     }
 }

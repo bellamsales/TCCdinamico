@@ -148,6 +148,7 @@
     <Content Include="css\loginGerente.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\produto.css" />
+    <Content Include="Formularios\AdicionarProduto.aspx" />
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
@@ -219,6 +220,13 @@
     <Compile Include="Banco\Banco.cs" />
     <Compile Include="Banco\Conexao.cs" />
     <Compile Include="Banco\Parametro.cs" />
+    <Compile Include="Formularios\AdicionarProduto.aspx.cs">
+      <DependentUpon>AdicionarProduto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdicionarProduto.aspx.designer.cs">
+      <DependentUpon>AdicionarProduto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Agendamentos.aspx.cs">
       <DependentUpon>Agendamentos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
