@@ -1,5 +1,5 @@
 .conteudo-principal {
-    margin-left: 70px; /* Deixando espaço para o menu lateral */
+    margin-left: 95px; /* Deixando espaço para o menu lateral */
     padding: 20px;
 }
 
@@ -97,4 +97,10 @@ h1 {
 .detalhes-funcionario ul li span {
     color: #662549;
     font-weight: 600;
+}
+
+.funcio
+{
+    margin-left: 85px;
+    padding: 20px;
 }

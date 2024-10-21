@@ -11,7 +11,7 @@ namespace prjGrowCoiffeur.Formularios
 {
 
 
-    public partial class Funcionario
+    public partial class funcionario
     {
 
         /// <summary>

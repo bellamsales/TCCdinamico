@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace prjGrowCoiffeur.Formularios
 {
-    public partial class Funcionario : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
+	public partial class funcionario : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
 
-        }
-    }
+		}
+	}
 }
