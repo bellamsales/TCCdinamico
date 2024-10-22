@@ -17,46 +17,8 @@ namespace prjGrowCoiffeur.Formularios
             if (!IsPostBack)
             {
                 CarregarFuncionarios();
-                ExibirHorariosDisponiveis();
             }
         }
-
-        private void ExibirHorariosDisponiveis()
-        {
-            List<DateTime> horariosManha = GerarHorariosDisponiveis(TimeSpan.FromHours(8), TimeSpan.FromHours(12), TimeSpan.FromMinutes(30));
-            List<DateTime> horariosTarde = GerarHorariosDisponiveis(TimeSpan.FromHours(13), TimeSpan.FromHours(17), TimeSpan.FromMinutes(30));
-            List<DateTime> horariosNoite = GerarHorariosDisponiveis(TimeSpan.FromHours(18), TimeSpan.FromHours(20), TimeSpan.FromMinutes(30));
-
-            // Exibir horários na página (como botões ou outra estrutura HTML)
-            foreach (var horario in horariosManha)
-            {
-                Response.Write($"<button>{horario.ToString("HH:mm")}</button>");
-            }
-
-            foreach (var horario in horariosTarde)
-            {
-                Response.Write($"<button>{horario.ToString("HH:mm")}</button>");
-            }
-
-            foreach (var horario in horariosNoite)
-            {
-                Response.Write($"<button>{horario.ToString("HH:mm")}</button>");
-            }
-        }
-
-        private List<DateTime> GerarHorariosDisponiveis(TimeSpan inicio, TimeSpan fim, TimeSpan intervalo)
-        {
-            List<DateTime> horarios = new List<DateTime>();
-            DateTime hoje = DateTime.Today; // Data de hoje
-
-            for (DateTime horario = hoje.Add(inicio); horario < hoje.Add(fim); horario = horario.Add(intervalo))
-            {
-                horarios.Add(horario);
-            }
-
-            return horarios;
-        }
-
         private void CarregarFuncionarios()
         {
             GiFuncionarios giFuncionarios = new GiFuncionarios();
