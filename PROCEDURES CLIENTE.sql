@@ -141,17 +141,8 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarClientes$$
 CREATE PROCEDURE ConsultarClientes()
 BEGIN
-    SELECT nm_email_cliente, nm_cliente, nm_endereco,ds_cliente
+    SELECT nm_email_cliente, nm_cliente, nm_endereco
     FROM Cliente;
-END $$
-
--- Consultar Clientes
-DELIMITER $$
-DROP PROCEDURE IF EXISTS ConsultarClientesporemail$$
-CREATE PROCEDURE ConsultarClientesporemail(p_nm_email_cliente VARCHAR(50))
-BEGIN
-    SELECT nm_email_cliente, nm_cliente, nm_endereco,ds_cliente
-    FROM Cliente where nm_email_cliente=p_nm_email_cliente;
 END $$
 
 
