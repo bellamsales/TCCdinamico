@@ -29,9 +29,9 @@ namespace prjGrowCoiffeur.Logica
 
                     agendamento.HoraAgendamento = TimeSpan.Parse(dadosBanco["hr_agendamento"].ToString());
 
-                    Servico servico = new Servico();
-                    servico.Nome = dadosBanco["nm_servico"].ToString();
-                    agendamento.Servico = servico;
+                    //Servico servico = new Servico();
+                    //servico.Nome = dadosBanco["nm_servico"].ToString();
+                    //agendamento.Servico = servico;
 
                     Cliente cliente = new Cliente();
                     cliente.Nome = dadosBanco["nm_cliente"].ToString();

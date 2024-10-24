@@ -206,6 +206,7 @@
     <Content Include="javascript\funcionario.js" />
     <Content Include="javascript\menu.js" />
     <Content Include="Formularios\Produto.aspx" />
+    <Content Include="Formularios\Servico.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -320,6 +321,13 @@
       <DependentUpon>Produto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Formularios\Servico.aspx.cs">
+      <DependentUpon>Servico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Servico.aspx.designer.cs">
+      <DependentUpon>Servico.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

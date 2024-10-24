@@ -21,13 +21,13 @@ namespace prjGrowCoiffeur.Logica
             {
                 while (dadosBanco.Read())
                 {
-                    Funcionario funcionario = new Funcionario();
-                    funcionario.Email = dadosBanco["nm_email_funcionario"].ToString();
-                    funcionario.Nome = dadosBanco["nm_funcionario"].ToString();
-                    Servico servico = new Servico();
-                    servico.Codigo = int.Parse(dadosBanco["cd_servico"].ToString());
-                    funcionario.Especialidade = servico;
-                    funcionarios.Add(funcionario);
+                    //Funcionario funcionario = new Funcionario();
+                    //funcionario.Email = dadosBanco["nm_email_funcionario"].ToString();
+                    //funcionario.Nome = dadosBanco["nm_funcionario"].ToString();
+                    //Servico servico = new Servico();
+                    //servico.Codigo = int.Parse(dadosBanco["cd_servico"].ToString());
+                    //funcionario.Especialidade = servico;
+                    //funcionarios.Add(funcionario);
                 }
             }
             if (!dadosBanco.IsClosed)

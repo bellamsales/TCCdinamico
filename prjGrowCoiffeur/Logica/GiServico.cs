@@ -26,16 +26,16 @@ namespace prjGrowCoiffeur.Logica
             {
                 while (dadosBanco.Read())
                 {
-                    Servico servico = new Servico
-                    {
-                        Codigo = int.Parse(dadosBanco["cd_servico"].ToString()),
-                        Nome = dadosBanco["nm_servico"].ToString(),
-                        Categoria = new Categoria
-                        {
-                            Codigo = int.Parse(dadosBanco["cd_categoria"].ToString())
-                        }
-                    };
-                    servicos.Add(servico);
+                    //Servico servico = new Servico
+                    //{
+                    //    Codigo = int.Parse(dadosBanco["cd_servico"].ToString()),
+                    //    Nome = dadosBanco["nm_servico"].ToString(),
+                    //    Categoria = new Categoria
+                    //    {
+                    //        Codigo = int.Parse(dadosBanco["cd_categoria"].ToString())
+                    //    }
+                    //};
+                    //servicos.Add(servico);
                 }
             }
             if (!dadosBanco.IsClosed)

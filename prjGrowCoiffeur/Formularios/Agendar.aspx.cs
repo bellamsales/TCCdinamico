@@ -67,16 +67,16 @@ namespace prjGrowCoiffeur.Formularios
 
         protected void ddlservico_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ddlservico.Enabled = true;
-            ddlservico.Items.Clear();
-            ddlservico.Items.Add(new ListItem("Selecionar Serviço", "-1"));
-            GiServico servicos = new GiServico();
-            if (ddlcategoriaServico.SelectedValue != "-1")
-                foreach (Servico servico in servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue)))
-                {
+            //ddlservico.Enabled = true;
+            //ddlservico.Items.Clear();
+            //ddlservico.Items.Add(new ListItem("Selecionar Serviço", "-1"));
+            //GiServico servicos = new GiServico();
+            //if (ddlcategoriaServico.SelectedValue != "-1")
+            //    foreach (Servico servico in servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue)))
+            //    {
 
-                    ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
-                }
+            //        ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
+            //    }
 
         }
 
