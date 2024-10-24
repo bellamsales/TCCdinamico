@@ -33,12 +33,12 @@
                     <div class="btn-expandir">
                         <i class="bi bi-caret-left-fill" id="btn-exp"</i>
                     </div>
-                    <a href="entrada.html">
-                        <img src="../images/logo-branca.png" alt="Logo" class="logo">
+                    <a href="meusAgendamentos.aspx">
+                        <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
                     <ul>
                         <li class="item-menu">
-                            <a href="index.html">
+                            <a href="index.aspx">
                                 <span class="icon"><i class="bi bi-calendar-date"></i></span>
                                 <span class="txt-link">Agenda</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -72,13 +72,13 @@
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                             </a>
                         </li>
-                        <li class="item-menu">
-                            <a href="cliente.aspx">
-                                <span class="icon"><i class="bi bi-person"></i></span>
-                                <span class="txt-link">Cliente</span>
-                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                            </a>
-                        </li>
+                       <li class="item-menu">
+                        <a href="ListarClientes.aspx"> <!-- Corrigido aqui -->
+                            <span class="icon"><i class="bi bi-person"></i></span>
+                            <span class="txt-link">Cliente</span>
+                            <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                        </a>
+                    </li>
                     </ul>
                 </nav>
             <% } else { %>
@@ -91,21 +91,21 @@
                     </a>
                     <ul>
                         <li class="item-menu ativo">
-                            <a href="entrada.html">
+                            <a href="meusAgendamentos.aspx">
                                 <span class="icon"><i class="bi bi-calendar-date"></i></span>
                                 <span class="txt-link">Agenda</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                             </a>
                         </li>
                         <li class="item-menu">
-                            <a href="feedback.html">
+                            <a href="feedback.aspx">
                                 <span class="icon"><i class="bi bi-star-fill"></i></span>
                                 <span class="txt-link">Feedback</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                             </a>
                         </li>
                         <li class="item-menu" id="logout">
-                            <a href="#">
+                            <a href="index.aspx">
                                 <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
                                 <span class="txt-link">Sair</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>

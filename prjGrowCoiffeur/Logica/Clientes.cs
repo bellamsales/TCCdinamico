@@ -38,7 +38,7 @@ using System.Web;
         }
         catch
         {
-            throw new Exception("Erro na listagem de produtos");
+            throw new Exception("Erro na listagem de clientes");
         }
     }
     public Cliente BuscarDadosCliente(string email)

@@ -29,14 +29,11 @@ namespace prjGrowCoiffeur.Formularios
                 MySqlCommand cmd = new MySqlCommand("SELECT IFNULL(MAX(cd_produto), 0) + 1 FROM Produto", conn);
                 novoCodigo = Convert.ToInt32(cmd.ExecuteScalar());
 
-                // Se novoCodigo for 0, defina como 1
-                if (novoCodigo == 0)
-                {
-                    novoCodigo = 1;
-                }
+                
+                
             }
 
-            txtCodigo.Text = novoCodigo.ToString(); // Certifique-se de que isso está sendo atribuído corretamente
+            txtCodigo.Text = novoCodigo.ToString(); 
         }
 
         protected void btnAdicionar_Click(object sender, EventArgs e)
@@ -59,7 +56,7 @@ namespace prjGrowCoiffeur.Formularios
                 string precoFormatado = txtPreco.Text
                     .Replace("R$", "")
                     .Replace(" ", "")
-                    .Replace(',', '.') // Troca vírgula por ponto
+                    .Replace(',', '.') 
                     .Trim();
 
                 if (!decimal.TryParse(precoFormatado, out preco))
@@ -101,19 +98,19 @@ namespace prjGrowCoiffeur.Formularios
                     conn.Open();
                     MySqlCommand cmd = new MySqlCommand("CALL InserirProduto(@Codigo, @Nome, @Preco, @Marca, @DataValidade, @Quantidade)", conn);
 
-                    // Certifique-se de adicionar o parâmetro @Codigo aqui
+                   
                     if (string.IsNullOrWhiteSpace(txtCodigo.Text) || !int.TryParse(txtCodigo.Text, out int codigo))
                     {
                         litMsg.Text = "<p style='color: red;'>Código do produto inválido.</p>";
                         return;
                     }
 
-                    cmd.Parameters.AddWithValue("@Codigo", codigo); // Adiciona o parâmetro
+                    cmd.Parameters.AddWithValue("@Codigo", codigo); 
 
                     cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
                     cmd.Parameters.AddWithValue("@Preco", preco);
                     cmd.Parameters.AddWithValue("@Marca", txtMarca.Text);
-                    cmd.Parameters.Add(new MySqlParameter("@DataValidade", MySqlDbType.Date) { Value = dataValidade }); // Adicionando o parâmetro da data
+                    cmd.Parameters.Add(new MySqlParameter("@DataValidade", MySqlDbType.Date) { Value = dataValidade }); 
                     cmd.Parameters.AddWithValue("@Quantidade", quantidade);
 
                     int resultado = cmd.ExecuteNonQuery();
@@ -143,14 +140,14 @@ namespace prjGrowCoiffeur.Formularios
 
         private void LimparCampos()
         {
-            txtCodigo.Text = string.Empty;  // Limpa o campo de código
+            txtCodigo.Text = string.Empty; 
             txtNome.Text = string.Empty;
             txtPreco.Text = string.Empty;
             txtMarca.Text = string.Empty;
             txtdata.Text = string.Empty;
             txtquantidadenoestoque.Text = string.Empty;
 
-            GerarCodigoProduto(); // Gera um novo código para o próximo produto
+            GerarCodigoProduto(); 
         }
     }
 }

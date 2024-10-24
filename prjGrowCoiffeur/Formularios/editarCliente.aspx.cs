@@ -53,7 +53,7 @@ namespace prjGrowCoiffeur.Formularios
                 {
                     conn.Open();
 
-                    // Primeiro, exclua os agendamentos associados
+                  
                     string deleteAgendamentosQuery = "DELETE FROM agendamento WHERE nm_email_cliente = @p_nm_email_cliente";
                     using (MySqlCommand cmdDeleteAgendamentos = new MySqlCommand(deleteAgendamentosQuery, conn))
                     {
@@ -61,7 +61,7 @@ namespace prjGrowCoiffeur.Formularios
                         cmdDeleteAgendamentos.ExecuteNonQuery();
                     }
 
-                    // Depois, exclua o cliente
+                   
                     string query = "CALL excluirCliente(@p_nm_email_cliente)";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
@@ -72,8 +72,8 @@ namespace prjGrowCoiffeur.Formularios
                         if (rowsAffected > 0)
                         {
                             litMsg.Text = "<h2 class='sucesso'>Produto excluído com sucesso</h2>";
-                            Response.Redirect("ListarClientes.aspx", false); // Redirecionar para produto.aspx
-                            Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
+                            Response.Redirect("ListarClientes.aspx", false); 
+                            Context.ApplicationInstance.CompleteRequest(); 
                         }
                         else
                         {
@@ -95,7 +95,7 @@ namespace prjGrowCoiffeur.Formularios
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
-                // Atualize a query para incluir a data de validade
+               
                 string query = "CALL AtualizarCliente( @p_nm_email_cliente,@p_nm_cliente,@p_nm_endereco,@p_ds_cliente)";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
@@ -112,8 +112,8 @@ namespace prjGrowCoiffeur.Formularios
                     if (rowsAffected > 0)
                     {
                         litMsg.Text = "<h2 class='sucesso'>Produto atualizado com sucesso</h2>";
-                        Response.Redirect("ListarClientes.aspx", false); // Redirecionar para produto.aspx
-                        Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
+                        Response.Redirect("ListarClientes.aspx", false);
+                        Context.ApplicationInstance.CompleteRequest(); 
                     }
                     else
                     {

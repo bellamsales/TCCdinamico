@@ -18,7 +18,15 @@ namespace prjGrowCoiffeur.Formularios
         public Funcionario Funcionario { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["TipoUsuario"] != null && Session["TipoUsuario"].ToString() == "funcionario")
+            if (Session["TipoUsuario"] == null)
+            {
+                
+                Response.Redirect("Login.aspx");
+                return; 
+            }
+
+            
+            if (Session["TipoUsuario"].ToString() == "funcionario")
             {
                 pnlCliente.Visible = true;
                 Cliente cliente = new Cliente();

@@ -54,7 +54,7 @@ namespace prjGrowCoiffeur.Formularios
             }
             catch (Exception)
             {
-                Response.Redirect("erro.html");
+                Response.Redirect("erro.aspx");
             }
         }
 
