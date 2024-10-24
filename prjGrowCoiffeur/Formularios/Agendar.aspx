@@ -5,49 +5,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-     <meta charset="UTF-8"/>
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet"/>
+
     <title>Glow Coiffeur</title>
     <link rel="stylesheet" href="../css/agendar.css"/>
-    <link rel="stylesheet" href="../css/menu.css"/>
+
+    <% if (Session["TipoUsuario"] != null) { %>
+        <% if (Session["TipoUsuario"].ToString() == "funcionario") { %>
+            <link rel="stylesheet" href="../css/menuFuncionario.css"/>
+        <% } else { %>
+            <link rel="stylesheet" href="../css/menu.css"/>
+        <% } %>
+    <% } else { %>
+        <link rel="stylesheet" href="../css/menu.css"/>
+    <% } %>
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="menu-lateral"> 
-            <div class="btn-expandir">
-                <i class="bi bi-caret-left-fill" id="btn-exp"></i>
-            </div>
-            <a href="index.html">
-                <img src="../images/logo-branca.png" alt="Logo" class="logo" />
-            </a>
-            <ul>
-                <li class="item-menu ativo">
+        <% if (Session["TipoUsuario"] != null) { %>
+            <% if (Session["TipoUsuario"].ToString() == "funcionario") { %>
+                <nav class="menu-lateral">
+                    <div class="btn-expandir">
+                        <i class="bi bi-caret-left-fill" id="btn-exp"</i>
+                    </div>
                     <a href="entrada.html">
-                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Agenda</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                        <img src="../images/logo-branca.png" alt="Logo" class="logo">
                     </a>
-                </li>
-                <li class="item-menu">
-                    <a href="feedback.html">
-                        <span class="icon"><i class="bi bi-star-fill"></i></span>
-                        <span class="txt-link">Feedback</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    <ul>
+                        <li class="item-menu">
+                            <a href="index.html">
+                                <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                                <span class="txt-link">Agenda</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="funcionario.aspx">
+                                <span class="icon"><i class="bi bi-people"></i></span>
+                                <span class="txt-link">Funcionário</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="produto.aspx">
+                                <span class="icon"><i class="bi bi-archive"></i></span>
+                                <span class="txt-link">Produto</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="servico.aspx">
+                                <span class="icon"><i class="bi bi-scissors"></i></span>
+                                <span class="txt-link">Serviço</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="feedback.aspx">
+                                <span class="icon"><i class="bi bi-star-fill"></i></span>
+                                <span class="txt-link">Feedback</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="cliente.aspx">
+                                <span class="icon"><i class="bi bi-person"></i></span>
+                                <span class="txt-link">Cliente</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            <% } else { %>
+                <nav class="menu-lateral">
+                    <div class="btn-expandir">
+                        <i class="bi bi-caret-left-fill" id="btn-exp"></i>
+                    </div>
+                    <a href="index.html">
+                        <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
-                </li>
-                <li class="item-menu" id="logout">
-                    <a href="#">
-                        <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
-                        <span class="txt-link">Sair</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+                    <ul>
+                        <li class="item-menu ativo">
+                            <a href="entrada.html">
+                                <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                                <span class="txt-link">Agenda</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu">
+                            <a href="feedback.html">
+                                <span class="icon"><i class="bi bi-star-fill"></i></span>
+                                <span class="txt-link">Feedback</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                        <li class="item-menu" id="logout">
+                            <a href="#">
+                                <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                                <span class="txt-link">Sair</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            <% } %>
+        <% } %>
 
         <div class="conteudo">
             <h1><strong>Novo agendamento</strong></h1>
@@ -89,20 +156,20 @@
                     <button type="button" id="btn-tarde" class="periodo-btn" data-periodo="Tarde" disabled="">Tarde</button>
                     <button type="button" id="btn-noite" class="periodo-btn" data-periodo="Noite" disabled="">Noite</button>
                 </div>
-                <div class="horarios" id="horarios"></div>
+                <div class="horarios" id="horarios" runat="server"></div>
             </div>
 
             <div id="containerHorarios" class="horarios">
-                <div id="horariosManha" class="horarios-lista">
-                   
-                </div>
-                <div id="horariosTarde" class="horarios-lista">
-                   
-                </div>
-                <div id="horariosNoite" class="horarios-lista">
-                   
-                </div>
-            </div>
+    <div id="horariosManha" class="horarios-lista">
+        <!-- Botões de horários disponíveis aparecerão aqui -->
+    </div>
+    <div id="horariosTarde" class="horarios-lista">
+        <!-- Botões de horários disponíveis aparecerão aqui -->
+    </div>
+    <div id="horariosNoite" class="horarios-lista">
+        <!-- Botões de horários disponíveis aparecerão aqui -->
+    </div>
+</div>
 
             <button type="button" class="agendar" onclick="agendarServico()">Agendar Serviço</button>
         </div>

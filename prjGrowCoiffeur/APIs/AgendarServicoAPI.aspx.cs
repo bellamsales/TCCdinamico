@@ -16,50 +16,82 @@ namespace prjGrowCoiffeur.APIs
 
             string funcionario = Request.QueryString["funcionario"];
             string dataStr = Request.QueryString["data"];
-            string periodo = Request.QueryString["periodo"];
             string cliente = Request.QueryString["cliente"];
             string servicoStr = Request.QueryString["servico"];
             string horaStr = Request.QueryString["hora"];
 
-            DateTime data;
-            if (!DateTime.TryParse(dataStr, out data))
+            // Validação dos parâmetros
+            if (string.IsNullOrEmpty(funcionario) ||
+                string.IsNullOrEmpty(cliente) ||
+                string.IsNullOrEmpty(servicoStr) ||
+                string.IsNullOrEmpty(dataStr) ||
+                string.IsNullOrEmpty(horaStr))
             {
-                Response.StatusCode = 400;
-                Response.Write("{\"error\":\"Data inválida\"}");
+                RespondWithError(400, "Todos os parâmetros devem ser fornecidos.");
                 return;
             }
 
-            TimeSpan hora;
-            if (!TimeSpan.TryParse(horaStr, out hora))
+            if (!DateTime.TryParse(dataStr, out DateTime data))
             {
-                Response.StatusCode = 400;
-                Response.Write("{\"error\":\"Hora inválida\"}");
+                RespondWithError(400, "Data inválida.");
                 return;
             }
-            int servico;
-            if (!int.TryParse(servicoStr, out servico))
+
+            if (!TimeSpan.TryParse(horaStr, out TimeSpan hora))
             {
-                Response.StatusCode = 400;
-                Response.Write("{\"error\":\"Serviço inválido\"}");
+                RespondWithError(400, "Hora inválida.");
+                return;
+            }
+
+            if (!int.TryParse(servicoStr, out int servico))
+            {
+                RespondWithError(400, "Serviço inválido.");
                 return;
             }
 
             GiServico giServico = new GiServico();
-
-
-            bool agendado = giServico.AgendarServico(cliente, servico, hora, data, funcionario);
-
-
-            if (agendado)
+            try
             {
-                Response.Write($"{{\"success\":true,\"message\":\"Agendamento realizado com sucesso para {cliente}\", \"servico\":\"{servicoStr}\", \"data\":\"{data:dd/MM/yyyy}\", \"hora\":\"{hora}\", \"funcionario\":\"{funcionario}\"}}");
+                bool agendado = giServico.AgendarServico(cliente, servico, hora, data, funcionario);
+
+                if (agendado)
+                {
+                    RespondWithSuccess(cliente, servicoStr, data, hora, funcionario);
+                }
+                else
+                {
+                    RespondWithError(400, "Horário não disponível. Tente novamente.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                Response.StatusCode = 500;
-                Response.Write("{\"success\":false,\"error\":\"Ocorreu um erro ao tentar agendar o serviço. Tente novamente mais tarde.\"}");
+                RespondWithError(500, $"Erro ao agendar o serviço: {ex.Message}");
             }
         }
 
+        private void RespondWithSuccess(string cliente, string servicoStr, DateTime data, TimeSpan hora, string funcionario)
+        {
+            var response = new
+            {
+                success = true,
+                message = $"Agendamento realizado com sucesso para {cliente}.",
+                servico = servicoStr,
+                data = data.ToString("dd/MM/yyyy"),
+                hora = hora.ToString(@"hh\:mm"),
+                funcionario
+            };
+
+            Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(response));
+        }
+
+        private void RespondWithError(int statusCode, string message)
+        {
+            Response.StatusCode = statusCode;
+            var errorResponse = new
+            {
+                error = message
+            };
+            Response.Write(Newtonsoft.Json.JsonConvert.SerializeObject(errorResponse));
+        }
     }
 }

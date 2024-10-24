@@ -1,19 +1,123 @@
 USE bancotcc04;
 
 DELIMITER $$
--- AGENDAMENTO DE SERVIÇOS
--- AUTO_INCREMENT ADCIONADO PARA MELHORAR INSTERTs
+
 DROP PROCEDURE IF EXISTS AgendarServico$$
-CREATE PROCEDURE AgendarServico(in pCliente varchar(50), in pServico int, in pHora time, in pData date, pFuncionario varchar(50))
+CREATE PROCEDURE AgendarServico(
+    IN pCliente VARCHAR(50), 
+    IN pServico INT, 
+    IN pHora TIME, 
+    IN pData DATE, 
+    IN pFuncionario VARCHAR(50), 
+    IN pDuracao INT -- Duration of the service in minutes
+)
 BEGIN
-	DECLARE vFuncionario varchar(50);
-    select nm_email_funcionario into vFuncionario from especialidade_funcionario where nm_email_funcionario = pFuncionario and cd_servico = pServico;
-    IF (vFuncionario IS NULL)
-    THEN
-		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funcionario não presta este serviço.';
-	ELSE
-		insert into agendamento values (default, pServico, pHora,pData, pCliente, pFuncionario);
-	END IF;
+    DECLARE vFuncionario VARCHAR(50);
+    DECLARE vHorarioFim TIME;
+    DECLARE vHorarioLimiteAlmoco TIME DEFAULT '12:00:00';
+    DECLARE vHorarioLimiteFim TIME DEFAULT '20:00:00';
+    DECLARE vIdAgendamento INT;
+    DECLARE vUltimoHorarioDisponivel TIME;
+
+    -- Calculate end time based on duration
+    SET vHorarioFim = ADDTIME(pHora, SEC_TO_TIME(pDuracao * 60));
+
+    -- Determine the last available time for the selected start time
+    IF pHora >= '08:00:00' AND pHora < '12:00:00' THEN
+        IF pDuracao = 30 THEN
+            SET vUltimoHorarioDisponivel = '11:30:00';
+        ELSEIF pDuracao = 60 THEN
+            SET vUltimoHorarioDisponivel = '11:00:00';
+        ELSEIF pDuracao = 120 THEN
+            SET vUltimoHorarioDisponivel = '10:00:00';
+        END IF;
+    ELSEIF pHora >= '13:00:00' AND pHora < '17:30:00' THEN
+        SET vUltimoHorarioDisponivel = '17:30:00';
+    ELSEIF pHora >= '18:00:00' AND pHora < '20:00:00' THEN
+        SET vUltimoHorarioDisponivel = '20:00:00';
+    END IF;
+
+    -- Verify if the employee provides the service
+    SELECT nm_email_funcionario INTO vFuncionario 
+    FROM especialidade_funcionario 
+    WHERE nm_email_funcionario = pFuncionario 
+      AND cd_servico = pServico;
+
+    IF vFuncionario IS NULL THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funcionario não presta este serviço.';
+    
+    ELSEIF vHorarioFim > vHorarioLimiteAlmoco AND pHora < vHorarioLimiteAlmoco THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'O serviço ultrapassa o horário de almoço.';
+    
+    ELSEIF vHorarioFim > vHorarioLimiteFim THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'O serviço ultrapassa o horário de funcionamento.';
+    
+    ELSEIF pHora > vUltimoHorarioDisponivel THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Horário selecionado não está disponível.';
+    
+    ELSEIF EXISTS (
+        SELECT 1 FROM agendamento 
+        WHERE nm_email_funcionario = pFuncionario 
+        AND dt_agendamento = pData 
+        AND (
+            (pHora >= horario_inicio AND pHora < horario_fim) OR 
+            (vHorarioFim > horario_inicio AND vHorarioFim <= horario_fim) OR 
+            (pHora < horario_inicio AND vHorarioFim > horario_fim)
+        )
+    ) THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'O horário já está reservado.';
+    
+    ELSE
+        -- Insert the new appointment
+        INSERT INTO agendamento (id_agendamento, cd_servico, horario_inicio, dt_agendamento, nm_cliente, nm_email_funcionario) 
+        VALUES (DEFAULT, pServico, pHora, pData, pCliente, pFuncionario);
+
+        -- Mark the time slots as not available
+        UPDATE agendamento 
+        SET horario_fim = vHorarioFim
+        WHERE nm_email_funcionario = pFuncionario 
+        AND dt_agendamento = pData 
+        AND horario_inicio = pHora;
+
+        -- Optionally return the ID of the new appointment
+        SET vIdAgendamento = LAST_INSERT_ID();
+        SELECT vIdAgendamento AS IdAgendamento;
+    END IF;
+END $$
+
+DELIMITER $$
+
+CREATE PROCEDURE ConsultarHorariosOcupados(
+    IN p_funcionario VARCHAR(255),
+    IN p_data DATE
+)
+BEGIN
+    SELECT TIME_FORMAT(hr_agendamento, '%H:%i') AS horario_ocupado
+    FROM Agendamento
+    WHERE nm_email_funcionario = p_funcionario
+    AND dt_agendamento = p_data;
+END $$
+
+DELIMITER $$
+
+CREATE PROCEDURE ObterDuracaoServico(
+    IN ServicoId INT,
+    OUT Duracao TIME
+)
+BEGIN
+    DECLARE DuracaoTemp TIME;
+
+    -- Seleciona a duração do serviço
+    SELECT qt_tempo_servico INTO DuracaoTemp
+    FROM Servico
+    WHERE cd_servico = ServicoId;
+
+    IF DuracaoTemp IS NULL THEN
+        -- Se não encontrar o serviço, você pode retornar um valor padrão ou um erro
+        SET Duracao = '00:00:00'; -- Retornando 0 como valor padrão
+    ELSE
+        SET Duracao = DuracaoTemp;
+    END IF;
 END $$
 
 -- BUSCA DOS AGENDAMENTOS PROXIMOS DE DETERMINADO CLIENTE

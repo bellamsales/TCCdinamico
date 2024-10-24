@@ -11,7 +11,7 @@ namespace prjGrowCoiffeur.Formularios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         protected void btnEntrar_Click(object sender, EventArgs e)
@@ -31,14 +31,48 @@ namespace prjGrowCoiffeur.Formularios
 
                 Response.Redirect("Agendar.aspx");
             }
-          
-                else
-                {
 
-                    lblMensagem.Text = "Email ou senha incorretos!";
-                }
+            else
+            {
+
+                lblMensagem.Text = "Email ou senha incorretos!";
             }
-        }   
+
+
+            bool funcionarioLogado = login.LoginFuncionario(email, senha);
+
+            if (funcionarioLogado)
+            {
+
+                Session["TipoUsuario"] = "funcionario";
+                Session["EmailUsuario"] = email;
+
+
+                Response.Redirect("Agendar.aspx");
+            }
+            else
+            {
+                lblMensagem.Text = "Email ou senha incorretos!";
+            }
+
+            bool gerenteLogado = login.LoginGerente(email, senha);
+            if (gerenteLogado)
+            {
+
+                Session["TipoUsuario"] = "gerente";
+                Session["EmailUsuario"] = email;
+
+
+                Response.Redirect("Agendamentos.aspx");
+            }
+            else
+            {
+
+                lblMensagem.Text = "Email ou senha incorretos!";
+            }
+        }
+    }
+        
 }
 
         

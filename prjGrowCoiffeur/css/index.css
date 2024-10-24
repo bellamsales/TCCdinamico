@@ -1,254 +1,134 @@
-body {
-    font-family: 'Poppins', sans-serif;
+body, html {
     margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    color: #ffffff;
-    background-color: #662549;
-    height: 74px;
     display: flex;
-    width: 100%;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+    padding: 10px;
+    background-color: #662549;
+    color: white;
+    height: 55px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap:2%;
     width: 100%;
     position: fixed;
+    margin-top: -20px;
 }
-
-#logobrancaheader {
-    width: 100px;
-    height: 74px;
-}
-
-il {
-    margin-left: 12px;
-    margin-right: 8px;
-    cursor: pointer;
-}
-
-#btnagendar {
-    background-color: #ffffff;
-    width: 136px;
-    height: 39px;
-    color: #662549;
-    font-size: 16px;
+header.cabecalho-calendario {
+    padding: 5px 10px;
+    border-radius: 4px;
     border: none;
-    cursor: pointer;
+    width: 300px;
+}
+#combobox{
+    width: 50%;
 }
 
-h1 {
-    color: white;
-    margin-top: -409px;
-    font-size: 46px;
-    margin-left: 10%;
-    position: relative;
-    width: 60%;
+div.principal-calendario {
+    margin: 20px 0;
 }
 
-#fotobanner {
-    width: 100%;
-    opacity: 0.5;
-    background-color: #662549;
-    height: 400px;
-}
-
-#banner {
-    width: 100%;
-    opacity: 0.8;
-    background-color: #662549;
-    height: 400px;
-}
-
-#titulo {
-    font-size: 45px;
-    text-shadow: 2px 2px black;
-}
-
-#endereço {
-    margin-left: 23px;
-    color: white;
-    position: relative;
+div.container-data {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 14px;
-    cursor: pointer;
-    margin-left: 10%;
-}
-
-#nossosalao {
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-around;
-}
-
-h2 {
-    color: #662549;
-    font-size: 35px;
-    margin-left: 10%;
-    margin-bottom: -4%;
-}
-
-#ladoesquerdotexto {
-    width: 65%;
-    border-right: 2px solid #662549;
-}
-
-#textonossosalao {
-    margin-left: 2%;
-    margin-right: 2%;
-    text-align: justify;
-}
-
-#ladodireito {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    flex-wrap: nowrap;
-    height: 400px;
-    margin-left: 2%;
-}
-
-#imgnossosalao {
-    width: 100%;
-}
-
-#servicosdeexcelencia {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     align-items: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 500px;
+    margin-bottom: 10px;
 }
 
-    #servicosdeexcelencia img {
-        width: 100%;
-        height: 200px;
-    }
-
-.alinhar {
+div.seletor-data {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
     align-items: center;
+    margin-top: 3%;
 }
 
-#listadiferenciais {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 2%;
-    margin-top: 7%;
-    margin-bottom: 80px;
-    margin-right: 10%;
-    width: 100%;
-}
-
-ul il a {
+button.botao-nav {
+    background-color: #884062;
+    border: none;
     color: white;
-    text-decoration: none;
-}
-
-footer {
-    width: 100%;
-    display: flex;
-    background-color: #662549;
-    color: white;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#ladologo {
-    margin-left: 20px;
-}
-
-#informacoesfooter {
-    margin-right: 40px;
-}
-
-#endereco {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: 10px;
-}
-
-#redessociais {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 20px;
+    padding: 5px 10px;
     cursor: pointer;
-    align-items: center;
-    margin-right: 20px;
+    border-radius: 4px;
 }
 
-#paiservicos {
-    background-color: #EAE1E6;
+div.seletor-data span {
+    margin: 0 10px;
+    font-size: 18px;
+    padding: 10px;
+    border: solid 1px  #884062;
+    border-radius: 10px;
 }
 
-#ladologo img {
-    width: 58%;
+div.grade-calendario {
+    display: flex;
+    width: 100%;
+    height: calc(100% - 160px);
 }
 
-/*responsivo*/
-@media screen and (max-width: 900px) {
-    header {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        height: 240px;
-        width: 100%;
-    }
+div.coluna-horarios {
+    width: 100px;
+    border-right: 1px solid #ddd;
+    
+}
 
-    il {
-        margin-left: unset;
-        margin-right: unset;
-    }
+div.faixa-horario {
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    padding-right: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
 
-    ul {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: center;
-        align-items: center;
-        margin-left: -20px;
-    }
+div.coluna-compromissos {
+    flex: 1;
+    position: relative;
+}
 
-    #btnagendar {
-        width: 333px;
-    }
+div.compromisso {
+    position: absolute;
+    left: 0;
+    right: 10px;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #884062;
+    opacity: 0.5;
+    width: 85%;
+    cursor: pointer;
+    height: 60px;
+}
 
-    #banner {
-        width: 100%;
-        opacity: 0.8;
-        background-color: #662549;
-        height: 400px;
-    }
+.conteudo{
+    margin-left: 50px;
+}
 
-    #fotobanner {
-        width: 100%;
-        opacity: 0.5;
-        background-color: #662549;
-        height: 400px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
+::-webkit-scrollbar {
+    width: 10px;
+   
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #E8BCB9;
+     border-radius: 10px;
+     border: solid 1px #5A203F;
+  }
+#btnagendar{
+    cursor: pointer;
+    background-color: #E8BCB9;
+    border: solid 1px #E8BCB9;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+.data-selecionada{
+    border: solid 1px #5A203F;
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
 }

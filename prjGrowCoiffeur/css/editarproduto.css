@@ -1,5 +1,4 @@
 * {
-
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -8,7 +7,6 @@
 
 a {
     text-decoration: none;
-
 }
 
 .conteudo {
@@ -30,7 +28,7 @@ a {
     justify-content: center;
 }
 
-header>i {
+header > i {
     color: #662549;
     font-size: 24px;
     cursor: pointer;
@@ -63,7 +61,6 @@ header {
 
 ::-webkit-scrollbar {
     width: 10px;
-
 }
 
 ::-webkit-scrollbar-thumb {
@@ -78,7 +75,6 @@ header {
     border: solid 1px #5A203F;
     margin: 1%;
     height: 23px;
-
 }
 
 .selectservicos {
@@ -106,7 +102,6 @@ option {
     background-color: #e8bcb975;
     border-radius: 2px;
     border-bottom: solid 1px #fff;
-
 }
 
 .data-selecionada {
@@ -146,6 +141,7 @@ h1 {
     padding: 10px;
     cursor: pointer;
 }
+
 .areaFormulario {
     display: flex;
     flex-direction: column;
@@ -156,6 +152,7 @@ h1 {
     margin-bottom: 20px;
     margin-right: 8px;
 }
+
     .areaFormulario p {
         display: flex;
         flex-direction: column;

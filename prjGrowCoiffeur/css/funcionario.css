@@ -1,5 +1,5 @@
 .conteudo-principal {
-    margin-left: 95px; /* Deixando espaço para o menu lateral */
+    margin-left: 70px;
     padding: 20px;
 }
 
@@ -48,6 +48,11 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.funcionario:hover {
+    background-color: #e0e0e0;
 }
 
 .funcionario i {
@@ -66,6 +71,9 @@ h1 {
     background-color: #fff;
     border-radius: 15px;
     border: 1px solid #ddd;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .detalhes-funcionario h2, .detalhes-funcionario p {
@@ -97,10 +105,4 @@ h1 {
 .detalhes-funcionario ul li span {
     color: #662549;
     font-weight: 600;
-}
-
-.funcio
-{
-    margin-left: 85px;
-    padding: 20px;
 }

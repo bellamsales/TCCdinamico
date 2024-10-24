@@ -158,7 +158,9 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente) {
                 console.log(data); 
 
                 const horariosDiv = document.getElementById("horariosManha");
-                horariosDiv.innerHTML = ''; 
+                horariosDiv.innerHTML = '';
+
+             
 
                 data.forEach(d => {
                     const button = document.createElement("button");
@@ -229,5 +231,118 @@ periodoButtons.forEach(button => {
             this.classList.add('selecionado');
            
         }
+    });
+});
+
+function adicionarBotoesDeHorario() {
+    const horarios = [];
+    const periodos = [
+        { inicio: '08:00', fim: '12:00' },
+        { inicio: '13:00', fim: '17:30' },
+        { inicio: '18:00', fim: '20:00' }
+    ];
+
+    periodos.forEach(periodo => {
+        let horaAtual = new Date(`1970-01-01T${periodo.inicio}:00`);
+        const horaFim = new Date(`1970-01-01T${periodo.fim}:00`);
+
+        while (horaAtual <= horaFim) {
+            horarios.push(horaAtual.toTimeString().slice(0, 5)); // Adiciona apenas a hora e minutos
+            horaAtual.setMinutes(horaAtual.getMinutes() + 30); // Incrementa 30 minutos
+        }
+    });
+
+    // Agora, preencha os botões na interface
+    const containerDeBotoes = document.getElementById('container-botoes'); // Certifique-se de ter um contêiner no HTML para os botões
+
+    horarios.forEach(horario => {
+        const botao = document.createElement('button');
+        botao.textContent = horario;
+        botao.onclick = () => selecionarHorario(horario); // Função para lidar com a seleção do horário
+        containerDeBotoes.appendChild(botao);
+    });
+}
+
+function selecionarHorario(horario) {
+    
+    console.log("Horário selecionado: " + horario);
+}
+
+function obterHorariosDisponiveis(funcionario, data, periodo) {
+    $.ajax({
+        type: "GET",
+        url: "ConsultaHoraDisponibilidade.aspx",
+        data: { funcionario: funcionario, data: data, periodo: periodo },
+        dataType: "json",
+        success: function (response) {
+            
+            $('#horariosManha').empty();
+            $('#horariosTarde').empty();
+            $('#horariosNoite').empty();
+
+          
+            response.manha.forEach(function (horario) {
+                $('#horariosManha').append(horario);
+            });
+
+            response.tarde.forEach(function (horario) {
+                $('#horariosTarde').append(horario);
+            });
+
+            response.noite.forEach(function (horario) {
+                $('#horariosNoite').append(horario);
+            });
+        },
+        error: function (error) {
+            console.error("Erro ao obter horários disponíveis:", error);
+        }
+    });
+}
+
+function consultarHorarios(funcionario, data, periodo) {
+    $.ajax({
+        url: 'ConsultaHoraDisponibilidade.aspx',
+        type: 'GET',
+        data: {
+            funcionario: funcionario,
+            data: data,
+            periodo: periodo
+        },
+        success: function (response) {
+            // Limpar horários antes de adicionar novos
+            $('#horariosManha').empty();
+            $('#horariosTarde').empty();
+            $('#horariosNoite').empty();
+
+            // Adicionar horários disponíveis
+            if (response.manha) {
+                response.manha.forEach(function (horario) {
+                    $('#horariosManha').append(horario);
+                });
+            }
+            if (response.tarde) {
+                response.tarde.forEach(function (horario) {
+                    $('#horariosTarde').append(horario);
+                });
+            }
+            if (response.noite) {
+                response.noite.forEach(function (horario) {
+                    $('#horariosNoite').append(horario);
+                });
+            }
+        },
+        error: function (xhr) {
+            console.error('Erro ao consultar horários:', xhr);
+        }
+    });
+}
+
+$(document).ready(function () {
+    $('#periodoSelecionado').click(function () {
+        var funcionario = 'funcionarioID'; 
+        var data = '2024-10-22'; 
+        var periodo = 'manha'; 
+
+        consultarHorarios(funcionario, data, periodo);
     });
 });

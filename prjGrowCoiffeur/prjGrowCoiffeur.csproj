@@ -133,31 +133,37 @@
   <ItemGroup>
     <Content Include="APIs\AgendarServicoAPI.aspx" />
     <Content Include="APIs\ConsultaHoraDisponibilidade.aspx" />
+    <Content Include="css\adicionarcliente.css" />
     <Content Include="css\adicionarproduto.css" />
     <Content Include="css\agendar.css" />
     <Content Include="css\cadastro.css" />
+    <Content Include="css\cliente.css" />
+    <Content Include="css\editarcliente.css" />
     <Content Include="css\editarproduto.css" />
     <Content Include="css\estilocadastrofuncionario.css" />
     <Content Include="css\estilocliente.css" />
     <Content Include="css\estilofuncionario.css" />
     <Content Include="css\estilologinfuncionario.css" />
+    <Content Include="css\feedback.css" />
     <Content Include="css\funcionario.css" />
     <Content Include="css\index.css" />
     <Content Include="css\login.css" />
     <Content Include="css\loginFuncionario.css" />
     <Content Include="css\loginGerente.css" />
     <Content Include="css\menu.css" />
+    <Content Include="css\menuFuncionario.css" />
     <Content Include="css\produto.css" />
+    <Content Include="css\servico.css" />
     <Content Include="Formularios\AdicionarProduto.aspx" />
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
+    <Content Include="Formularios\editarCliente.aspx" />
     <Content Include="Formularios\editarProduto.aspx" />
     <Content Include="Formularios\Funcionario.aspx" />
     <Content Include="Formularios\index.aspx" />
+    <Content Include="Formularios\ListarClientes.aspx" />
     <Content Include="Formularios\Login.aspx" />
-    <Content Include="Formularios\LoginFuncionario.aspx" />
-    <Content Include="Formularios\LoginGerente.aspx" />
     <Content Include="images\acessibilidade.png" />
     <Content Include="images\adicionar.png" />
     <Content Include="images\ambiente.png" />
@@ -248,6 +254,13 @@
     <Compile Include="Formularios\Cadastro.aspx.designer.cs">
       <DependentUpon>Cadastro.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\editarCliente.aspx.cs">
+      <DependentUpon>editarCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\editarCliente.aspx.designer.cs">
+      <DependentUpon>editarCliente.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\editarProduto.aspx.cs">
       <DependentUpon>editarProduto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,6 +282,13 @@
     <Compile Include="Formularios\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\ListarClientes.aspx.cs">
+      <DependentUpon>ListarClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\ListarClientes.aspx.designer.cs">
+      <DependentUpon>ListarClientes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,20 +296,7 @@
     <Compile Include="Formularios\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\LoginFuncionario.aspx.cs">
-      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\LoginFuncionario.aspx.designer.cs">
-      <DependentUpon>LoginFuncionario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\LoginGerente.aspx.cs">
-      <DependentUpon>LoginGerente.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\LoginGerente.aspx.designer.cs">
-      <DependentUpon>LoginGerente.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Logica\Clientes.cs" />
     <Compile Include="Logica\GiAgenda.cs" />
     <Compile Include="Logica\GiCategoria.cs" />
     <Compile Include="Logica\GiFuncionarios.cs" />
