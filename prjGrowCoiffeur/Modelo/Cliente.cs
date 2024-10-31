@@ -4,32 +4,42 @@ using System.Linq;
 using System.Web;
 
 
-public class Cliente
-{
+    public class Cliente
+    {
+    public int CdCliente { get; set; }
     public string Email { get; set; }
-    public string Nome { get; set; }
-    public string Endereco { get; set; }
-    public string Descricao { get; set; }
-    public string Senhacliente { get; set; }
-    public Cliente()
-    {
+        public string Nome { get; set; }
+       public string Endereco { get; set; }
+       public string Descricao { get; set; }
+       public string Senhacliente { get; set; }
 
-    }
-    public Cliente(string nomeemail, string nomecliente, string endereco, string descricao)
+    public string CPF { get; set; }
+
+    public bool Ativo { get; set; }
+    public Cliente() { }
+
+    public Cliente(int cdCliente, string email, string nome, string endereco, string descricao, bool ativo, string cpf)
     {
-        Email = nomeemail;
-        Nome = nomecliente;
+        CdCliente = cdCliente;
+        Email = email;
+        Nome = nome;
         Endereco = endereco;
         Descricao = descricao;
+        Ativo = ativo;
+        CPF = cpf;
     }
-    public Cliente(string nomeemail, string nomecliente, string senha, string endereco, string descricao)
+
+   
+    public Cliente(int cdCliente, string email, string nome, string senha, string endereco, string descricao, bool ativo, string cpf)
     {
-        Email = nomeemail;
-        Nome = nomecliente;
+        CdCliente = cdCliente;
+        Email = email;
+        Nome = nome;
         Senhacliente = senha;
         Endereco = endereco;
         Descricao = descricao;
+        Ativo = ativo;
+        CPF = cpf;
     }
-
 }
 

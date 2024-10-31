@@ -23,33 +23,43 @@ namespace prjGrowCoiffeur.Formularios
             try
             {
                 Clientes clientes = new Clientes();
-                List<Cliente> lista_produtos = clientes.Listar();
+                List<Cliente> lista_clientes = clientes.Listar();
 
-                if (lista_produtos.Count > 0)
+                if (lista_clientes.Count > 0)
                 {
-                    string html = "<table class='table'><tr><th>Email</th><th>Nome</th><th>Endereço</th>" +
-                        "<th>Descrição</th><th></th></tr>";
+              
+                    string html = "<table class='table'><tr><th>Nome</th><th>Email</th><th>Endereço</th>" +
+                        "<th>Descrição</th><th>Status</th><th>Ações</th></tr>"; 
 
-                    foreach (var cliente in lista_produtos)
+                    foreach (var cliente in lista_clientes)
                     {
-                        html += $@"<tr>
-                                    <td class='alinhartabcentro'>{cliente.Email}</td>
-                                    <td>{cliente.Nome}</td>
-                                    <td>{cliente.Endereco}</td>
-                                    <td class='alinhartabcentro'>{cliente.Descricao}</td>
-                                    <td id='tdlinks'> 
-                                   <a href='editarCliente.aspx?s={cliente.Email}'>
-                                        <img src='../images/editar.svg' class='imgtabela'/>
-                                    </a>
-                                    </td>
-                                </tr>";
+                        string descricao = cliente.Ativo ? cliente.Descricao :
+                                   (clientes.ClienteTemAgendamentos(cliente.Email) ?
+                                    "Cliente inativo pois possui próximos agendamentos" :
+                                    "Cliente inativo");
+                        string status = cliente.Ativo ? "Ativo" : "Inativo"; 
+                        string acaoLink = cliente.Ativo ?
+                            $"<a href='editarCliente.aspx?s={cliente.Email}'><img src='../images/editar.svg' class='imgtabela'/></a>" :
+                            "<span>Inativo</span>";
+
+                        string rowClass = cliente.Ativo ? "" : "inativo";
+
+                       
+                        html += $@"<tr class='{rowClass}'>
+                        <td class='alinhartabcentro'>{cliente.Nome}</td>
+                        <td>{cliente.Email}</td>
+                        <td>{cliente.Endereco}</td>
+                        <td class='alinhartabcentro'>{descricao}</td>
+                        <td class='alinhartabcentro'>{status}</td> <!-- New status column -->
+                        <td id='tdlinks'>{acaoLink}</td>
+                    </tr>";
                     }
                     html += "</table>";
                     litcliente.Text = html;
                 }
                 else
                 {
-                    litcliente.Text = "<p>Nenhum produto encontrado.</p>";
+                    litcliente.Text = "<p>Nenhum cliente encontrado.</p>";
                 }
             }
             catch (Exception)

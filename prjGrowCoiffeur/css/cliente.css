@@ -93,3 +93,9 @@ tr {
 .alinhartabcentro {
     text-align: center;
 }
+
+.inativo {
+    background-color: #f5f5f5; 
+    color: #ccc; 
+    pointer-events: none; 
+}

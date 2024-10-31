@@ -23,16 +23,16 @@
                 <div class="btn-expandir">
                     <i class="bi bi-caret-left-fill" id="btn-exp"></i>
                 </div>
-                <a href="entrada.html">
+                <a href="index.aspx">
                     <img src="../images/logo-branca.png" alt="Logo" class="logo">
                 </a>
                 <ul>
-                    <li class="item-menu"><a href="index.html"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Agenda</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="funcionario.html"><span class="icon"><i class="bi bi-people"></i></span><span class="txt-link">Funcionário</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="Agendamentos.aspx"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Agenda</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="funcionario.aspx"><span class="icon"><i class="bi bi-people"></i></span><span class="txt-link">Funcionário</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                     <li class="item-menu"><a href="produto.aspx"><span class="icon"><i class="bi bi-archive"></i></span><span class="txt-link">Produto</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="servico.html"><span class="icon"><i class="bi bi-scissors"></i></span><span class="txt-link">Serviço</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="feedback.html"><span class="icon"><i class="bi bi-star-fill"></i></span><span class="txt-link">Feedback</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="cliente.html"><span class="icon"><i class="bi bi-person"></i></span><span class="txt-link">Cliente</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="servico.aspx"><span class="icon"><i class="bi bi-scissors"></i></span><span class="txt-link">Serviço</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="feedback.aspx"><span class="icon"><i class="bi bi-star-fill"></i></span><span class="txt-link">Feedback</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="ListarClientes.aspx"><span class="icon"><i class="bi bi-person"></i></span><span class="txt-link">Cliente</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                 </ul>
             </nav>
             <div class="conteudo">

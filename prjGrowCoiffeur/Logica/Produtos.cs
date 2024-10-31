@@ -16,12 +16,12 @@ public class Produtos : Banco
             List<clsProduto> lista = new List<clsProduto>();
             MySqlDataReader dados = Consultar("ConsultarProdutos", null);
 
-            // Verifica se há dados antes de tentar ler
+            
             if (dados != null && dados.HasRows)
             {
                 while (dados.Read())
                 {
-                    // Verifica se os valores não são nulos antes de acessá-los
+                   
                     clsProduto clProduto = new clsProduto(
                         dados.IsDBNull(0) ? 0 : dados.GetInt32(0),
                         dados.IsDBNull(1) ? "N/A" : dados.GetString(1),
@@ -102,12 +102,12 @@ public class Produtos : Banco
             if (dados.Read())
             {
                 produto = new clsProduto(
-                    dados.GetInt32(0), // cd_produto
-                    dados.GetString(1), // nm_produto
-                    dados.GetString(2), // nm_marca_produto
-                    dados.GetDateTime(3), // dt_validade_produto
-                    dados.GetInt32(4), // qt_produto_estoque
-                    dados.GetDecimal(5) // vl_produto_estoque
+                    dados.GetInt32(0), 
+                    dados.GetString(1), 
+                    dados.GetString(2), 
+                    dados.GetDateTime(3),
+                    dados.GetInt32(4),
+                    dados.GetDecimal(5) 
                 );
             }
 
@@ -122,5 +122,75 @@ public class Produtos : Banco
             throw new Exception("Erro ao buscar dados do Produto: " + ex.Message);
         }
         return produto;
+    }
+
+    public bool AdicionarProduto(clsProduto produto)
+    {
+        List<Parametro> parametros = new List<Parametro>
+    {
+         new Parametro("p_cd_produto", produto.CdProduto),
+        new Parametro("p_nm_produto", produto.NmProduto),
+        new Parametro("p_nm_marca_produto", produto.NmMarcaProduto),
+        new Parametro("p_vl_produto_estoque", produto.VlProdutoEstoque),
+        new Parametro("p_dt_validade_produto", produto.DtValidadeProduto),
+        new Parametro("p_qt_produto_estoque", produto.QtProdutoEstoque)
+    };
+
+        try
+        {
+            Conectar();
+            Executar("InserirProduto", parametros);
+            Desconectar();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Erro ao adicionar produto: " + ex.Message);
+        }
+    }
+
+    public bool ExcluirProduto(int codigoProduto)
+    {
+        List<Parametro> parametros = new List<Parametro>
+    {
+        new Parametro("pCodigo", codigoProduto)
+    };
+
+        try
+        {
+            Conectar();
+            Executar("ExcluirProduto", parametros);
+            Desconectar();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Erro ao excluir produto: " + ex.Message);
+        }
+    }
+
+    public bool EditarProduto(clsProduto produto)
+    {
+        List<Parametro> parametros = new List<Parametro>
+    {
+        new Parametro("p_cd_produto", produto.CdProduto),
+        new Parametro("p_nm_produto", produto.NmProduto),
+        new Parametro("p_nm_marca_produto", produto.NmMarcaProduto),
+        new Parametro("p_vl_produto_estoque", produto.VlProdutoEstoque),
+        new Parametro("p_dt_validade_produto", produto.DtValidadeProduto),
+        new Parametro("p_qt_produto_estoque", produto.QtProdutoEstoque)
+    };
+
+        try
+        {
+            Conectar();
+            Executar("AtualizarProduto", parametros);
+            Desconectar();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception("Erro ao editar produto: " + ex.Message);
+        }
     }
 }

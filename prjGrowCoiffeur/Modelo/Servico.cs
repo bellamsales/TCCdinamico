@@ -11,7 +11,10 @@ namespace prjGrowCoiffeur.Modelo
         public string Nome { get; set; }
         public string Descrição { get; set; }
         public double ValorMonetario { get; set; }
-        public int TempoEstimado { get; set; }
+        public TimeSpan TempoEstimado { get; set; }
         public Categoria Categoria { get; set; }
+
+
+
     }   
 }

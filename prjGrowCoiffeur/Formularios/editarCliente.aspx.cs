@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
+using prjGrowCoiffeur.Logica;
+using prjGrowCoiffeur.Modelo;
+using System.Text.RegularExpressions;
+using MySqlX.XDevAPI;
 
 namespace prjGrowCoiffeur.Formularios
 {
@@ -12,120 +16,163 @@ namespace prjGrowCoiffeur.Formularios
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (String.IsNullOrEmpty(Request["s"]))
+            if (string.IsNullOrEmpty(Request["s"]))
             {
                 Response.Redirect("index.aspx");
                 return;
             }
-            string email = Request["s"];
-            txtEmail.Text = email;
+
             if (!IsPostBack)
             {
+                string email = Request["s"];
+                txtEmail.Text = email;
+
                 try
-                {   Clientes clientes = new Clientes();
-                    Produtos produtos = new Produtos();
-                    Cliente cliente = clientes.BuscarDadosCliente( email);
+                {
+                    Clientes clientes = new Clientes();
+
+                    Cliente cliente = clientes.BuscarDadosCliente(email);
 
                     if (cliente != null)
                     {
-                        txtEmail.Text = email;
                         txtNome.Text = cliente.Nome;
                         txtEndereco.Text = cliente.Endereco;
                         txtDescricao.Text = cliente.Descricao;
+                        txtSenha.Text = cliente.CPF;
+                        txtSenha.ReadOnly = false;
+
+
+                    }
+                    else
+                    {
+                        throw new Exception("Cliente não encontrado.");
                     }
                 }
-                catch
+                catch (Exception ex)
                 {
-                    Response.Redirect("erro.html");
+                    litMsg.Text = "<h2 class='erro'>Erro: " + ex.Message + "</h2>";
                 }
             }
         }
+
+
+
+
 
         protected void btnexcluir_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
-            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            try
             {
-                try
+                Clientes clientes = new Clientes();
+                bool excluido = clientes.ExcluirCliente(email);
+
+                if (excluido)
                 {
-                    conn.Open();
-
-                  
-                    string deleteAgendamentosQuery = "DELETE FROM agendamento WHERE nm_email_cliente = @p_nm_email_cliente";
-                    using (MySqlCommand cmdDeleteAgendamentos = new MySqlCommand(deleteAgendamentosQuery, conn))
-                    {
-                        cmdDeleteAgendamentos.Parameters.AddWithValue("@p_nm_email_cliente", email);
-                        cmdDeleteAgendamentos.ExecuteNonQuery();
-                    }
-
-                   
-                    string query = "CALL excluirCliente(@p_nm_email_cliente)";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@p_nm_email_cliente", email);
-
-                        int rowsAffected = cmd.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            litMsg.Text = "<h2 class='sucesso'>Produto excluído com sucesso</h2>";
-                            Response.Redirect("ListarClientes.aspx", false); 
-                            Context.ApplicationInstance.CompleteRequest(); 
-                        }
-                        else
-                        {
-                            litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto. Produto não encontrado.</h2>";
-                        }
-                    }
+                    litMsg.Text = "<h2 class='sucesso'>Cliente excluído com sucesso</h2>";
+                    Response.Redirect("ListarClientes.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
-                catch (Exception ex)
+                else
                 {
-                    litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto: " + ex.Message + "</h2>";
+                    litMsg.Text = "<h2 class='erro'>O cliente possui agendamentos e foi inativado.</h2>";
+                    Response.Redirect("ListarClientes.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
             }
+            catch (Exception ex)
+            {
+                litMsg.Text = "<h2 class='erro'>Erro ao excluir o cliente: " + ex.Message + "</h2>";
+            }
         }
+
 
         protected void btnedit_Click(object sender, EventArgs e)
         {
-            string email = txtEmail.Text;
-            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
-
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            try
             {
-               
-                string query = "CALL AtualizarCliente( @p_nm_email_cliente,@p_nm_cliente,@p_nm_endereco,@p_ds_cliente)";
+                if (!ValidarCampos())
+                    return;
 
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@p_nm_email_cliente", txtEmail.Text);
-                cmd.Parameters.AddWithValue("@p_nm_cliente", txtNome.Text);
-                cmd.Parameters.AddWithValue("@p_nm_endereco", txtEndereco.Text);
-                cmd.Parameters.AddWithValue("@p_ds_cliente", txtDescricao.Text);
+                string emailAtual = Request["s"];
+                string novoEmail = txtEmail.Text;
 
-                try
+                Clientes clientes = new Clientes();
+
+                if (novoEmail != emailAtual && clientes.EmailExiste(novoEmail))
                 {
-                    conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
+                    litMsg.Text = "<p style='color: red;'>O email já está em uso. Tente um email diferente.</p>";
+                    return;
+                }
 
-                    if (rowsAffected > 0)
+                Cliente cliente = clientes.BuscarDadosCliente(emailAtual);
+
+                if (cliente != null)
+                {
+                    
+                    string senhaAtualizada = string.IsNullOrWhiteSpace(txtSenha.Text) ? cliente.Senhacliente : txtSenha.Text.Trim();
+
+                    if (clientes.AtualizarCliente(
+                        emailAtual,
+                        novoEmail,
+                        txtNome.Text,
+                        senhaAtualizada,
+                        txtEndereco.Text,
+                        txtDescricao.Text,
+                        cliente.CdCliente))
                     {
-                        litMsg.Text = "<h2 class='sucesso'>Produto atualizado com sucesso</h2>";
+                        litMsg.Text = "<h2 class='sucesso'>Cliente atualizado com sucesso</h2>";
                         Response.Redirect("ListarClientes.aspx", false);
-                        Context.ApplicationInstance.CompleteRequest(); 
+                        Context.ApplicationInstance.CompleteRequest();
                     }
                     else
                     {
-                        litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto. Produto não encontrado.</h2>";
+                        litMsg.Text = "<h2 class='erro'>Erro ao atualizar o cliente. Cliente não encontrado ou nenhum dado foi alterado.</h2>";
                     }
                 }
-                catch (Exception ex)
-                {
-                    litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto: " + ex.Message + "</h2>";
-                }
             }
+            catch (Exception ex)
+            {
+                litMsg.Text = "<h2 class='erro'>Erro: " + ex.Message + "</h2>";
+            }
+        }
+
+        private bool ValidarCampos()
+        {
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                litMsg.Text = "<p style='color: red;'>O campo 'Nome' é obrigatório.</p>";
+                return false;
+            }
+
+            if (!ValidarEmail(txtEmail.Text))
+            {
+                litMsg.Text = "<p style='color: red;'>O email inserido não é válido. Por favor, insira um email válido.</p>";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEndereco.Text))
+            {
+                litMsg.Text = "<p style='color: red;'>O campo 'Endereco' é obrigatório.</p>";
+                return false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtSenha.Text) && txtSenha.Text.Length < 8)
+            {
+                litMsg.Text = "<p style='color: red;'>A senha deve ter pelo menos 8 caracteres.</p>";
+                return false;
+            }
+
+        
+
+            return true;
+        }
+
+        private bool ValidarEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
         }
     }
 }
-    

@@ -25,19 +25,19 @@
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
-            <a href="entrada.html">
+            <a href="meusAgendamentos.aspxl">
                 <img src="../images/logo-branca.png" alt="Logo" class="logo">
             </a>
             <ul>
                 <li class="item-menu">
-                    <a href="index.html">
+                    <a href="index.aspx">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
                         <span class="txt-link">Agenda</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
-                    <a href="funcionario.html">
+                    <a href="funcionario.aspx">
                         <span class="icon"><i class="bi bi-people"></i></span>
                         <span class="txt-link">Funcionário</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -52,21 +52,21 @@
                 </li>
 
                 <li class="item-menu">
-                    <a href="servico.html">
+                    <a href="servico.aspx">
                         <span class="icon"><i class="bi bi-scissors"></i></span>
                         <span class="txt-link">Serviço</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
-                    <a href="feedback.html">
+                    <a href="feedback.aspx">
                         <span class="icon"><i class="bi bi-star-fill"></i></span>
                         <span class="txt-link">Feedback</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
-                    <a href="cliente.html">
+                    <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
                         <span class="txt-link">Cliente</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -87,25 +87,32 @@
               <section class="areaFormulario">
      <p>
          <label for="txtEmail">Email:</label>
-         <asp:TextBox ID="txtEmail" runat="server" placeholder="Aqui deve ser o código" disabled></asp:TextBox>
+         <asp:TextBox ID="txtEmail" runat="server" placeholder="Digite o e-mail" ></asp:TextBox>
      </p>
 
      <p>
          <label for="txtNome">Nome:</label>
-         <asp:TextBox ID="txtNome" runat="server" placeholder="Informe Nome do Produto"  autofocus></asp:TextBox>
+         <asp:TextBox ID="txtNome" runat="server" placeholder="Digite o nome"  autofocus></asp:TextBox>
      </p>
+
+    <p>
+    <label for="txtEndereco">Senha:</label>
+    <asp:TextBox ID="txtSenha" runat="server" placeholder="Digite a senha" ReadOnly=true></asp:TextBox>
+</p>
 
      <p>
          <label for="txtEndereco">Endereço:</label>
-         <asp:TextBox ID="txtEndereco" runat="server" placeholder="Informe valor unitário" ></asp:TextBox>
+         <asp:TextBox ID="txtEndereco" runat="server" placeholder="Digite o endereço" ></asp:TextBox>
      </p>
       <p>
      <label for="txtDescricao">Descrição:</label>
-     <asp:TextBox ID="txtDescricao" runat="server" placeholder="infome a marca do produto" ></asp:TextBox>
+     <asp:TextBox ID="txtDescricao" runat="server" placeholder="Digite a descrição" ></asp:TextBox>
       </p>
+
+
        <p  class="btns">
             
-                     <asp:Button ID="btnexcluir" runat="server" Onclick="btnexcluir_Click" Text="Excluir Cliente" />
+                     <asp:Button ID="btnexcluir" runat="server" OnClick="btnexcluir_Click" Text="Excluir Cliente" OnClientClick="return confirm('Tem certeza que deseja excluir este cliente?');" />
                      <asp:Button ID="btnedit" runat="server" OnClick="btnedit_Click" Text=" Editar Cliente" />
        </p>
      <div class="rodape">
@@ -121,6 +128,7 @@
  </section>
 
     <script src="javascript/menu.js"></script>
+        
         </div>
     </form>
 </body>

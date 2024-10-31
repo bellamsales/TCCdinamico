@@ -1,35 +1,32 @@
-.conteudo {
+.conteudo{
     margin-left: 58px;
 }
-
-* {
+*{
     margin: 0;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin: 0;
+    margin:0;
 }
-
-#divBusca {
+#divBusca{
     margin-top: 20px;
-    border: solid 1px #5A203F;
-    border-radius: 15px;
-    width: 70%;
+    border:solid 1px #5A203F;
+    border-radius:15px;
+    width:70%;
     margin-bottom: 2%;
+   
 }
-
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-style: italic;
-    font-size: 18px;
-    border: none;
-    height: 100%;
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left:5px;
+    font-style:italic;
+    font-size:18px;
+    border:none;
+    height:100%;
     width: 96%;
     border-radius: 10px;
-}
-
+  }
 header {
     display: flex;
     flex-direction: row;
@@ -37,60 +34,61 @@ header {
     gap: 5%;
     align-items: center;
 }
-
 #btnaddproduto {
     height: 40px;
     background-color: #5A203F;
     color: white;
     border: 1px solid #5A203F;
     border-radius: 10px;
-    padding: 5px;
-    cursor: pointer;
+    padding:5px;
+    cursor:pointer;
 }
-
-.listadeprodutos {
+  .listadeprodutos{
     width: 90%;
     height: 500px;
     padding-left: 5px;
     overflow-y: scroll;
     margin-left: 50px;
-}
-
-::-webkit-scrollbar {
+  }
+  ::-webkit-scrollbar {
     width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
+   
+  }
+  
+  ::-webkit-scrollbar-thumb {
     background-color: #E8BCB9;
-    border-radius: 10px;
-}
+     border-radius: 10px;
+   
+  }
+  
+  .caixaprodutos{
+   
+   
+  }
 
-.caixaprodutos {
-}
-
-.imgtabela {
-    width: 40px;
+  .imgtabela{
+    width:40px;
     cursor: pointer;
-}
+  }
 
-.table th {
-    background-color: #E8BCB9;
-}
-
+  .table th {
+      background-color:#E8BCB9;
+  }
 tr {
     background-color: #e3e3e3;
 }
+  .table{
+      width:100%;
+      
 
-.table {
-    width: 100%;
-}
-
+  }
 #tdlinks {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-.alinhartabcentro {
-    text-align: center;
+.alinhartabcentro
+{
+    text-align:center;
 }
+

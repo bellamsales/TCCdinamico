@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
+
 namespace prjGrowCoiffeur.Formularios
 {
     public partial class AdicionarProduto : System.Web.UI.Page
@@ -52,16 +53,13 @@ namespace prjGrowCoiffeur.Formularios
                     return;
                 }
 
+                string textoPreco = txtPreco.Text.Replace("R$", "").Trim().Replace(".", ",");
                 decimal preco;
-                string precoFormatado = txtPreco.Text
-                    .Replace("R$", "")
-                    .Replace(" ", "")
-                    .Replace(',', '.') 
-                    .Trim();
 
-                if (!decimal.TryParse(precoFormatado, out preco))
+                // Tentar converter texto para decimal
+                if (!decimal.TryParse(textoPreco, NumberStyles.Any, new CultureInfo("pt-BR"), out preco))
                 {
-                    litMsg.Text = "<p style='color: red;'>Preço inválido. Use o formato correto (ex: 40 ou 45.25).</p>";
+                    litMsg.Text = "<p style='color: red;'>Preço inválido. Use o formato correto (ex: 40 ou 45,25).</p>";
                     return;
                 }
 
@@ -85,7 +83,6 @@ namespace prjGrowCoiffeur.Formularios
                     return;
                 }
 
-               
                 if (string.IsNullOrWhiteSpace(txtquantidadenoestoque.Text) ||
                     !int.TryParse(txtquantidadenoestoque.Text, out int quantidade))
                 {
@@ -93,44 +90,29 @@ namespace prjGrowCoiffeur.Formularios
                     return;
                 }
 
-                using (MySqlConnection conn = new MySqlConnection("SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04"))
+                Produtos produtos = new Produtos();
+                clsProduto produto = new clsProduto(
+                    int.Parse(txtCodigo.Text),
+                    txtNome.Text,
+                    txtMarca.Text,
+                    dataValidade,
+                    quantidade,
+                    preco
+                );
+
+                bool produtoAdicionado = produtos.AdicionarProduto(produto);
+
+                if (produtoAdicionado)
                 {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("CALL InserirProduto(@Codigo, @Nome, @Preco, @Marca, @DataValidade, @Quantidade)", conn);
-
-                   
-                    if (string.IsNullOrWhiteSpace(txtCodigo.Text) || !int.TryParse(txtCodigo.Text, out int codigo))
-                    {
-                        litMsg.Text = "<p style='color: red;'>Código do produto inválido.</p>";
-                        return;
-                    }
-
-                    cmd.Parameters.AddWithValue("@Codigo", codigo); 
-
-                    cmd.Parameters.AddWithValue("@Nome", txtNome.Text);
-                    cmd.Parameters.AddWithValue("@Preco", preco);
-                    cmd.Parameters.AddWithValue("@Marca", txtMarca.Text);
-                    cmd.Parameters.Add(new MySqlParameter("@DataValidade", MySqlDbType.Date) { Value = dataValidade }); 
-                    cmd.Parameters.AddWithValue("@Quantidade", quantidade);
-
-                    int resultado = cmd.ExecuteNonQuery();
-
-                    if (resultado > 0)
-                    {
-                        litMsg.Text = "<p style='color: green;'>Produto adicionado com sucesso!</p>";
-                        LimparCampos();
-                        Response.Redirect("produto.aspx", false);
-                        Context.ApplicationInstance.CompleteRequest();
-                    }
-                    else
-                    {
-                        litMsg.Text = "<p style='color: red;'>Erro ao adicionar o produto.</p>";
-                    }
+                    litMsg.Text = "<p style='color: green;'>Produto adicionado com sucesso!</p>";
+                    LimparCampos();
+                    Response.Redirect("produto.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
-            }
-            catch (MySqlException mysqlEx)
-            {
-                litMsg.Text = $"<p style='color: red;'>Erro de MySQL: {mysqlEx.Number} - {mysqlEx.Message}</p>";
+                else
+                {
+                    litMsg.Text = "<p style='color: red;'>Erro ao adicionar o produto.</p>";
+                }
             }
             catch (Exception ex)
             {

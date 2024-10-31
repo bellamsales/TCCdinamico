@@ -86,7 +86,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-
+DROP PROCEDURE IF EXISTS ConsultarHorariosOcupados$$
 CREATE PROCEDURE ConsultarHorariosOcupados(
     IN p_funcionario VARCHAR(255),
     IN p_data DATE
@@ -99,7 +99,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-
+DROP PROCEDURE IF EXISTS ObterDuracaoServico$$
 CREATE PROCEDURE ObterDuracaoServico(
     IN ServicoId INT,
     OUT Duracao TIME
@@ -173,6 +173,8 @@ BEGIN
 	select hr_inicio_disponibilidade, hr_fim_disponibilidade
     from disponibilidade d
 join disponibilidade_funcionario df on (d.cd_disponibilidade = df.cd_disponibilidade_funcionario)
+join especialidade_funcionario ef on (ef.nm_email_funcionario = df.nm_email_funcionario)
+join servico s on (ef.cd_servico = s.cd_servico)
     Where dt_inicio_disponibilidade >= curdate() and df.nm_email_funcionario = p_funcionario and dt_inicio_disponibilidade = p_data and nm_periodo_disponibilidade=p_periodo;
 END$$
 
@@ -275,7 +277,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-
+DROP PROCEDURE IF EXISTS LoginCliente$$
 CREATE PROCEDURE LoginCliente(
     IN p_email_cliente VARCHAR(50),
     IN p_senha_cliente VARCHAR(8)
@@ -296,7 +298,7 @@ BEGIN
     SELECT v_mensagem AS mensagem;
 END $$ 
 
-
+DROP PROCEDURE IF EXISTS CadastroFuncionario$$
 CREATE PROCEDURE CadastroFuncionario (
     IN p_email_funcionario VARCHAR(50),
     IN p_nome_funcionario VARCHAR(200),
@@ -310,19 +312,107 @@ BEGIN
     VALUES (p_email_funcionario, p_nome_funcionario, p_senha_funcionario, p_telefone_funcionario, p_endereco_funcionario, p_cargo_funcionario);
 END$$
 
+DROP PROCEDURE IF EXISTS ConsultarPeriodoDisponivel$$
+CREATE PROCEDURE ConsultarPeriodoDisponivel(pEmail varchar(50))
+BEGIN
+    select d.nm_periodo_disponibilidade from disponibilidade d
+	join disponibilidade_funcionario df on (df.cd_disponibilidade_funcionario = d.cd_disponibilidade)
+	where df.nm_email_funcionario = pEmail group by d.nm_periodo_disponibilidade;
+END $$
+
+DELIMITER $$
+DROP PROCEDURE IF EXISTS BuscarDisponibilidade$$
+CREATE PROCEDURE BuscarDisponibilidade(
+    IN p_email_funcionario VARCHAR(255),
+    IN p_data_disponibilidade DATE,
+    IN p_periodo_disponibilidade VARCHAR(20),
+    IN p_codigo_servico INT
+)
+BEGIN
+    SELECT hr_inicio_disponibilidade, 
+           hr_fim_disponibilidade, 
+           qt_tempo_servico
+    FROM disponibilidade d
+    JOIN disponibilidade_funcionario df ON d.cd_disponibilidade = df.cd_disponibilidade_funcionario
+    JOIN especialidade_funcionario ef ON ef.nm_email_funcionario = df.nm_email_funcionario
+    JOIN servico s ON ef.cd_servico = s.cd_servico
+    WHERE d.dt_inicio_disponibilidade >= CURDATE()
+      AND df.nm_email_funcionario = p_email_funcionario
+      AND d.dt_inicio_disponibilidade = p_data_disponibilidade
+      AND d.nm_periodo_disponibilidade = p_periodo_disponibilidade
+      AND s.cd_servico = p_codigo_servico;
+END $$
+DROP PROCEDURE IF EXISTS AgendarServico$$
+CREATE PROCEDURE AgendarServico(in pCliente varchar(50), in pServico int, in pHora time, in pData date, pFuncionario varchar(50))
+BEGIN
+	DECLARE vFuncionario varchar(50);
+    select nm_email_funcionario into vFuncionario from especialidade_funcionario where nm_email_funcionario = pFuncionario and cd_servico = pServico;
+    IF (vFuncionario IS NULL)
+    THEN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funcionario não presta este serviço.';
+	ELSE
+		insert into agendamento values (default, pServico, pHora,pData, pCliente, pFuncionario);
+        
+	END IF;
+END $$
+
+DROP PROCEDURE IF EXISTS ConsultarHorariosAgendamentos$$
+CREATE PROCEDURE ConsultarHorariosAgendamentos(
+    IN p_data_agendamento DATE,
+    IN p_email_funcionario VARCHAR(50)
+)
+BEGIN
+	SELECT hr_agendamento, qt_tempo_servico
+    FROM agendamento ag
+    join servico s on (s.cd_servico = ag.cd_servico)
+    WHERE dt_agendamento = p_data_agendamento 
+      AND nm_email_funcionario = p_email_funcionario;
+END $$
+
+DROP PROCEDURE IF EXISTS ConsultarAgendamentosPorFuncionarioData$$
+CREATE PROCEDURE ConsultarAgendamentosPorFuncionarioData(
+    IN p_funcionario_email VARCHAR(50),
+    IN p_data_agendamento DATE
+)
+BEGIN
+    SELECT 
+        a.hr_agendamento, 
+        s.nm_servico, 
+        c.nm_cliente
+    FROM 
+        agendamento a
+    JOIN 
+        servico s ON s.cd_servico = a.cd_servico
+    JOIN 
+        cliente c ON c.nm_email_cliente = a.nm_email_cliente
+    WHERE 
+        a.nm_email_funcionario = p_funcionario_email
+        AND a.dt_agendamento = p_data_agendamento;
+END$$
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS ConsultarAgendamentosPorData$$
+
+CREATE PROCEDURE ConsultarAgendamentosPorData(IN p_dt_agendamento DATE)
+BEGIN
+    SELECT 
+        a.hr_agendamento,
+        s.nm_servico,
+        c.nm_cliente,
+        f.nm_funcionario
+    FROM 
+        agendamento a
+    JOIN 
+        servico s ON a.cd_servico = s.cd_servico
+    JOIN 
+        cliente c ON a.nm_email_cliente = c.nm_email_cliente
+    JOIN 
+        funcionario f ON a.nm_email_funcionario = f.nm_email_funcionario
+    WHERE 
+        DATE(a.dt_agendamento) = p_dt_agendamento;
+END $$
+
 DELIMITER ;
-
-call AgendarServico("ana.oliveira@email.com", 0, current_time(), curdate(), "anaclara@gmail.com");
-call ConsultarDataDisponibilidadeFuncionario('anaclara@gmail.com');
-call sp_ObterHorariosDisponiveis();
-
-select hr_inicio_disponibilidade
-    from disponibilidade d
-join disponibilidade_funcionario df on (d.cd_disponibilidade = df.cd_disponibilidade_funcionario)
-    Where dt_inicio_disponibilidade >= curdate() and df.nm_email_funcionario = "roberto.pereira@email.com" and dt_inicio_disponibilidade = "2024-11-14" and nm_periodo_disponibilidade="Tarde";
-
-select * from disponibilidade_funcionario;
-
-
-
-CALL ConsultarDisponibilidadeFuncionario('ana.oliveira@email.com', 1);
+CALL ConsultarAgendamentosPorData('2024-01-12');
+DESCRIBE agendamento;

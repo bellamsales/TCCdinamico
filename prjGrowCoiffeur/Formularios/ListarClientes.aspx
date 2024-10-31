@@ -20,19 +20,18 @@
 </head>
 <body>
     <form id="form1" runat="server">
-          <asp:Literal ID="litTeste" runat="server"></asp:Literal>
             <div>
                  <nav class="menu-lateral"> 
             <div class="btn-expandir">
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
-            <a href="index.html">
+            <a href="index.aspx">
                 <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
                 <li class="item-menu">
-                    <a href="index.html">
+                    <a href="Agendamentos.aspx">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
                         <span class="txt-link">Agenda</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -54,21 +53,21 @@
                 </li>
 
                 <li class="item-menu">
-                    <a href="servico.html">
+                    <a href="servico.aspx">
                         <span class="icon"><i class="bi bi-scissors"></i></span>
                         <span class="txt-link">Serviço</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
-                    <a href="feedback.html">
+                    <a href="feedback.aspx">
                         <span class="icon"><i class="bi bi-star-fill"></i></span>
                         <span class="txt-link">Feedback</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
-                    <a href="cliente.html">
+                    <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
                         <span class="txt-link">Cliente</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -82,8 +81,7 @@
             <div id="divBusca">
                 <input type="text" id="txtBusca" placeholder="Buscar..."/>
                 <img src="../images/procurar.png" id="btnBusca" alt="Buscar"/>
-                  </div> 
-               <asp:Button ID="btnaddcliente" runat="server" OnClick="btnaddcliente_Click" Text ="Adicionar Cliente" />
+                  </div>  <asp:Button ID="btnaddcliente" runat="server" Text="Adicionar Cliente" OnClick="btnaddcliente_Click" />
                    <%--<asp:Button ID="btnaddproduto" runat="server" OnClick="btnaddproduto_Click" Text="Adicionar Produto" />--%>
                  
            </header>

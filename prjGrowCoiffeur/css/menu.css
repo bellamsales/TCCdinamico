@@ -1,4 +1,5 @@
-* {
+*
+{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
@@ -7,16 +8,13 @@
     font-style: normal;
 }
 
-body {
+body
+{
     height: 100vh;
-    transition: margin-left 0.5s ease;
 }
 
-    body.expandir-conteudo .conteudo {
-        margin-left: 300px;
-    }
-
-.menu-lateral {
+.menu-lateral
+{
     width: 60px;
     height: 100%;
     background-color: #662549;
@@ -29,11 +27,13 @@ body {
     transition: .5s;
 }
 
-.expandir {
+.expandir
+{
     width: 280px;
 }
 
-.menu-lateral.expandir .logo {
+.menu-lateral.expandir .logo
+{
     width: 80%;
     margin-left: 2%;
     margin-right: 0%;
@@ -41,36 +41,42 @@ body {
     transition: width 0.5s ease;
 }
 
-.menu-lateral.expandir #btn-exp > i {
+.menu-lateral.expandir #btn-exp > i
+{
     transform: rotate(180deg);
     transition: transform 0.5s ease;
 }
 
-.menu-lateral.expandir ul {
+.menu-lateral.expandir ul
+{
     margin-top: 20%;
 }
 
-.logo {
+.logo
+{
     width: 127%;
     margin: auto;
     margin-left: -10px;
-    margin-top: 10px;
+    margin-top: 10px;    
     margin-bottom: 20px;
 }
 
-.btn-expandir {
+.btn-expandir
+{
     width: 100%;
     padding-left: 10px;
 }
 
 
-    .btn-expandir > i {
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
+.btn-expandir > i
+{
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
 
-ul {
+ul
+{
     height: 100%;
     list-style-type: none;
     margin-left: 5%;
@@ -78,46 +84,46 @@ ul {
     transition: margin-top 0.5s;
 }
 
-    ul li.item-menu {
-        transition: .2s;
-    }
+ul li.item-menu
+{
+    transition: .2s;
+}
 
-    ul li.ativo {
-        background-color: #974c76;
-    }
+ul li.ativo
+{
+    background-color: #974c76;
+}
 
-    ul li.item-menu:hover {
-        background-color: #974c76;
-    }
+ul li.item-menu:hover
+{
+    background-color: #974c76;
+}
 
-    ul li.item-menu a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 20px 4%;
-        display: flex;
-        margin-bottom: 0%;
-        line-height: 40px;
-    }
+ul li.item-menu a
+{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 20px 4%; 
+    display: flex;
+    margin-bottom: 0%;
+    line-height: 40px;
+}
 
-    ul li#logout {
-        margin-top: 385px;
-    }
+ul li.item-menu a .txt-link
+{
+    margin-left: 33px;
+}
 
-        ul li#logout.expandir {
-            margin-top: 350px;
-        }
+ul li.item-menu a .icon > i
+{
+    font-size: 27px;
+    padding-left: 2%;
+}
 
-    ul li.item-menu a .txt-link {
-        margin-left: 33px;
-    }
+ul li.item-menu a .icon-seta > i
+{
+    margin-left: 180%;
+    font-size: 24px;
+}
 
-    ul li.item-menu a .icon > i {
-        font-size: 27px;
-        padding-left: 2%;
-    }
-
-    ul li.item-menu a .icon-seta > i {
-        margin-left: 180%;
-        font-size: 24px;
-    }

@@ -1528,3 +1528,717 @@ C:\Users\aluno\Downloads\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGr
 C:\Users\aluno\Downloads\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CopyComplete
 C:\Users\aluno\Downloads\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
 C:\Users\aluno\Downloads\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CopyComplete
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\aluno\Downloads\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.rsp
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.rsp
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\ZstdSharp.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CopyComplete
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+D:\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowC.5FA19BA9.Up2Date
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCCdinamico Arrumar Editar Funcionário\TCCdinamico\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowC.5FA19BA9.Up2Date
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCCdinamico TUDO\TCCdinamico\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\obj\Debug\prjGrowC.5FA19BA9.Up2Date
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\Alisson\Desktop\TCCdinamico TUDO\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\obj\Debug\prjGrowC.5FA19BA9.Up2Date
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\prjGrowCoiffeur ARRUMAR ALGUMAS COISAS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll.config
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\prjGrowCoiffeur.pdb
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csc.exe
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csc.exe.config
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csc.rsp
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csi.exe
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csi.exe.config
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\csi.rsp
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.AppContext.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Console.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Net.Http.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Net.Sockets.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.ValueTuple.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\vbc.exe
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\vbc.exe.config
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\vbc.rsp
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Google.Protobuf.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Hash.xxHash.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\MySql.Data.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Newtonsoft.Json.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Buffers.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.IO.Pipelines.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Memory.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Net.Http.Formatting.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Numerics.Vectors.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Web.Http.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Web.Http.WebHost.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\ZstdSharp.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\BouncyCastle.Cryptography.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Google.Protobuf.pdb
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Google.Protobuf.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Compression.LZ4.Streams.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\K4os.Hash.xxHash.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\MySql.Data.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Newtonsoft.Json.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Buffers.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Configuration.ConfigurationManager.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.IO.Pipelines.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Memory.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Net.Http.Formatting.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Numerics.Vectors.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Web.Http.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\System.Web.Http.WebHost.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\pt-br\System.Net.Http.Formatting.resources.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\pt-br\System.Web.Http.resources.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\bin\pt-br\System.Web.Http.WebHost.resources.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.AssemblyReference.cache
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.csproj.CoreCompileInputs.cache
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\obj\Debug\prjGrowC.5FA19BA9.Up2Date
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.dll
+C:\Users\Nah\Desktop\TCC QUASE COM OS EDITAR PRONTOS\prjGrowCoiffeur\obj\Debug\prjGrowCoiffeur.pdb

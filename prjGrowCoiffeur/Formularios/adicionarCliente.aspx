@@ -29,12 +29,12 @@
                     <img src="../images/logo-branca.png" alt="Logo" class="logo">
                 </a>
                 <ul>
-                    <li class="item-menu"><a href="index.html"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Agenda</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="funcionario.html"><span class="icon"><i class="bi bi-people"></i></span><span class="txt-link">Funcionário</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="index.aspx"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Agenda</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="funcionario.aspx"><span class="icon"><i class="bi bi-people"></i></span><span class="txt-link">Funcionário</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                     <li class="item-menu"><a href="produto.aspx"><span class="icon"><i class="bi bi-archive"></i></span><span class="txt-link">Produto</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="servico.html"><span class="icon"><i class="bi bi-scissors"></i></span><span class="txt-link">Serviço</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="feedback.html"><span class="icon"><i class="bi bi-star-fill"></i></span><span class="txt-link">Feedback</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
-                    <li class="item-menu"><a href="cliente.html"><span class="icon"><i class="bi bi-person"></i></span><span class="txt-link">Cliente</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="servico.aspx"><span class="icon"><i class="bi bi-scissors"></i></span><span class="txt-link">Serviço</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="feedback.aspx"><span class="icon"><i class="bi bi-star-fill"></i></span><span class="txt-link">Feedback</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
+                    <li class="item-menu"><a href="ListarClientes.aspx"><span class="icon"><i class="bi bi-person"></i></span><span class="txt-link">Cliente</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                 </ul>
             </nav>
               <div class="conteudo">
@@ -47,24 +47,29 @@
                 <section class="areaFormulario">
                     <p>
                         <label for="txtEmail">Email:</label>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Aqui deve ser o Email"></asp:TextBox>
+                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Informe o email do cliente"></asp:TextBox>
                     </p>
                     <p>
                         <label for="txtsenha">Senha:</label>
-                        <asp:TextBox ID="txtSenha" runat="server" placeholder="Informe sua senha" ></asp:TextBox>
+                        <asp:TextBox ID="txtSenha" runat="server" placeholder="Informe a senha do cliente" ></asp:TextBox>
                     </p>
                     <p>
                         <label for="txtNome">Nome:</label>
-                        <asp:TextBox ID="txtNome" runat="server" placeholder="Informe Nome "></asp:TextBox>
+                        <asp:TextBox ID="txtNome" runat="server" placeholder="Informe nome do cliente"></asp:TextBox>
                     </p>
                    
                      <p>
                         <label for="txtEndereco">Endereço:</label>
-                        <asp:TextBox ID="txtEndereco" runat="server" placeholder="Informe o endereco completo"></asp:TextBox>
+                        <asp:TextBox ID="txtEndereco" runat="server" placeholder="Informe o endereco completo do cliente"></asp:TextBox>
                     </p>
                      <p>
                         <label for="txtDescricao">Descricao:</label>
-                        <asp:TextBox ID="txtDescricao" runat="server" placeholder="Informe o endereco completo"></asp:TextBox>
+                        <asp:TextBox ID="txtDescricao" runat="server" placeholder="Informe uma descrição pro cliente"></asp:TextBox>
+                    </p>
+
+                     <p>
+                        <label for="txtCPF">CPF:</label>
+                        <asp:TextBox ID="txtCPF" runat="server" placeholder="Informe o CPF do cliente"></asp:TextBox>
                     </p>
                    
                     <p class="btns">

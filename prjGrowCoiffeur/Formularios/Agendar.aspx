@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Agendar.aspx.cs" Inherits="prjGrowCoiffeur.Formularios.Agendar" %>
 
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -11,12 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet"/>
-
     <title>Glow Coiffeur</title>
     <link rel="stylesheet" href="../css/agendar.css"/>
-
+    
     <% if (Session["TipoUsuario"] != null) { %>
-        <% if (Session["TipoUsuario"].ToString() == "funcionario") { %>
+       <% if (Session["TipoUsuario"].ToString() == "funcionario" || Session["TipoUsuario"].ToString() == "gerente") { %>
             <link rel="stylesheet" href="../css/menuFuncionario.css"/>
         <% } else { %>
             <link rel="stylesheet" href="../css/menu.css"/>
@@ -28,17 +26,17 @@
 <body>
     <form id="form1" runat="server">
         <% if (Session["TipoUsuario"] != null) { %>
-            <% if (Session["TipoUsuario"].ToString() == "funcionario") { %>
+           <% if (Session["TipoUsuario"].ToString() == "funcionario" || Session["TipoUsuario"].ToString() == "gerente") { %>
                 <nav class="menu-lateral">
                     <div class="btn-expandir">
-                        <i class="bi bi-caret-left-fill" id="btn-exp"</i>
+                        <i class="bi bi-caret-left-fill" id="btn-exp"></i>
                     </div>
-                    <a href="meusAgendamentos.aspx">
+                    <a href="index.aspx">
                         <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
                     <ul>
-                        <li class="item-menu">
-                            <a href="index.aspx">
+                        <li class="item-menu ativo">
+                            <a href="Agendamentos.aspx">
                                 <span class="icon"><i class="bi bi-calendar-date"></i></span>
                                 <span class="txt-link">Agenda</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
@@ -58,27 +56,36 @@
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                             </a>
                         </li>
+
                         <li class="item-menu">
-                            <a href="servico.aspx">
-                                <span class="icon"><i class="bi bi-scissors"></i></span>
-                                <span class="txt-link">Serviço</span>
-                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                            </a>
-                        </li>
-                        <li class="item-menu">
-                            <a href="feedback.aspx">
-                                <span class="icon"><i class="bi bi-star-fill"></i></span>
-                                <span class="txt-link">Feedback</span>
-                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                            </a>
-                        </li>
-                       <li class="item-menu">
-                        <a href="ListarClientes.aspx"> <!-- Corrigido aqui -->
+                        <a href="servico.aspx">
+                            <span class="icon"><i class="bi bi-scissors"></i></span>
+                            <span class="txt-link">Serviço</span>
+                            <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="feedback.aspx">
+                            <span class="icon"><i class="bi bi-star-fill"></i></span>
+                            <span class="txt-link">Feedback</span>
+                            <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="item-menu">
+                        <a href="ListarClientes.aspx">
                             <span class="icon"><i class="bi bi-person"></i></span>
                             <span class="txt-link">Cliente</span>
                             <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                         </a>
                     </li>
+
+                        <li class="item-menu" id="logout">
+                            <a href="index.aspx">
+                                <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                                <span class="txt-link">Sair</span>
+                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
             <% } else { %>
@@ -86,7 +93,7 @@
                     <div class="btn-expandir">
                         <i class="bi bi-caret-left-fill" id="btn-exp"></i>
                     </div>
-                    <a href="index.html">
+                    <a href="index.aspx">
                         <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
                     <ul>
@@ -116,7 +123,17 @@
             <% } %>
         <% } %>
 
-        <div class="conteudo">
+
+               <div class="conteudo">
+                
+
+    <div id="errorPopup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2>Sistema:</h2>
+            <p id="errorMessages">Aqui aparecem os erros de HTML e CSS.</p>
+        </div>
+    </div>
             <h1><strong>Novo agendamento</strong></h1>
             <asp:Panel ID="pnlCliente" CssClass="form-group" Visible="false" runat="server">
                 <label for="txtCliente">Email do Cliente:</label>

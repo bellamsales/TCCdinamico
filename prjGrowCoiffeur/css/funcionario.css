@@ -1,108 +1,100 @@
-.conteudo-principal {
-    margin-left: 70px;
-    padding: 20px;
+﻿.conteudo {
+    margin-left: 58px;
 }
 
-h1 {
-    font-size: 2rem;
-    color: #662549;
+* {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+#divBusca {
     margin-top: 20px;
-}
-
-.lista-funcionarios {
-    width: 25%;
-    background-color: #f5f5f5;
-    padding: 20px;
+    border: solid 1px #5A203F;
     border-radius: 15px;
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.search-bar input {
-    width: 85%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-
-.search-bar i {
-    margin-left: 10px;
-    font-size: 1.2rem;
-}
-
-.funcionario {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.funcionario:hover {
-    background-color: #e0e0e0;
-}
-
-.funcionario i {
-    font-size: 2rem;
-    color: #662549;
-    margin-right: 10px;
-}
-
-.funcionario span {
-    font-size: 1rem;
-}
-
-.detalhes-funcionario {
     width: 70%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    border: 1px solid #ddd;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
+    margin-bottom: 2%;
 }
 
-.detalhes-funcionario h2, .detalhes-funcionario p {
-    color: #662549;
-    margin-top: 20px;
-    margin-left: 20px
+#txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 100%;
+    width: 96%;
+    border-radius: 10px;
 }
 
-.detalhes-funcionario h3 {
-    color: #662549;
-    font-size: 20px;
-    margin-top: 40px;
-    margin-left: 20px
-}
-
-.detalhes-funcionario ul {
-    list-style: none;
-    padding: 0;
-}
-
-.detalhes-funcionario ul li {
-    font-size: 1.1rem;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    align-items: center;
 }
 
-.detalhes-funcionario ul li span {
-    color: #662549;
-    font-weight: 600;
+#btnaddfuncionario {
+    height: 40px;
+    background-color: #5A203F;
+    color: white;
+    border: 1px solid #5A203F;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.listadefuncionarios {
+    width: 90%;
+    height: 500px;
+    padding-left: 5px;
+    overflow-y: scroll;
+    margin-left: 50px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E8BCB9;
+    border-radius: 10px;
+}
+
+
+
+.imgtabela {
+    width: 40px;
+    cursor: pointer;
+}
+
+.table th {
+    background-color: #E8BCB9;
+}
+
+tr {
+    background-color: #e3e3e3;
+}
+
+.table {
+    width: 100%;
+}
+
+#tdlinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.alinhartabcentro {
+    text-align: center;
+}
+.inativo {
+    background-color: #f5f5f5;
+    color: #ccc;
+    pointer-events: none;
 }

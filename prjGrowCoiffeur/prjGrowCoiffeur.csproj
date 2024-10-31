@@ -134,18 +134,19 @@
     <Content Include="APIs\AgendarServicoAPI.aspx" />
     <Content Include="APIs\ConsultaHoraDisponibilidade.aspx" />
     <Content Include="css\adicionarcliente.css" />
+    <Content Include="css\adicionarfuncionario.css" />
     <Content Include="css\adicionarproduto.css" />
     <Content Include="css\agendar.css" />
     <Content Include="css\cadastro.css" />
     <Content Include="css\cliente.css" />
     <Content Include="css\editarcliente.css" />
+    <Content Include="css\editarfuncionario.css" />
     <Content Include="css\editarproduto.css" />
     <Content Include="css\erro.css" />
     <Content Include="css\estilocadastrofuncionario.css" />
     <Content Include="css\estilocliente.css" />
     <Content Include="css\estilofuncionario.css" />
     <Content Include="css\estilologinfuncionario.css" />
-    <Content Include="css\feedback.css" />
     <Content Include="css\funcionario.css" />
     <Content Include="css\index.css" />
     <Content Include="css\login.css" />
@@ -153,14 +154,16 @@
     <Content Include="css\loginGerente.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\menuFuncionario.css" />
+    <Content Include="css\planilha.css" />
     <Content Include="css\produto.css" />
-    <Content Include="css\servico.css" />
     <Content Include="Formularios\adicionarCliente.aspx" />
+    <Content Include="Formularios\adicionarFuncionario.aspx" />
     <Content Include="Formularios\AdicionarProduto.aspx" />
     <Content Include="Formularios\Agendamentos.aspx" />
     <Content Include="Formularios\Agendar.aspx" />
     <Content Include="Formularios\Cadastro.aspx" />
     <Content Include="Formularios\editarCliente.aspx" />
+    <Content Include="Formularios\editarFuncionario.aspx" />
     <Content Include="Formularios\editarProduto.aspx" />
     <Content Include="Formularios\erro.aspx" />
     <Content Include="Formularios\Funcionario.aspx" />
@@ -206,10 +209,11 @@
     <Content Include="images\visualizacao.png" />
     <Content Include="images\whatsapp.png" />
     <Content Include="javascript\agendar.js" />
+    <Content Include="javascript\alertas.js" />
     <Content Include="javascript\funcionario.js" />
+    <Content Include="javascript\mascaras.js" />
     <Content Include="javascript\menu.js" />
     <Content Include="Formularios\Produto.aspx" />
-    <Content Include="Formularios\Servico.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +240,13 @@
     </Compile>
     <Compile Include="Formularios\adicionarCliente.aspx.designer.cs">
       <DependentUpon>adicionarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\adicionarFuncionario.aspx.cs">
+      <DependentUpon>adicionarFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\adicionarFuncionario.aspx.designer.cs">
+      <DependentUpon>adicionarFuncionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\AdicionarProduto.aspx.cs">
       <DependentUpon>AdicionarProduto.aspx</DependentUpon>
@@ -271,6 +282,13 @@
     </Compile>
     <Compile Include="Formularios\editarCliente.aspx.designer.cs">
       <DependentUpon>editarCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\editarFuncionario.aspx.cs">
+      <DependentUpon>editarFuncionario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\editarFuncionario.aspx.designer.cs">
+      <DependentUpon>editarFuncionario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\editarProduto.aspx.cs">
       <DependentUpon>editarProduto.aspx</DependentUpon>
@@ -338,13 +356,6 @@
       <DependentUpon>Produto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Formularios\Servico.aspx.cs">
-      <DependentUpon>Servico.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formularios\Servico.aspx.designer.cs">
-      <DependentUpon>Servico.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

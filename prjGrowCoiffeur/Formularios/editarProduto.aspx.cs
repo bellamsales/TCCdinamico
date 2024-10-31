@@ -32,13 +32,13 @@ namespace prjGrowCoiffeur.Formularios
                         txtNome.Text = produto.NmProduto;
                         txtmarca.Text = produto.NmMarcaProduto;
 
-                      
+
                         txtPreco.Text = produto.VlProdutoEstoque.ToString("C", System.Globalization.CultureInfo.CurrentCulture);
 
-                       
-                        txtdata.Text = produto.DtValidadeProduto.ToString("yyyy-MM-dd"); 
 
-                  
+                        txtdata.Text = produto.DtValidadeProduto.ToString("yyyy-MM-dd");
+
+
                         txtquantidadenoestoque.Text = produto.QtProdutoEstoque.ToString();
                     }
                 }
@@ -52,35 +52,25 @@ namespace prjGrowCoiffeur.Formularios
         protected void btnexcluir_Click(object sender, EventArgs e)
         {
             int codigoProduto = int.Parse(txtCodigo.Text);
-            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
+            Produtos produtos = new Produtos();
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            try
             {
-                // Call the stored procedure ExcluirProduto
-                string query = "CALL ExcluirProduto(@cd_produto)";
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@cd_produto", codigoProduto);
-
-                try
+                bool excluido = produtos.ExcluirProduto(codigoProduto);
+                if (excluido)
                 {
-                    conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        litMsg.Text = "<h2 class='sucesso'>Produto excluído com sucesso</h2>";
-                        Response.Redirect("produto.aspx", false); // Redirecionar para produto.aspx
-                        Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
-                    }
-                    else
-                    {
-                        litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto. Produto não encontrado.</h2>";
-                    }
+                    litMsg.Text = "<h2 class='sucesso'>Produto excluído com sucesso</h2>";
+                    Response.Redirect("produto.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
-                catch (Exception ex)
+                else
                 {
-                    litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto: " + ex.Message + "</h2>";
+                    litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto. Produto não encontrado.</h2>";
                 }
+            }
+            catch (Exception ex)
+            {
+                litMsg.Text = "<h2 class='erro'>Erro ao excluir o produto: " + ex.Message + "</h2>";
             }
         }
 
@@ -88,9 +78,11 @@ namespace prjGrowCoiffeur.Formularios
         protected void btnedit_Click(object sender, EventArgs e)
         {
             #region Validações
+            // Remover "R$" e formatar o preço corretamente
             string textoPreco = txtPreco.Text.Replace("R$", "").Trim().Replace(".", ",");
-            double preco;
-            if (!double.TryParse(textoPreco, out preco))
+            decimal preco;
+            // Tentar converter o texto em decimal
+            if (!decimal.TryParse(textoPreco, System.Globalization.NumberStyles.Any, System.Globalization.CultureInfo.CurrentCulture, out preco))
             {
                 litMsg.Text = "<h2 class='erro'>Preço inválido</h2>";
                 return;
@@ -111,42 +103,34 @@ namespace prjGrowCoiffeur.Formularios
             }
             #endregion
 
-            int codigoProduto = int.Parse(txtCodigo.Text);
-            string connectionString = "SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04";
+            clsProduto produto = new clsProduto(
+                int.Parse(txtCodigo.Text),
+                txtNome.Text,
+                txtmarca.Text,
+                dataValidade,
+                quantidadeEstoque,
+                preco 
+            );
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            Produtos produtos = new Produtos();
+
+            try
             {
-                // Atualize a query para incluir a data de validade
-                string query = "CALL AtualizarProduto(@cd_produto, @nm_produto, @nm_marca_produto, @vl_produto_estoque, @qt_produto_estoque, @dt_validade_produto)";
-
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@cd_produto", codigoProduto);
-                cmd.Parameters.AddWithValue("@nm_produto", txtNome.Text);
-                cmd.Parameters.AddWithValue("@nm_marca_produto", txtmarca.Text);
-                cmd.Parameters.AddWithValue("@vl_produto_estoque", preco);
-                cmd.Parameters.AddWithValue("@qt_produto_estoque", quantidadeEstoque);
-                cmd.Parameters.AddWithValue("@dt_validade_produto", dataValidade); // Adicione a data de validade
-
-                try
+                bool atualizado = produtos.EditarProduto(produto);
+                if (atualizado)
                 {
-                    conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-
-                    if (rowsAffected > 0)
-                    {
-                        litMsg.Text = "<h2 class='sucesso'>Produto atualizado com sucesso</h2>";
-                        Response.Redirect("produto.aspx", false); // Redirecionar para produto.aspx
-                        Context.ApplicationInstance.CompleteRequest(); // Completa a requisição
-                    }
-                    else
-                    {
-                        litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto. Produto não encontrado.</h2>";
-                    }
+                    litMsg.Text = "<h2 class='sucesso'>Produto atualizado com sucesso</h2>";
+                    Response.Redirect("produto.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
-                catch (Exception ex)
+                else
                 {
-                    litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto: " + ex.Message + "</h2>";
+                    litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto. Produto não encontrado.</h2>";
                 }
+            }
+            catch (Exception ex)
+            {
+                litMsg.Text = "<h2 class='erro'>Erro ao atualizar o produto: " + ex.Message + "</h2>";
             }
         }
     }

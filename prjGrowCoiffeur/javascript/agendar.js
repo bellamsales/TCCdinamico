@@ -1,119 +1,31 @@
-//var menuItem = document.querySelectorAll('.item-menu');
 
-//async function fetchAppointments() {
-//    const response = await fetch('/api/appointments');
-//    const appointments = await response.json();
-
-//    const appointmentTemplate = document.getElementById('appointmentTemplate');
-//    const agendaContainer = document.querySelector('.agenda');
-//    agendaContainer.innerHTML = '';
-
-//    appointments.forEach(appointment => {
-//        const appointmentElement = appointmentTemplate.content.cloneNode(true);
-//        appointmentElement.querySelector('.cliente').textContent = `Cliente: ${appointment.cliente}`;
-//        appointmentElement.querySelector('.servico').textContent = `Serviço: ${appointment.servico}`;
-//        appointmentElement.querySelector('.data').textContent = `Data: ${appointment.data}`;
-//        appointmentElement.querySelector('.horario').textContent = `Horário: ${appointment.horario}`;
-//        agendaContainer.appendChild(appointmentElement);
-//    });
-//}
-//window.onload = fetchAppointments;
-
-//const caixaMes = document.getElementById('cmbMeses');
-//if (caixaMes)
-//caixaMes.addEventListener('change', function(e){
-//gerarCalendario(caixaMes.value, 2024);
-//})
-
-//function gerarCalendario(mes, ano) {
-
-//// cria uma data com o ano e mes especificado. O terceiro parametro seria o dia, colocando 0 ele assume o ultimo dia do mes
-//const diasNoMes = new Date(ano, mes + 1, 0).getDate();
-
-//// cria uma data com o ano e mes especificado. No caso, o primeiro dia do mes. com getDay pegamos o dia da semana (0 = domingo, 6 = sábado)
-//const primeiroDia = new Date(ano, mes, 1).getDay();
-//console.log(primeiroDia);
-
-//const calendario = document.getElementById('calendario');
-//calendario.innerHTML = '';
-
-//const datasPredefinidas = [5, 10, 15, 25]; // Dias marcados de exemplo
-
-//if (primeiroDia < 6)
-//{
-//for (let i = 0; i < primeiroDia; i++) {
-//    const celulaVazia = document.createElement('div');
-//    celulaVazia.className = 'dia vazio';
-//    calendario.appendChild(celulaVazia);
-//}
-//}
-
-
-//for (let dia = 1; dia <= diasNoMes; dia++) {
-//const diaElemento = document.createElement('div');
-//diaElemento.className = 'dia';
-//diaElemento.textContent = dia;
-
-//if (datasPredefinidas.includes(dia)) {
-//    diaElemento.classList.add('predefinido');
-//}
-
-//calendario.appendChild(diaElemento);
-//}
-//}
-
-//gerarCalendario(5, 2024); // Meses começam em 0 (Janeiro = 0, Agosto = 7)
-
-//document.addEventListener("DOMContentLoaded", function() {
-//    const form = document.querySelector('form');
-//    form.addEventListener('submit', function(event) {
-//        event.preventDefault();
-
-
-//        const nomeCliente = document.getElementById('nomeCliente').value;
-//        const emailCliente = document.getElementById('emailCliente').value;
-//        const servico = document.getElementById('servico').value;
-//        const profissional = document.getElementById('profissional').value;
-//        const horario = document.querySelector('input[name="horario"]:checked').value;
-
-
-//        const novoAgendamento = {
-//            cliente: nomeCliente,
-//            email: emailCliente,
-//            servico: servico,
-//            profissional: profissional,
-//            horario: horario
-//        };
-
-
-//        const agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
-
-
-//        agendamentos.push(novoAgendamento);
-
-
-//        localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
-
-
-//        window.location.href = 'index.html';
-//    });
-// });
 let diaSelecionado = null;
 let funcionarioAG = null;
 let dataAG = null;
 let servicoAG = null;
 let horaAG = null;
-let clienteAG = null
-function handleDiaClick(dia, funcionario, mes, servico, cliente) {
+let clienteAG = null;
+function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
     diaSelecionado = dia;
     funcionarioAG = funcionario;
     clienteAG = cliente;
     servicoAG = servico;
-    document.getElementById('btn-manha').disabled = false;
-    document.getElementById('btn-tarde').disabled = false;
-    document.getElementById('btn-noite').disabled = false;
 
-    
+    document.getElementById('btn-manha').disabled = true;
+    document.getElementById('btn-tarde').disabled = true;
+    document.getElementById('btn-noite').disabled = true;
+
+    const periodosArray = periodos.split(',');
+    periodosArray.forEach(periodo => {
+        if (periodo === 'Manhã') {
+            document.getElementById('btn-manha').disabled = false;
+        } else if (periodo === 'Tarde') {
+            document.getElementById('btn-tarde').disabled = false;
+        } else if (periodo === 'Noite') {
+            document.getElementById('btn-noite').disabled = false;
+        }
+    });
+
     document.getElementById('btn-manha').addEventListener('click', function () {
         capturarPeriodo('Manhã');
     });
@@ -127,69 +39,111 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente) {
 
     function formatarMinutosParaHoras(minutos) {
         const horas = Math.floor(minutos / 60);
-        const minutosRestantes = minutos % 60; 
+        const minutosRestantes = minutos % 60;
 
         const horasFormatadas = String(horas).padStart(2, '0');
         const minutosFormatados = String(minutosRestantes).padStart(2, '0');
 
-        return `${horasFormatadas}:${minutosFormatados}`; 
+        return `${horasFormatadas}:${minutosFormatados}`;
     }
 
     function capturarPeriodo(periodo) {
-        if (diaSelecionado === null) {
+        if (diaSelecionado === null)
             return;
-        }
+        
 
         const dataSelecionada = new Date(new Date().getFullYear(), mes - 1, diaSelecionado);
-        const dataFormatada = dataSelecionada.toISOString().split('T')[0]; 
+        const dataFormatada = dataSelecionada.toISOString().split('T')[0];
 
         dataAG = dataFormatada;
 
-        const url = `../APIs/ConsultaHoraDisponibilidade.aspx?funcionario=${encodeURIComponent(funcionario)}&data=${encodeURIComponent(dataFormatada)}&periodo=${encodeURIComponent(periodo)}`;
-
+        const url = `../APIs/ConsultaHoraDisponibilidade.aspx?funcionario=${encodeURIComponent(funcionario)}&data=${encodeURIComponent(dataFormatada)}&periodo=${encodeURIComponent(periodo)}&codigoServico=${encodeURIComponent(servicoAG)}`;
+        console.log(url);
         fetch(url)
             .then(response => {
                 if (!response.ok) {
-                    throw new Error('Erro na requisição: ' + response.status);
+                    const errors = [response.status];
+                    showPopup(errors);
+                    return;
                 }
-                return response.json(); 
+                return response.json();
             })
             .then(data => {
-                console.log(data); 
 
                 const horariosDiv = document.getElementById("horariosManha");
                 horariosDiv.innerHTML = '';
 
-             
+
 
                 data.forEach(d => {
-                    const button = document.createElement("button");
-                    button.type = "button";
-                    button.className = "horario-btn";
-                    console.log(d.HoraInicial);
-                    button.textContent = `${formatarMinutosParaHoras(d.HoraInicial.TotalMinutes)} - ${formatarMinutosParaHoras(d.HoraFinal.TotalMinutes) }`; // Adiciona o horário como texto no botão
-                    
-                   button.addEventListener('click', function () {
-    
-    if (this.classList.contains('selecionado')) {
-        
-        this.classList.remove('selecionado');
-        horaAG = null; 
-    } else {
-    
-        this.classList.add('selecionado');
-        horaAG = formatarMinutosParaHoras(d.HoraInicial.TotalMinutes); 
-    }
-});
+                    let controleDuracao = 0;
+                    const duracaoServico = d.TempoServico.TotalMinutes;
+                    let inicioMinutosPadrao = d.HoraInicial.TotalMinutes;
+                    let inicioMinutos = d.HoraInicial.TotalMinutes;
+                    const fimMinutos = d.HoraFinal.TotalMinutes;
+                    let bloqueioManha = false;
+                    const inicioAlmoco = 12 * 60; // 12:00 em minutos
+                    const fimAlmoco = 13 * 60; // 13:00 em minutos
 
-                    horariosDiv.appendChild(button); 
+                    if (inicioMinutos <= 12 * 60 && fimMinutos >= 12 * 60) {
+
+                        if (d.HoraInicial.TotalMinutes <= 12 * 60 && d.HoraFinal.TotalMinutes >= 12 * 60)
+                            bloqueioManha = true;
+                        
+                    }
+                    while (inicioMinutos < fimMinutos) {
+                        let intervaloFimMinutos = inicioMinutos + duracaoServico;
+
+                        if (inicioMinutos < fimAlmoco && intervaloFimMinutos > inicioAlmoco) {
+
+                            if (inicioMinutos < inicioAlmoco)
+                                intervaloFimMinutos = inicioAlmoco;
+                            else {
+                                inicioMinutos = fimAlmoco;
+                                continue;
+                            }
+                        }
+                        if (intervaloFimMinutos > fimMinutos)
+                            intervaloFimMinutos = fimMinutos;
+                        
+
+                        const inicioFormatado = formatarMinutosParaHoras(inicioMinutos);
+                        const fimFormatado = formatarMinutosParaHoras(intervaloFimMinutos);
+
+                        const button = document.createElement("button");
+                        button.type = "button";
+                        button.className = "horario-btn";
+                        button.textContent = `${inicioFormatado}`;
+                        if (bloqueioManha && inicioMinutos < inicioAlmoco) {
+                            document.getElementById('btn-manha').disabled = false;
+                        }
+                        button.addEventListener('click', function () {
+                            if (this.classList.contains('selecionado')) {
+                                this.classList.remove('selecionado');
+                                horaAG = null;
+                            } else {
+                                this.classList.add('selecionado');
+                                horaAG = inicioFormatado;
+                            }
+                        });
+
+                        horariosDiv.appendChild(button);
+
+                        inicioMinutos = intervaloFimMinutos;
+                        controleDuracao++;
+                    }
+
+                    if ((duracaoServico * controleDuracao) > (fimMinutos - inicioMinutosPadrao) && periodo == "Noite")
+                        horariosDiv.removeChild(horariosDiv.lastElementChild);
+                
                 });
             })
             .catch(error => {
-                console.error('Erro:', error); 
+                const errors = [error];
+                showPopup(errors);
+                return;
             });
     }
-    
 }
 function agendarServico() {
 
@@ -199,18 +153,21 @@ function agendarServico() {
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Erro na requisição: ' + response.status); 
+                const errors = [response.status];
+                showPopup(errors);
+                return;
             }
             return response.json();
         })
         .then(data => {
-            alert(data.message || data.error); 
+            const errors = [data.message || data.error];
+            showPopup(errors);
         })
         .catch(error => {
-            console.error('Erro:', error);
-            alert('Erro ao agendar o serviço. Tente novamente.');
+            const errors = [error];
+            showPopup(errors);
         });
-    
+
 }
 
 const periodoButtons = document.querySelectorAll('.periodo-btn');
@@ -218,131 +175,53 @@ const periodoButtons = document.querySelectorAll('.periodo-btn');
 
 periodoButtons.forEach(button => {
     button.addEventListener('click', function () {
-       
+
         if (this.classList.contains('selecionado')) {
-           
+
             this.classList.remove('selecionado');
-           
+
         } else {
-            
+
             periodoButtons.forEach(btn => btn.classList.remove('selecionado'));
 
-           
+
             this.classList.add('selecionado');
-           
+
         }
     });
 });
 
-function adicionarBotoesDeHorario() {
-    const horarios = [];
-    const periodos = [
-        { inicio: '08:00', fim: '12:00' },
-        { inicio: '13:00', fim: '17:30' },
-        { inicio: '18:00', fim: '20:00' }
-    ];
 
-    periodos.forEach(periodo => {
-        let horaAtual = new Date(`1970-01-01T${periodo.inicio}:00`);
-        const horaFim = new Date(`1970-01-01T${periodo.fim}:00`);
+function showPopup(errors) {
+    const popup = document.getElementById('errorPopup');
+    popup.style.display = 'block';
+    popup.style.right = '0';
 
-        while (horaAtual <= horaFim) {
-            horarios.push(horaAtual.toTimeString().slice(0, 5)); // Adiciona apenas a hora e minutos
-            horaAtual.setMinutes(horaAtual.getMinutes() + 30); // Incrementa 30 minutos
-        }
-    });
 
-    // Agora, preencha os botões na interface
-    const containerDeBotoes = document.getElementById('container-botoes'); // Certifique-se de ter um contêiner no HTML para os botões
+    document.getElementById('errorMessages').innerHTML = errors.join('<br>');
 
-    horarios.forEach(horario => {
-        const botao = document.createElement('button');
-        botao.textContent = horario;
-        botao.onclick = () => selecionarHorario(horario); // Função para lidar com a seleção do horário
-        containerDeBotoes.appendChild(botao);
-    });
+
+    setTimeout(() => {
+        popup.style.right = '-300px';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500);
+    }, 3000);
 }
+document.querySelector('.close').onclick = function () {
+    const popup = document.getElementById('errorPopup');
+    popup.style.right = '-300px';
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 500);
+};
 
-function selecionarHorario(horario) {
-    
-    console.log("Horário selecionado: " + horario);
-}
-
-function obterHorariosDisponiveis(funcionario, data, periodo) {
-    $.ajax({
-        type: "GET",
-        url: "ConsultaHoraDisponibilidade.aspx",
-        data: { funcionario: funcionario, data: data, periodo: periodo },
-        dataType: "json",
-        success: function (response) {
-            
-            $('#horariosManha').empty();
-            $('#horariosTarde').empty();
-            $('#horariosNoite').empty();
-
-          
-            response.manha.forEach(function (horario) {
-                $('#horariosManha').append(horario);
-            });
-
-            response.tarde.forEach(function (horario) {
-                $('#horariosTarde').append(horario);
-            });
-
-            response.noite.forEach(function (horario) {
-                $('#horariosNoite').append(horario);
-            });
-        },
-        error: function (error) {
-            console.error("Erro ao obter horários disponíveis:", error);
-        }
-    });
-}
-
-function consultarHorarios(funcionario, data, periodo) {
-    $.ajax({
-        url: 'ConsultaHoraDisponibilidade.aspx',
-        type: 'GET',
-        data: {
-            funcionario: funcionario,
-            data: data,
-            periodo: periodo
-        },
-        success: function (response) {
-            // Limpar horários antes de adicionar novos
-            $('#horariosManha').empty();
-            $('#horariosTarde').empty();
-            $('#horariosNoite').empty();
-
-            // Adicionar horários disponíveis
-            if (response.manha) {
-                response.manha.forEach(function (horario) {
-                    $('#horariosManha').append(horario);
-                });
-            }
-            if (response.tarde) {
-                response.tarde.forEach(function (horario) {
-                    $('#horariosTarde').append(horario);
-                });
-            }
-            if (response.noite) {
-                response.noite.forEach(function (horario) {
-                    $('#horariosNoite').append(horario);
-                });
-            }
-        },
-        error: function (xhr) {
-            console.error('Erro ao consultar horários:', xhr);
-        }
-    });
-}
-
-$(document).ready(function () {
-    $('#periodoSelecionado').click(function () {
-        var funcionario = 'funcionarioID'; 
-        var data = '2024-10-22'; 
-        var periodo = 'manha'; 
-
-        consultarHorarios(funcionario, data, periodo);
-    });
-});
+window.onclick = function (event) {
+    if (event.target == document.getElementById('errorPopup')) {
+        const popup = document.getElementById('errorPopup');
+        popup.style.right = '-300px';
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 500);
+    }
+};

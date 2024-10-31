@@ -18,15 +18,7 @@ namespace prjGrowCoiffeur.Formularios
         public Funcionario Funcionario { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["TipoUsuario"] == null)
-            {
-                
-                Response.Redirect("Login.aspx");
-                return; 
-            }
-
-            
-            if (Session["TipoUsuario"].ToString() == "funcionario")
+            if (Session["TipoUsuario"] != null && Session["TipoUsuario"].ToString() == "funcionario" || Session["TipoUsuario"].ToString() == "gerente")
             {
                 pnlCliente.Visible = true;
                 Cliente cliente = new Cliente();
@@ -40,7 +32,6 @@ namespace prjGrowCoiffeur.Formularios
                 pnlCliente.Visible = false;
                 this.Cliente = cliente;
             }
-
 
             GiCategoria categorias = new GiCategoria();
             if (!IsPostBack)
@@ -61,8 +52,6 @@ namespace prjGrowCoiffeur.Formularios
 
             int currentMonth = DateTime.Now.Month;
             int currentYear = DateTime.Now.Year;
-
-
         }
 
         private void GerarMeses()
@@ -75,17 +64,15 @@ namespace prjGrowCoiffeur.Formularios
 
         protected void ddlservico_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //ddlservico.Enabled = true;
-            //ddlservico.Items.Clear();
-            //ddlservico.Items.Add(new ListItem("Selecionar Serviço", "-1"));
-            //GiServico servicos = new GiServico();
-            //if (ddlcategoriaServico.SelectedValue != "-1")
-            //    foreach (Servico servico in servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue)))
-            //    {
-
-            //        ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
-            //    }
-
+            ddlservico.Enabled = true;
+            ddlservico.Items.Clear();
+            ddlservico.Items.Add(new ListItem("Selecionar Serviço", "-1"));
+            GiServico servicos = new GiServico();
+            if (ddlcategoriaServico.SelectedValue != "-1")
+                foreach (Servico servico in servicos.ConsultarServicosPorCategoria(int.Parse(ddlcategoriaServico.SelectedValue)))
+                {
+                    ddlservico.Items.Add(new ListItem(servico.Nome, servico.Codigo.ToString()));
+                }
         }
 
         protected void ddlservico_SelectedIndexChanged1(object sender, EventArgs e)
@@ -111,7 +98,6 @@ namespace prjGrowCoiffeur.Formularios
             }
 
         }
-
         private void GerarDiasDisponiveis()
         {
             GiFuncionarios giFuncionarios = new GiFuncionarios();
@@ -120,6 +106,13 @@ namespace prjGrowCoiffeur.Formularios
                 .Select(d => d.Data.Day)
                 .ToList();
 
+            var periodoDisponiveis = giFuncionarios.ConsultarPeriodoDisponivel(ddlprofissional.SelectedValue);
+            string periodosStr = "";
+            foreach (Disponibilidade periodo in periodoDisponiveis)
+            {
+                periodosStr += periodo.NomePeriodo + ",";
+            }
+            periodosStr = periodosStr.Substring(0, periodosStr.Length - 1);
             DateTime primeiroDiaDoMes = new DateTime(DateTime.Now.Year, int.Parse(cmbMeses.SelectedValue), 1);
             int totalDiasNoMes = DateTime.DaysInMonth(DateTime.Now.Year, int.Parse(cmbMeses.SelectedValue));
 
@@ -127,11 +120,10 @@ namespace prjGrowCoiffeur.Formularios
             {
                 DateTime dataAtual = primeiroDiaDoMes.AddDays(dia - 1);
                 bool isDisponivel = diasDisponiveis.Contains(dia);
-                return $"<div class=\"{(isDisponivel ? "dia predefinido" : "dia indisponivel")}\" onclick=\"handleDiaClick({dia}, '{ddlprofissional.SelectedValue}', {cmbMeses.SelectedValue}, '{ddlservico.SelectedValue}', '{Cliente.Email}')\">{dia}</div>";
+                return $"<div class=\"{(isDisponivel ? "dia predefinido" : "dia indisponivel")}\" onclick=\"handleDiaClick({dia}, '{ddlprofissional.SelectedValue}', {cmbMeses.SelectedValue}, '{ddlservico.SelectedValue}', '{Cliente.Email}', '{periodosStr}')\">{dia}</div>";
             }));
 
             Console.WriteLine("Dias Disponíveis para Outubro: " + string.Join(", ", diasDisponiveis));
         }
     }
 }
-

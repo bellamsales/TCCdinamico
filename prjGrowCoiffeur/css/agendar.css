@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #fde3e3;
     color: #662549;
@@ -7,38 +6,38 @@ body
     padding: 0;
 }
 
-.conteudo
-{
+.conteudo {
     padding: 20px;
     margin-left: 27%;
     margin-right: 27%;
     margin-top: 2%;
 }
-h1
-{
+
+h1 {
     font-size: 24px;
     margin-bottom: 15px;
 }
-.form-group
-{
+
+.form-group {
     margin-bottom: 15px;
 }
-.form-group label
-{
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-.form-group input,
-.form-group select
-{
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
-}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+
 .calendar {
     margin-left: 0;
     margin-right: 58%;
@@ -53,13 +52,15 @@ h1
     padding: 10px;
     border-radius: 4px;
 }
+
 #calendario {
     display: flex;
     flex-wrap: wrap;
     width: 350px;
     margin: auto;
-    gap:5px;
+    gap: 5px;
 }
+
 .dia {
     width: calc((100% / 7) - 5px);
     height: 50px;
@@ -72,13 +73,15 @@ h1
     font-weight: bold;
     box-sizing: border-box;
 }
+
 .vazio {
     background-color: unset;
 }
 
 .dia.predefinido {
-    background-color: #951299; 
-    background-color: #662549; 
+    background-color: #951299;
+    background-color: #662549;
+    cursor: pointer;
     color: #fff;
 }
 
@@ -93,11 +96,11 @@ h1
     font-size: 14px;
     font-family: 'Poppins', sans-serif;
 }
-.dias button.active,
+/*.dias button.active,
 .horarios button:hover {
     background-color: #662549;
     color: white;
-}
+}*/
 .agendar {
     display: block;
     width: 100%;
@@ -110,6 +113,134 @@ h1
     cursor: pointer;
     margin-top: 20px;
 }
-.agendar:hover {
-    background-color: #4e1c37;
+
+    .agendar:hover {
+        background-color: #4e1c37;
+    }
+
+.periodo-btn, .horario-btn {
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
 }
+
+    .horario-btn.selected {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+.horarios-lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.periodo-btn.selecionado {
+    background-color: #662549;
+    color: white;
+}
+
+.horario-btn.selecionado {
+    background-color: #662549;
+    color: white;
+}
+
+.confirmation-box, .error-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 10px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+    .confirmation-box h2 {
+        color: #4caf50;
+    }
+
+    .error-box h2 {
+        color: #f44336;
+    }
+
+.ok-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .ok-button:hover {
+        background-color: #45a049;
+    }
+
+.dias-da-semana {
+    display: flex;
+    justify-content: space-around; /* Espaça os botões uniformemente */
+    margin-bottom: 10px; /* Espaço entre os botões e o calendário */
+}
+
+.dia-btn {
+    flex: 1; /* Para que os botões ocupem o mesmo espaço */
+    padding: 10px;
+    border: none;
+    background-color: #f0f0f0; /* Cor de fundo */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .dia-btn:hover {
+        background-color: #d1d1d1; /* Efeito de hover */
+    }
+
+
+
+.slide-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição de cor */
+    position: fixed; /* Fixo na tela */
+    right: 20px; /* Distância da direita */
+    bottom: 20px; /* Distância do fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+    .slide-button:hover {
+        background-color: #0056b3; /* Cor ao passar o mouse */
+    }
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 20%;
+    right: -300px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease;
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer;
+    }

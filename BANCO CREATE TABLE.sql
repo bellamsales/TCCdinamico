@@ -4,25 +4,29 @@ use bancotcc04;
 
 
 CREATE TABLE Cliente (
-    
-    nm_email_cliente VARCHAR(50),
+    cd_cliente INT AUTO_INCREMENT PRIMARY KEY, 
+    nm_email_cliente VARCHAR(50) UNIQUE, 
     nm_cliente VARCHAR(200),
     nm_senha VARCHAR(8),
     nm_endereco VARCHAR(300),
     ds_cliente TEXT,
-    CONSTRAINT pk_cliente PRIMARY KEY (nm_email_cliente)
+    nm_cpf VARCHAR(11),
+    ativo BOOLEAN DEFAULT TRUE
 );
 
 
 
+
 CREATE TABLE Funcionario (
-    nm_email_funcionario VARCHAR(50),
+    cd_funcionario INT AUTO_INCREMENT PRIMARY KEY, 
+    nm_email_funcionario VARCHAR(50) UNIQUE,       
     nm_funcionario VARCHAR(200),
     nm_senha VARCHAR(8),
-    nm_telefone VARCHAR(13),
+    nm_telefone VARCHAR(15),
     nm_endereco VARCHAR(300),
     nm_cargo VARCHAR(100),
-    CONSTRAINT pk_funcionario PRIMARY KEY (nm_email_funcionario)
+    nm_cpf VARCHAR(11),
+	ativo BOOLEAN DEFAULT TRUE
 );
 
 CREATE TABLE Gerente (
@@ -50,8 +54,8 @@ CREATE TABLE Disponibilidade_funcionario (
     cd_disponibilidade_funcionario INT,
     nm_email_funcionario VARCHAR(50),
     PRIMARY KEY (cd_disponibilidade_funcionario, nm_email_funcionario),
-    CONSTRAINT fk_disponibilidade_funcionario FOREIGN KEY (cd_disponibilidade_funcionario) REFERENCES disponibilidade(cd_disponibilidade), 
-    CONSTRAINT fk_email_funcionario FOREIGN KEY (nm_email_funcionario) REFERENCES funcionario(nm_email_funcionario)
+    CONSTRAINT fk_disponibilidade_funcionario FOREIGN KEY (cd_disponibilidade_funcionario) REFERENCES disponibilidade(cd_disponibilidade) ON UPDATE CASCADE, 
+    CONSTRAINT fk_email_funcionario FOREIGN KEY (nm_email_funcionario) REFERENCES funcionario(nm_email_funcionario) ON UPDATE CASCADE
 );
 
 
@@ -86,7 +90,7 @@ Create Table Servico (
     cd_categoria INT,
     constraint pk_servico primary key (cd_servico),
     constraint fk_servico_categoria foreign key (cd_categoria)
-        references categoria (cd_categoria)
+        references categoria (cd_categoria) ON UPDATE CASCADE
 );
 
 
@@ -96,10 +100,10 @@ CREATE TABLE Especialidade_funcionario (
     CONSTRAINT pk_especialidade_funcionario PRIMARY KEY (nm_email_funcionario , cd_servico),
 
     CONSTRAINT fk_especialidade_funcionario_funcionario FOREIGN KEY (nm_email_funcionario)
-        REFERENCES Funcionario (nm_email_funcionario),
+        REFERENCES Funcionario (nm_email_funcionario) ON UPDATE CASCADE, 
 
     CONSTRAINT fk_especialidade_funcionario_servico FOREIGN KEY (cd_servico)
-        REFERENCES Servico (cd_servico)
+        REFERENCES Servico (cd_servico) ON UPDATE CASCADE
 );
 
 
@@ -114,10 +118,10 @@ CREATE TABLE Agendamento (
 
     CONSTRAINT pk_agendamento PRIMARY KEY (cd_agendamento, hr_agendamento, dt_agendamento),
     CONSTRAINT fk_agendamento_cliente FOREIGN KEY (nm_email_cliente)
-        REFERENCES Cliente (nm_email_cliente),
+        REFERENCES Cliente (nm_email_cliente) ON UPDATE CASCADE,
 
     CONSTRAINT fk_agendamento_funcionario FOREIGN KEY (nm_email_funcionario)
-        REFERENCES Funcionario (nm_email_funcionario)
+        REFERENCES Funcionario (nm_email_funcionario) ON UPDATE CASCADE
   
 );
 
@@ -141,8 +145,8 @@ CREATE TABLE Feedback (
     hr_feedback TIME,
     CONSTRAINT pk_feedback PRIMARY KEY (cd_feedback, cd_agendamento),
     CONSTRAINT fk_feedback_cliente FOREIGN KEY (nm_email_cliente)
-        REFERENCES Cliente (nm_email_cliente)
-);
+        REFERENCES Cliente (nm_email_cliente)  ON UPDATE CASCADE
+); 
 
 
 -- Store Procedures --

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -19,61 +20,76 @@ namespace prjGrowCoiffeur.Formularios
         {
             try
             {
-
-
-                if (string.IsNullOrWhiteSpace(txtEmail.Text))
+                if (string.IsNullOrWhiteSpace(txtCPF.Text))
                 {
-                    litMsg.Text = "<p style='color: red;'>O campo 'Email' é obrigatório.</p>";
+                    litMsg.Text = "<p style='color: red;'>O campo 'CPF' é obrigatório.</p>";
                     return;
                 }
-                if (string.IsNullOrWhiteSpace(txtSenha.Text))
-                {
-                    litMsg.Text = "<p style='color: red;'>O campo 'Senha' é obrigatório.</p>";
-                    return;
-                }
+
                 if (string.IsNullOrWhiteSpace(txtNome.Text))
                 {
                     litMsg.Text = "<p style='color: red;'>O campo 'Nome' é obrigatório.</p>";
                     return;
                 }
+                if (!ValidarEmail(txtEmail.Text))
+                {
+                    litMsg.Text = "<p style='color: red;'>O email inserido não é válido. Por favor, insira um email válido.</p>";
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(txtSenha.Text))
+                {
+                    litMsg.Text = "<p style='color: red;'>O campo 'Senha' é obrigatório.</p>";
+                    return;
+                }
                 if (string.IsNullOrWhiteSpace(txtEndereco.Text))
                 {
-                    litMsg.Text = "<p style='color: red;'>O campo 'endereco' é obrigatório.</p>";
-                    return;
-                }
-                if (string.IsNullOrWhiteSpace(txtDescricao.Text))
-                {
-                    litMsg.Text = "<p style='color: red;'>O campo 'descricao' é obrigatório.</p>";
+                    litMsg.Text = "<p style='color: red;'>O campo 'Endereco' é obrigatório.</p>";
                     return;
                 }
 
-                using (MySqlConnection conn = new MySqlConnection("SERVER=localhost;UID=root;PASSWORD=root;DATABASE=bancotcc04"))
+                string cpfLimpo = LimparCPF(txtCPF.Text);
+                if (!ValidarCPF(cpfLimpo))
                 {
-                    conn.Open();
-                    MySqlCommand cmd = new MySqlCommand("CALL InserirCliente(@p_nm_email_cliente,@p_nm_cliente,@p_nm_senha,@p_nm_endereco,@p_ds_cliente)", conn);
+                    litMsg.Text = "<p style='color: red;'>O CPF inserido não é válido.</p>";
+                    return;
+                }
+
+                if (!string.IsNullOrWhiteSpace(txtSenha.Text) && txtSenha.Text.Length < 8)
+                {
+                    litMsg.Text = "<p style='color: red;'>A senha deve ter pelo menos 8 caracteres.</p>";
+                    return;
+                }
 
 
 
-                    cmd.Parameters.AddWithValue("@p_nm_email_cliente", txtEmail.Text);
+                Clientes clientesLogica = new Clientes();
+                if (clientesLogica.EmailExiste(txtEmail.Text))
+                {
+                    litMsg.Text = "<p style='color: red;'>O email já está em uso. Tente um email diferente.</p>";
+                    return;
+                }
 
-                    cmd.Parameters.AddWithValue("@@p_nm_cliente", txtNome.Text);
-                    cmd.Parameters.AddWithValue("@p_nm_senha", txtSenha.Text);
-                    cmd.Parameters.AddWithValue("@p_nm_endereco", txtEndereco.Text);
-                    cmd.Parameters.AddWithValue("@p_ds_cliente", txtDescricao.Text);
+              
+                bool clienteAdicionado = clientesLogica.AdicionarCliente(
+                    txtEmail.Text,
+                    txtNome.Text,
+                    txtSenha.Text,
+                    txtEndereco.Text,
+                    txtDescricao.Text,
+                    cpfLimpo
+                );
 
-                    int resultado = cmd.ExecuteNonQuery();
-
-                    if (resultado > 0)
-                    {
-                        litMsg.Text = "<p style='color: green;'>Produto adicionado com sucesso!</p>";
-                        LimparCampos();
-                        Response.Redirect("ListarCliente.aspx", false);
-                        Context.ApplicationInstance.CompleteRequest();
-                    }
-                    else
-                    {
-                        litMsg.Text = "<p style='color: red;'>Erro ao adicionar o produto.</p>";
-                    }
+                if (clienteAdicionado)
+                {
+                    litMsg.Text = "<p style='color: green;'>Cliente adicionado com sucesso!</p>";
+                    LimparCampos();
+                    Response.Redirect("ListarClientes.aspx", false);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+                else
+                {
+                    litMsg.Text = "<p style='color: red;'>Erro ao adicionar o Cliente.</p>";
                 }
             }
             catch (MySqlException mysqlEx)
@@ -84,20 +100,58 @@ namespace prjGrowCoiffeur.Formularios
             {
                 litMsg.Text = $"<p style='color: red;'>Erro: {ex.Message}</p>";
             }
+        }
 
+      
 
-
+        private bool ValidarEmail(string email)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(email, pattern);
         }
 
         private void LimparCampos()
         {
-            txtEmail.Text = string.Empty;  
+            txtEmail.Text = string.Empty;
             txtNome.Text = string.Empty;
             txtSenha.Text = string.Empty;
             txtEndereco.Text = string.Empty;
             txtDescricao.Text = string.Empty;
-           
+            txtCPF.Text = string.Empty;
+
+        }
+
+        private string LimparCPF(string cpf)
+        {
+
+            return new string(cpf.Where(char.IsDigit).ToArray());
+        }
+
+        private bool ValidarCPF(string cpf)
+        {
+
+            if (cpf.Length != 11)
+                return false;
+
+
+            int[] cpfDigits = cpf.Select(c => int.Parse(c.ToString())).ToArray();
+            int firstDigit = 0;
+            int secondDigit = 0;
+
+
+            for (int i = 0; i < 9; i++)
+                firstDigit += cpfDigits[i] * (10 - i);
+            firstDigit = (firstDigit * 10) % 11;
+            if (firstDigit == 10) firstDigit = 0;
+
+
+            for (int i = 0; i < 10; i++)
+                secondDigit += cpfDigits[i] * (11 - i);
+            secondDigit = (secondDigit * 10) % 11;
+            if (secondDigit == 10) secondDigit = 0;
+
+
+            return (firstDigit == cpfDigits[9]) && (secondDigit == cpfDigits[10]);
         }
     }
-
 }
