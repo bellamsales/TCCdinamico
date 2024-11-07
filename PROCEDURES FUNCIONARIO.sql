@@ -2,7 +2,7 @@ USE bancotcc04;
 
 -- Procedures Funcionário --
 
--- Atualizar Disponibilidade de um Funcionário
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS AtualizarDisponibilidadeFuncionario$$
@@ -27,16 +27,16 @@ CREATE PROCEDURE excluirFuncionario(
     IN p_nm_email_funcionario VARCHAR(50)
 )
 BEGIN
-    -- Excluir dependências em 'especialidade_funcionario'
+
     DELETE FROM especialidade_funcionario WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Excluir dependências em 'disponibilidade_funcionario'
+ 
     DELETE FROM disponibilidade_funcionario WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Excluir dependências em 'agendamento'
+    
     DELETE FROM agendamento WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Excluir o funcionário da tabela 'funcionario'
+  
     DELETE FROM Funcionario WHERE nm_email_funcionario = p_nm_email_funcionario;
 END $$
 
@@ -45,7 +45,7 @@ DELIMITER $$
 DROP PROCEDURE IF EXISTS FuncionarioTemAgendamentos$$
 CREATE PROCEDURE FuncionarioTemAgendamentos(IN p_email VARCHAR(255), OUT p_count INT)
 BEGIN
-    -- Select the count of appointments for the given email
+   
     SELECT COUNT(*) INTO p_count 
     FROM Agendamento 
     WHERE nm_email_funcionario = p_email;
@@ -62,10 +62,10 @@ CREATE PROCEDURE InserirFuncionario(
     IN p_nm_senha VARCHAR(8),
     IN p_nm_endereco VARCHAR(300),
     IN p_nm_cargo VARCHAR(100),
-    IN p_nm_CPF VARCHAR(11)  -- Adicionando o parâmetro para o CPF
+    IN p_nm_CPF VARCHAR(11)  
 )
 BEGIN
-    -- Verificar se o funcionário já existe
+  
     DECLARE funcionario_existe INT;
 
     SELECT COUNT(*)
@@ -82,7 +82,7 @@ BEGIN
     END IF;
 END $$
 
--- Cadastrar Funcionário
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS CadastrarFuncionario$$
@@ -122,7 +122,7 @@ END$$
 
 
 
--- Consultar Disponibilidade de um Funcionário 
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS  ConsultarDisponibilidadeFuncionario$$
@@ -138,7 +138,7 @@ BEGIN
     AND d.nm_dia_semana = p_nm_dia_semana;
 END $$
 
--- Consultar Funcionarios
+
 DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarFuncionarios$$
 CREATE PROCEDURE ConsultarFuncionarios()
@@ -150,7 +150,7 @@ BEGIN
         f.nm_endereco,
         f.nm_cargo,
         f.nm_cpf,
-        f.ativo  -- Campo "ativo" adicionado à seleção
+        f.ativo  
     FROM 
         Funcionario f
     LEFT JOIN 
@@ -164,21 +164,19 @@ BEGIN
         f.nm_endereco, 
         f.nm_cargo, 
         f.nm_cpf,
-        f.ativo  -- Campo "ativo" adicionado ao GROUP BY
+        f.ativo  
     ORDER BY 
         f.nm_funcionario;  
 END $$
  
 
 
--- Atualizar um funcionário
-
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS FuncionarioInativo$$
 CREATE PROCEDURE FuncionarioInativo(IN p_nm_email_funcionario VARCHAR(255))
 BEGIN
-    -- Verificar se o funcionário existe antes de tentar inativá-lo
+    
     DECLARE funcionario_existe INT;
 
     SELECT COUNT(*)
@@ -211,7 +209,7 @@ CREATE PROCEDURE AtualizarFuncionario(
    
 )
 BEGIN
-    -- Update the Funcionario table
+ 
     UPDATE Funcionario
     SET nm_email_funcionario = p_nm_novo_email,
         nm_funcionario = p_nm_funcionario,
@@ -222,17 +220,17 @@ BEGIN
         
     WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Update the Especialidade_funcionario table
+  
     UPDATE Especialidade_funcionario
     SET nm_email_funcionario = p_nm_novo_email
     WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Update the Agendamento table
+
     UPDATE Agendamento
     SET nm_email_funcionario = p_nm_novo_email
     WHERE nm_email_funcionario = p_nm_email_funcionario;
 
-    -- Update any other related tables (like Disponibilidade_funcionario)
+  
     UPDATE Disponibilidade_funcionario
     SET nm_email_funcionario = p_nm_novo_email
     WHERE nm_email_funcionario = p_nm_email_funcionario;
@@ -241,7 +239,7 @@ END$$
 
 DROP PROCEDURE IF EXISTS ObterFuncionarioPorCPF$$
 CREATE PROCEDURE ObterFuncionarioPorCPF
-    @cpf VARCHAR(11) -- Altere para VARCHAR se o CPF for armazenado como string
+    @cpf VARCHAR(11) 
 AS
 BEGIN
     SELECT nm_cpf
@@ -249,7 +247,7 @@ BEGIN
     WHERE nm_cpf = @cpf;
 END
 
--- Atualizar a disponibilidade do funcionário se estiver livre
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS atualizarDisponibilidadeFuncionarioSeLivre$$
@@ -261,7 +259,7 @@ CREATE PROCEDURE atualizarDisponibilidadeFuncionarioSeLivre(
 BEGIN
     DECLARE qtd INT DEFAULT 0;
 
-    -- Verificar se o funcionário está disponível para a nova disponibilidade
+
     SELECT COUNT(*) INTO qtd 
     FROM Disponibilidade_funcionario 
     WHERE nm_email_funcionario = p_nm_email_funcionario 
@@ -278,7 +276,7 @@ BEGIN
 END $$
 
 
--- Consultar Agendamentos de um Funcionário
+
 DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarAgendamentosFuncionario$$
 CREATE PROCEDURE ConsultarAgendamentosFuncionario(
@@ -293,7 +291,7 @@ BEGIN
 END $$
 
 
--- Consultar todos os Funcionários
+
 DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarTodosFuncionarios$$
 CREATE PROCEDURE ConsultarTodosFuncionarios()
@@ -302,5 +300,5 @@ BEGIN
     FROM Funcionario;
 END $$
 
--- Procedures Funcionário Acaba aqui --
+
 

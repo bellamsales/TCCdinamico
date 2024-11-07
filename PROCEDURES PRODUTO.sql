@@ -11,7 +11,7 @@ BEGIN
 END $$
 
 
--- Excluir Produto
+
 DELIMITER $$
 
 CREATE PROCEDURE ExcluirProduto(
@@ -24,7 +24,7 @@ END $$
 
 
 
--- Atualizar Produto
+
 DELIMITER $$
 
 CREATE PROCEDURE AtualizarProduto(
@@ -33,15 +33,15 @@ CREATE PROCEDURE AtualizarProduto(
     IN p_nm_marca_produto VARCHAR(100),
     IN p_vl_produto_estoque DECIMAL(10,2),
     IN p_qt_produto_estoque INT,
-    IN p_dt_validade_produto DATE  -- Adicione o parâmetro de data de validade
+    IN p_dt_validade_produto DATE  
 )
 BEGIN
     UPDATE Produto
     SET nm_produto = p_nm_produto,
-        nm_marca_produto = p_nm_marca_produto, -- Para marca do produto
+        nm_marca_produto = p_nm_marca_produto, 
         vl_produto_estoque = p_vl_produto_estoque,
         qt_produto_estoque = p_qt_produto_estoque,
-        dt_validade_produto = p_dt_validade_produto -- Adicione a data de validade
+        dt_validade_produto = p_dt_validade_produto 
     WHERE cd_produto = p_cd_produto;
 END $$
 
@@ -63,17 +63,7 @@ BEGIN
 END$$
 
 
--- Consultar Produtos
-/*DELIMITER $$
 
-CREATE PROCEDURE ConsultarProdutos()
-BEGIN
-    SELECT cd_produto, nm_produto, ds_produto, vl_produto, qt_estoque
-    FROM Produto;
-END $$*/
-
-
--- Consultar produtos e verificar estoque
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS consultarProdutosEVerificarEstoque$$
@@ -87,7 +77,7 @@ BEGIN
 END $$
 
 
--- Adicionar um produto somente se a categoria existir
+
 DELIMITER $$
 
 DROP PROCEDURE IF EXISTS adicionarProdutoSeCategoriaExistir$$
@@ -101,7 +91,7 @@ CREATE PROCEDURE adicionarProdutoSeCategoriaExistir(
 BEGIN
     DECLARE qtd INT DEFAULT 0;
 
-    -- Verificar se a categoria existe
+
     SELECT COUNT(*) INTO qtd FROM Categoria WHERE cd_categoria = p_cd_categoria;
 
     IF qtd > 0 THEN
@@ -113,7 +103,7 @@ BEGIN
 END $$
 
 
--- Buscar todos os fornecedores e suas médias de avaliação
+
 DROP PROCEDURE IF EXISTS buscarFornecedores$$
 CREATE PROCEDURE buscarFornecedores()
 BEGIN
@@ -122,7 +112,7 @@ BEGIN
 END $$
 
 
--- Buscar a média de avaliações de um fornecedor
+
 DROP FUNCTION IF EXISTS buscarMediaAvaliacao$$
 CREATE FUNCTION buscarMediaAvaliacao(pCodigo INT) 
 RETURNS DECIMAL(10,2)
@@ -137,7 +127,7 @@ BEGIN
 END $$
 
 
--- Consultar Produtos em Baixo Estoque
+
 DELIMITER $$
 DROP PROCEDURE IF EXISTS ConsultarProdutosBaixoEstoque$$
 CREATE PROCEDURE ConsultarProdutosBaixoEstoque(
@@ -150,7 +140,7 @@ BEGIN
 END $$
 
 
--- Consultar Estoque de um Produto
+
 DELIMITER $$
 
 CREATE PROCEDURE ConsultarEstoqueProduto(
@@ -163,7 +153,7 @@ BEGIN
 END $$
 
 
--- Consultar Produtos por Categoria
+
 DELIMITER $$
 
 CREATE PROCEDURE ConsultarProdutosPorCategoria(
@@ -176,7 +166,7 @@ BEGIN
 END $$
 
 DELIMITER $$
-/*BuscarDadosProdutoPorCodigo*/
+
 DROP PROCEDURE IF EXISTS buscarDadosProdutoPorCodigo$$
 CREATE PROCEDURE buscarDadosProdutoPorCodigo(pCodigo int)
 BEGIN

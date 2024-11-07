@@ -153,7 +153,7 @@ public class Produtos : Banco
     {
         List<Parametro> parametros = new List<Parametro>
     {
-        new Parametro("pCodigo", codigoProduto)
+        new Parametro("p_cd_produto", codigoProduto)
     };
 
         try

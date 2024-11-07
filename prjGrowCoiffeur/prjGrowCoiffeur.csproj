@@ -154,8 +154,10 @@
     <Content Include="css\loginGerente.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\menuFuncionario.css" />
+    <Content Include="css\MeusAgendamentos.css" />
     <Content Include="css\planilha.css" />
     <Content Include="css\produto.css" />
+    <Content Include="css\servico.css" />
     <Content Include="Formularios\adicionarCliente.aspx" />
     <Content Include="Formularios\adicionarFuncionario.aspx" />
     <Content Include="Formularios\AdicionarProduto.aspx" />
@@ -165,11 +167,16 @@
     <Content Include="Formularios\editarCliente.aspx" />
     <Content Include="Formularios\editarFuncionario.aspx" />
     <Content Include="Formularios\editarProduto.aspx" />
+    <Content Include="Formularios\EditarServico.aspx" />
     <Content Include="Formularios\erro.aspx" />
+    <Content Include="Formularios\ExcluirServico.aspx" />
     <Content Include="Formularios\Funcionario.aspx" />
     <Content Include="Formularios\index.aspx" />
     <Content Include="Formularios\ListarClientes.aspx" />
     <Content Include="Formularios\Login.aspx" />
+    <Content Include="Formularios\AdicionarServico.aspx" />
+    <Content Include="Formularios\Meusagendamentos.aspx" />
+    <Content Include="Formularios\Servico.aspx" />
     <Content Include="images\acessibilidade.png" />
     <Content Include="images\adicionar.png" />
     <Content Include="images\ambiente.png" />
@@ -214,6 +221,7 @@
     <Content Include="javascript\mascaras.js" />
     <Content Include="javascript\menu.js" />
     <Content Include="Formularios\Produto.aspx" />
+    <Content Include="javascript\servico.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -297,12 +305,26 @@
     <Compile Include="Formularios\editarProduto.aspx.designer.cs">
       <DependentUpon>editarProduto.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\EditarServico.aspx.cs">
+      <DependentUpon>EditarServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\EditarServico.aspx.designer.cs">
+      <DependentUpon>EditarServico.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\erro.aspx.cs">
       <DependentUpon>erro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Formularios\erro.aspx.designer.cs">
       <DependentUpon>erro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\ExcluirServico.aspx.cs">
+      <DependentUpon>ExcluirServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\ExcluirServico.aspx.designer.cs">
+      <DependentUpon>ExcluirServico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Funcionario.aspx.cs">
       <DependentUpon>Funcionario.aspx</DependentUpon>
@@ -332,6 +354,28 @@
     <Compile Include="Formularios\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\AdicionarServico.aspx.cs">
+      <DependentUpon>AdicionarServico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\AdicionarServico.aspx.designer.cs">
+      <DependentUpon>AdicionarServico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Meusagendamentos.aspx.cs">
+      <DependentUpon>Meusagendamentos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Meusagendamentos.aspx.designer.cs">
+      <DependentUpon>Meusagendamentos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Servico.aspx.cs">
+      <DependentUpon>Servico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Formularios\Servico.aspx.designer.cs">
+      <DependentUpon>Servico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logica\cliagenda.cs" />
     <Compile Include="Logica\Clientes.cs" />
     <Compile Include="Logica\GiAgenda.cs" />
     <Compile Include="Logica\GiCategoria.cs" />

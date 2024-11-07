@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
  <head runat="server">
-<html lang="pt-br"/>
+
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,27 +21,34 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+       
         <nav class="menu-lateral">
             <div class="btn-expandir">
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
-                <img src="../images/logo-branca.png" alt="Logo" class="logo">
+                <a href="index.aspx">
+                <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
-                <li class="item-menu">
-                    <a href="Agendamentos.aspx">
-                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Agenda</span>
+                  <li class="item-menu">
+                       <a href="Agendamentos.aspx">
+                        <span class="icon"><i class="bi bi-table"></i></span>
+                        <span class="txt-link">Agendar</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-                <li class="item-menu">
+            <li class="item-menu">
+                    <a href="Agendar.aspx">
+                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Planilha</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+                <li class="item-menu ativo">
                     <a href="funcionario.aspx">
                         <span class="icon"><i class="bi bi-people"></i></span>
                         <span class="txt-link">Funcionário</span>
-            <a href="index.aspx">
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
@@ -60,13 +67,7 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-                <li class="item-menu">
-                    <a href="feedback.aspx">
-                        <span class="icon"><i class="bi bi-star-fill"></i></span>
-                        <span class="txt-link">Feedback</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
+        
                 <li class="item-menu">
                     <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
@@ -74,7 +75,13 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-
+                <li class="item-menu" id="logout">
+                    <a href="index.aspx">
+                        <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                        <span class="txt-link">Sair</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
             </ul>
         </nav>
         <div class="conteudo">

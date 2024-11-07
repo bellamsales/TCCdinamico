@@ -68,7 +68,7 @@ h1 {
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #f4f4f4;
+    background-color: rgb(255 255 255 / 20%);
     border-radius: 5px;
     font-weight: bold;
     box-sizing: border-box;
@@ -178,21 +178,21 @@ h1 {
 
 .dias-da-semana {
     display: flex;
-    justify-content: space-around; /* Espaça os botões uniformemente */
-    margin-bottom: 10px; /* Espaço entre os botões e o calendário */
+    justify-content: space-around; 
+    margin-bottom: 10px; 
 }
 
 .dia-btn {
-    flex: 1; /* Para que os botões ocupem o mesmo espaço */
+    flex: 1; 
     padding: 10px;
     border: none;
-    background-color: #f0f0f0; /* Cor de fundo */
+    background-color: #f0f0f0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
     .dia-btn:hover {
-        background-color: #d1d1d1; /* Efeito de hover */
+        background-color: #d1d1d1; 
     }
 
 
@@ -200,19 +200,19 @@ h1 {
 .slide-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: white; /* Cor do texto */
+    background-color: #007bff; 
+    color: white; 
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Transição de cor */
-    position: fixed; /* Fixo na tela */
-    right: 20px; /* Distância da direita */
-    bottom: 20px; /* Distância do fundo */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: background-color 0.3s; 
+    position: fixed; 
+    right: 20px;
+    bottom: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
     .slide-button:hover {
-        background-color: #0056b3; /* Cor ao passar o mouse */
+        background-color: #0056b3; 
     }
 
 .popup {
@@ -243,4 +243,18 @@ h1 {
         color: red;
         text-decoration: none;
         cursor: pointer;
+    }
+
+.mensagem-disponibilidade {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+    .mensagem-disponibilidade p {
+        color: #662549;
+        font-weight: bold;
+        text-align: justify;
+        padding-bottom: 25px;
     }

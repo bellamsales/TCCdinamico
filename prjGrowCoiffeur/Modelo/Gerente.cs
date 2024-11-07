@@ -4,8 +4,7 @@ using System.Linq;
 using System.Web;
 
 
-namespace prjGrowCoiffeur.Modelo
-{
+
     public class Gerente
     {
         public string Email { get; set; }
@@ -14,4 +13,3 @@ namespace prjGrowCoiffeur.Modelo
         public string Endereco { get; set; }
       
     }
-}

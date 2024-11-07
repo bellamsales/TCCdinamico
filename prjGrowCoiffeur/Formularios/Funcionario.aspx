@@ -20,9 +20,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-            <div>
+    <div>
                  <nav class="menu-lateral"> 
-            <div class="btn-expandir">
+                    <div class="btn-expandir">
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
@@ -30,42 +30,41 @@
                 <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
-                <li class="item-menu">
-                    <a href="Agendamentos.aspx">
-                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Agenda</span>
+                  <li class="item-menu">
+                       <a href="Agendamentos.aspx">
+                        <span class="icon"><i class="bi bi-table"></i></span>
+                        <span class="txt-link">Agendar</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
                 <li class="item-menu">
+                    <a href="Agendar.aspx">
+                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Planilha</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+                <li class="item-menu ativo">
                                 <a href="funcionario.aspx">
                                     <span class="icon"><i class="bi bi-people"></i></span>
                                     <span class="txt-link">Funcionário</span>
                                     <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                                 </a>
                 </li>
-                <li class="item-menu ativo">
+                <li class="item-menu">
                     <a href="produto.aspx">
                         <span class="icon"><i class="bi bi-archive"></i></span>
                         <span class="txt-link">Produto</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-
                 <li class="item-menu">
                     <a href="servico.aspx">
                         <span class="icon"><i class="bi bi-scissors"></i></span>
                         <span class="txt-link">Serviço</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
-                </li>
-                <li class="item-menu">
-                    <a href="feedback.aspx">
-                        <span class="icon"><i class="bi bi-star-fill"></i></span>
-                        <span class="txt-link">Feedback</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
+                </li>          
                 <li class="item-menu">
                     <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
@@ -73,36 +72,28 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-           
+           <li class="item-menu" id="logout">
+                <a href="index.aspx">
+                    <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                    <span class="txt-link">Sair</span>
+                    <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                </a>
+            </li>
             </ul>
-        </nav>
-         <div class="conteudo">
+                </nav>
+        <div class="conteudo">
            <header>
-            <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                <img src="../images/procurar.png" id="btnBusca" alt="Buscar"/>
-                  </div>  <asp:Button ID="btnaddfuncionario" runat="server" Text="Adicionar Funcionário" OnClick="btnaddfuncionario_Click" />
-                   <%--<asp:Button ID="btnaddproduto" runat="server" OnClick="btnaddproduto_Click" Text="Adicionar Produto" />--%>
-                 
+            <h1><strong> Funcionários </strong></h1>
+                <asp:Button ID="btnaddfuncionario" runat="server" Text="Adicionar Funcionário" OnClick="btnaddfuncionario_Click" />
            </header>
            <section class="listadefuncionarios">
              <div class="caixaclientea">
-                
                  <asp:Literal ID="litfuncionario" runat="server"></asp:Literal>
-                
-                 
-                 <%--   <p><strong>Categoria :</strong> <asp:Literal ID="litcategoriaproduto" runat="server"></asp:Literal></p>--%>
-           
-                
-                 
-           
              </div>
            </section>
-           
         </div>
-       
      <script src="../javascript/menu.js"></script>    
-            </div>
+    </div>
     </form>
 </body>
 </html>

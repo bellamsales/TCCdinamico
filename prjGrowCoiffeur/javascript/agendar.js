@@ -1,10 +1,11 @@
-
 let diaSelecionado = null;
 let funcionarioAG = null;
 let dataAG = null;
 let servicoAG = null;
 let horaAG = null;
 let clienteAG = null;
+let periodoSelecionado = null;  // Variável para rastrear o período selecionado
+
 function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
     diaSelecionado = dia;
     funcionarioAG = funcionario;
@@ -27,15 +28,35 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
     });
 
     document.getElementById('btn-manha').addEventListener('click', function () {
-        capturarPeriodo('Manhã');
+        selecionarPeriodo('Manhã');
     });
     document.getElementById('btn-tarde').addEventListener('click', function () {
-        capturarPeriodo('Tarde');
+        selecionarPeriodo('Tarde');
     });
     document.getElementById('btn-noite').addEventListener('click', function () {
-        capturarPeriodo('Noite');
+        selecionarPeriodo('Noite');
     });
 
+    function selecionarPeriodo(periodo) {
+        // Remover a classe 'selecionado' de todos os botões de período
+        document.getElementById('btn-manha').classList.remove('selecionado');
+        document.getElementById('btn-tarde').classList.remove('selecionado');
+        document.getElementById('btn-noite').classList.remove('selecionado');
+
+        // Adicionar a classe 'selecionado' ao botão de período atual
+        if (periodo === 'Manhã') {
+            document.getElementById('btn-manha').classList.add('selecionado');
+        } else if (periodo === 'Tarde') {
+            document.getElementById('btn-tarde').classList.add('selecionado');
+        } else if (periodo === 'Noite') {
+            document.getElementById('btn-noite').classList.add('selecionado');
+        }
+
+        periodoSelecionado = periodo;  // Atualizar o período selecionado
+
+        // Chamar a função capturarPeriodo para buscar os horários disponíveis
+        capturarPeriodo(periodoSelecionado);
+    }
 
     function formatarMinutosParaHoras(minutos) {
         const horas = Math.floor(minutos / 60);
@@ -48,9 +69,7 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
     }
 
     function capturarPeriodo(periodo) {
-        if (diaSelecionado === null)
-            return;
-        
+        if (diaSelecionado === null) return;
 
         const dataSelecionada = new Date(new Date().getFullYear(), mes - 1, diaSelecionado);
         const dataFormatada = dataSelecionada.toISOString().split('T')[0];
@@ -59,6 +78,7 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
 
         const url = `../APIs/ConsultaHoraDisponibilidade.aspx?funcionario=${encodeURIComponent(funcionario)}&data=${encodeURIComponent(dataFormatada)}&periodo=${encodeURIComponent(periodo)}&codigoServico=${encodeURIComponent(servicoAG)}`;
         console.log(url);
+
         fetch(url)
             .then(response => {
                 if (!response.ok) {
@@ -69,11 +89,8 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
                 return response.json();
             })
             .then(data => {
-
                 const horariosDiv = document.getElementById("horariosManha");
                 horariosDiv.innerHTML = '';
-
-
 
                 data.forEach(d => {
                     let controleDuracao = 0;
@@ -82,20 +99,18 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
                     let inicioMinutos = d.HoraInicial.TotalMinutes;
                     const fimMinutos = d.HoraFinal.TotalMinutes;
                     let bloqueioManha = false;
-                    const inicioAlmoco = 12 * 60; // 12:00 em minutos
-                    const fimAlmoco = 13 * 60; // 13:00 em minutos
+                    const inicioAlmoco = 12 * 60;
+                    const fimAlmoco = 13 * 60;
 
                     if (inicioMinutos <= 12 * 60 && fimMinutos >= 12 * 60) {
-
                         if (d.HoraInicial.TotalMinutes <= 12 * 60 && d.HoraFinal.TotalMinutes >= 12 * 60)
                             bloqueioManha = true;
-                        
                     }
+
                     while (inicioMinutos < fimMinutos) {
                         let intervaloFimMinutos = inicioMinutos + duracaoServico;
 
                         if (inicioMinutos < fimAlmoco && intervaloFimMinutos > inicioAlmoco) {
-
                             if (inicioMinutos < inicioAlmoco)
                                 intervaloFimMinutos = inicioAlmoco;
                             else {
@@ -105,7 +120,6 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
                         }
                         if (intervaloFimMinutos > fimMinutos)
                             intervaloFimMinutos = fimMinutos;
-                        
 
                         const inicioFormatado = formatarMinutosParaHoras(inicioMinutos);
                         const fimFormatado = formatarMinutosParaHoras(intervaloFimMinutos);
@@ -114,17 +128,18 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
                         button.type = "button";
                         button.className = "horario-btn";
                         button.textContent = `${inicioFormatado}`;
+
                         if (bloqueioManha && inicioMinutos < inicioAlmoco) {
                             document.getElementById('btn-manha').disabled = false;
                         }
+
+                        // Remover a classe 'selecionado' de todos os botões e adicionar ao atual
                         button.addEventListener('click', function () {
-                            if (this.classList.contains('selecionado')) {
-                                this.classList.remove('selecionado');
-                                horaAG = null;
-                            } else {
-                                this.classList.add('selecionado');
-                                horaAG = inicioFormatado;
-                            }
+                            const allButtons = document.querySelectorAll('.horario-btn');
+                            allButtons.forEach(btn => btn.classList.remove('selecionado'));
+
+                            this.classList.add('selecionado');
+                            horaAG = inicioFormatado;
                         });
 
                         horariosDiv.appendChild(button);
@@ -133,9 +148,8 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
                         controleDuracao++;
                     }
 
-                    if ((duracaoServico * controleDuracao) > (fimMinutos - inicioMinutosPadrao) && periodo == "Noite")
+                    if ((duracaoServico * controleDuracao) > (fimMinutos - inicioMinutosPadrao) && periodo === "Noite")
                         horariosDiv.removeChild(horariosDiv.lastElementChild);
-                
                 });
             })
             .catch(error => {
@@ -145,8 +159,8 @@ function handleDiaClick(dia, funcionario, mes, servico, cliente, periodos) {
             });
     }
 }
-function agendarServico() {
 
+function agendarServico() {
     const url = `../APIs/AgendarServicoAPI.aspx?funcionario=${encodeURIComponent(funcionarioAG)}&cliente=${encodeURIComponent(clienteAG)}&servico=${encodeURIComponent(servicoAG)}&data=${encodeURIComponent(dataAG)}&hora=${encodeURIComponent(horaAG)}`;
     console.log(url);
 
@@ -167,39 +181,14 @@ function agendarServico() {
             const errors = [error];
             showPopup(errors);
         });
-
 }
-
-const periodoButtons = document.querySelectorAll('.periodo-btn');
-
-
-periodoButtons.forEach(button => {
-    button.addEventListener('click', function () {
-
-        if (this.classList.contains('selecionado')) {
-
-            this.classList.remove('selecionado');
-
-        } else {
-
-            periodoButtons.forEach(btn => btn.classList.remove('selecionado'));
-
-
-            this.classList.add('selecionado');
-
-        }
-    });
-});
-
 
 function showPopup(errors) {
     const popup = document.getElementById('errorPopup');
     popup.style.display = 'block';
     popup.style.right = '0';
 
-
     document.getElementById('errorMessages').innerHTML = errors.join('<br>');
-
 
     setTimeout(() => {
         popup.style.right = '-300px';
@@ -208,6 +197,7 @@ function showPopup(errors) {
         }, 500);
     }, 3000);
 }
+
 document.querySelector('.close').onclick = function () {
     const popup = document.getElementById('errorPopup');
     popup.style.right = '-300px';
@@ -217,7 +207,7 @@ document.querySelector('.close').onclick = function () {
 };
 
 window.onclick = function (event) {
-    if (event.target == document.getElementById('errorPopup')) {
+    if (event.target === document.getElementById('errorPopup')) {
         const popup = document.getElementById('errorPopup');
         popup.style.right = '-300px';
         setTimeout(() => {

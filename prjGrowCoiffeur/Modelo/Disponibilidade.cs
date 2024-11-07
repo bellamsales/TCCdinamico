@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace prjGrowCoiffeur.Modelo
-{
     public class Disponibilidade
     {
         public Funcionario Funcionario { get; set; }
@@ -15,4 +13,3 @@ namespace prjGrowCoiffeur.Modelo
         public TimeSpan TempoServico { get; set; }
 
     }
-}

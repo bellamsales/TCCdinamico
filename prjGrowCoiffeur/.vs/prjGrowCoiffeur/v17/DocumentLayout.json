@@ -1,12 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nah\\Desktop\\TCC QUASE COM OS EDITAR PRONTOS\\prjGrowCoiffeur\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|c:\\users\\bella e gu\\desktop\\tcc 04\\prjgrowcoiffeur\\formularios\\servico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|solutionrelative:formularios\\servico.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|c:\\users\\bella e gu\\desktop\\tcc 04\\prjgrowcoiffeur\\css\\servico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|solutionrelative:css\\servico.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|c:\\users\\bella e gu\\desktop\\tcc 04\\prjgrowcoiffeur\\formularios\\produto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|solutionrelative:formularios\\produto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\css\\produto.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E62DAE49-DC84-46F7-B320-37FC5CAB944D}|prjGrowCoiffeur.csproj|solutionrelative:css\\produto.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Produto.aspx",
+              "DocumentMoniker": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\Formularios\\Produto.aspx",
+              "RelativeDocumentMoniker": "Formularios\\Produto.aspx",
+              "ToolTip": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\Formularios\\Produto.aspx",
+              "RelativeToolTip": "Formularios\\Produto.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-06T17:23:47.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "produto.css",
+              "DocumentMoniker": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\css\\produto.css",
+              "RelativeDocumentMoniker": "css\\produto.css",
+              "ToolTip": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\css\\produto.css",
+              "RelativeToolTip": "css\\produto.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-05T21:48:22.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "servico.css",
+              "DocumentMoniker": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\css\\servico.css",
+              "RelativeDocumentMoniker": "css\\servico.css",
+              "ToolTip": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\css\\servico.css",
+              "RelativeToolTip": "css\\servico.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAACoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-06T17:23:55.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Servico.aspx",
+              "DocumentMoniker": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\Formularios\\Servico.aspx",
+              "RelativeDocumentMoniker": "Formularios\\Servico.aspx",
+              "ToolTip": "C:\\Users\\Bella e Gu\\Desktop\\TCC 04\\prjGrowCoiffeur\\Formularios\\Servico.aspx",
+              "RelativeToolTip": "Formularios\\Servico.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-06T17:23:49.302Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

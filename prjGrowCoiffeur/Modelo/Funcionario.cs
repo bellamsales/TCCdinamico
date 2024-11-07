@@ -5,8 +5,7 @@ using System.Web;
 using MySql.Data.MySqlClient;
 using System.Data;
 
-namespace prjGrowCoiffeur.Modelo
-{
+
     public class Funcionario
     {
         public int CdFuncionario { get; set; }
@@ -45,4 +44,3 @@ namespace prjGrowCoiffeur.Modelo
 
 
     }
-}

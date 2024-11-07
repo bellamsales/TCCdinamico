@@ -12,6 +12,9 @@ namespace prjGrowCoiffeur.Modelo
         public Servico Servico { get; set; }
         public Cliente Cliente { get; set; }
         public Funcionario Funcionario { get; set; }
+        public int Codigo { get; set; }
+        public DateTime DataAgendamento { get; set; }
+
 
         public bool Agendar(string cliente, int servico, TimeSpan hora, DateTime data, string funcionario)
         {

@@ -9,7 +9,7 @@ CREATE PROCEDURE AgendarServico(
     IN pHora TIME, 
     IN pData DATE, 
     IN pFuncionario VARCHAR(50), 
-    IN pDuracao INT -- Duration of the service in minutes
+    IN pDuracao INT 
 )
 BEGIN
     DECLARE vFuncionario VARCHAR(50);
@@ -37,7 +37,7 @@ BEGIN
         SET vUltimoHorarioDisponivel = '20:00:00';
     END IF;
 
-    -- Verify if the employee provides the service
+  
     SELECT nm_email_funcionario INTO vFuncionario 
     FROM especialidade_funcionario 
     WHERE nm_email_funcionario = pFuncionario 
@@ -68,18 +68,18 @@ BEGIN
         SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'O horário já está reservado.';
     
     ELSE
-        -- Insert the new appointment
+      
         INSERT INTO agendamento (id_agendamento, cd_servico, horario_inicio, dt_agendamento, nm_cliente, nm_email_funcionario) 
         VALUES (DEFAULT, pServico, pHora, pData, pCliente, pFuncionario);
 
-        -- Mark the time slots as not available
+       
         UPDATE agendamento 
         SET horario_fim = vHorarioFim
         WHERE nm_email_funcionario = pFuncionario 
         AND dt_agendamento = pData 
         AND horario_inicio = pHora;
 
-        -- Optionally return the ID of the new appointment
+       
         SET vIdAgendamento = LAST_INSERT_ID();
         SELECT vIdAgendamento AS IdAgendamento;
     END IF;
@@ -107,20 +107,20 @@ CREATE PROCEDURE ObterDuracaoServico(
 BEGIN
     DECLARE DuracaoTemp TIME;
 
-    -- Seleciona a duração do serviço
+  
     SELECT qt_tempo_servico INTO DuracaoTemp
     FROM Servico
     WHERE cd_servico = ServicoId;
 
     IF DuracaoTemp IS NULL THEN
-        -- Se não encontrar o serviço, você pode retornar um valor padrão ou um erro
-        SET Duracao = '00:00:00'; -- Retornando 0 como valor padrão
+        
+        SET Duracao = '00:00:00'; 
     ELSE
         SET Duracao = DuracaoTemp;
     END IF;
 END $$
 
--- BUSCA DOS AGENDAMENTOS PROXIMOS DE DETERMINADO CLIENTE
+
 DROP PROCEDURE IF EXISTS ConsultarAgendamentosProximosCliente$$
 CREATE PROCEDURE ConsultarAgendamentosProximosCliente(in pCliente varchar(50))
 BEGIN
@@ -234,12 +234,12 @@ BEGIN
         AND d.dt_inicio_disponibilidade <= data
         AND d.dt_fim_disponibilidade >= data
         AND d.nm_periodo_disponibilidade = CASE 
-            WHEN periodo = 1 THEN 'Manhã'   -- Exemplo: período 1 representa manhã
-            WHEN periodo = 2 THEN 'Tarde'   -- Exemplo: período 2 representa tarde
-            WHEN periodo = 3 THEN 'Noite'   -- Exemplo: período 3 representa noite
+            WHEN periodo = 1 THEN 'Manhã'  
+            WHEN periodo = 2 THEN 'Tarde'   
+            WHEN periodo = 3 THEN 'Noite'   
             ELSE NULL
         END
-        AND h.disponivel = 1 -- Assume que existe uma coluna 'disponivel' que indica se o horário está disponível
+        AND h.disponivel = 1 
     ORDER BY 
         h.horario;
 END $$
@@ -272,7 +272,7 @@ BEGIN
         SET v_mensagem = TRUE;
     END IF;
 
-    -- Retorna o resultado da verificação
+ 
     SELECT v_mensagem AS mensagem;
 END $$
 
@@ -294,7 +294,7 @@ BEGIN
         SET v_mensagem = TRUE;
     END IF;
 
-    -- Retorna o resultado da verificação
+  
     SELECT v_mensagem AS mensagem;
 END $$ 
 
@@ -414,5 +414,3 @@ BEGIN
 END $$
 
 DELIMITER ;
-CALL ConsultarAgendamentosPorData('2024-01-12');
-DESCRIBE agendamento;

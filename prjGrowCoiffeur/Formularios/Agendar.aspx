@@ -35,13 +35,20 @@
                         <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
                     <ul>
-                        <li class="item-menu ativo">
-                            <a href="Agendamentos.aspx">
-                                <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                                <span class="txt-link">Agenda</span>
-                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                            </a>
-                        </li>
+                           <li class="item-menu">
+                       <a href="Agendamentos.aspx">
+                        <span class="icon"><i class="bi bi-table"></i></span>
+                        <span class="txt-link">Agendar</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+            <li class="item-menu ativo">
+                    <a href="Agendar.aspx">
+                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Planilha</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
                         <li class="item-menu">
                             <a href="funcionario.aspx">
                                 <span class="icon"><i class="bi bi-people"></i></span>
@@ -64,13 +71,7 @@
                             <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                         </a>
                     </li>
-                    <li class="item-menu">
-                        <a href="feedback.aspx">
-                            <span class="icon"><i class="bi bi-star-fill"></i></span>
-                            <span class="txt-link">Feedback</span>
-                            <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                        </a>
-                    </li>
+                   
                     <li class="item-menu">
                         <a href="ListarClientes.aspx">
                             <span class="icon"><i class="bi bi-person"></i></span>
@@ -99,18 +100,21 @@
                     <ul>
                         <li class="item-menu ativo">
                             <a href="meusAgendamentos.aspx">
-                                <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                                <span class="icon"><i class="bi bi-calendar-check"></i></span>
                                 <span class="txt-link">Agenda</span>
                                 <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                             </a>
                         </li>
-                        <li class="item-menu">
-                            <a href="feedback.aspx">
-                                <span class="icon"><i class="bi bi-star-fill"></i></span>
-                                <span class="txt-link">Feedback</span>
-                                <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                            </a>
-                        </li>
+                     
+            <li class="item-menu">
+                    <a href="Agendar.aspx">
+                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Planilha</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+                               
+                      
                         <li class="item-menu" id="logout">
                             <a href="index.aspx">
                                 <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
@@ -166,7 +170,9 @@
                 </div>
                  <h3 id="dia-da-semana"></h3>
             </div>
-
+                   <div class="mensagem-disponibilidade">
+    <p>*Os dias que possuem a cor roxa estão disponíveis, os que não possuem estão indisponíveis.</p>
+</div>
             <div class="calendario">
                 <div class="dias">
                     <button type="button" id="btn-manha" class="periodo-btn" data-periodo="Manhã" disabled="">Manhã</button>

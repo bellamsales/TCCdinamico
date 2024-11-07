@@ -112,9 +112,9 @@ public abstract class Banco
 
             return cSQL.ExecuteReader();
         }
-        catch (Exception)
+        catch (Exception erro)
         {
-            throw new Exception("Não foi possível realizar a consulta");
+            throw new Exception(erro.Message);
         }
     }
 }

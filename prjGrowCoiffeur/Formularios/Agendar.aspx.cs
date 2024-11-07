@@ -83,7 +83,7 @@ namespace prjGrowCoiffeur.Formularios
 
             GiFuncionarios funcionarios = new GiFuncionarios();
             if (ddlservico.SelectedValue != "-1")
-                foreach (Modelo.Funcionario funcionario in funcionarios.ConsultarFuncionariosPorServico(int.Parse(ddlservico.SelectedValue)))
+                foreach (Funcionario funcionario in funcionarios.ConsultarFuncionariosPorServico(int.Parse(ddlservico.SelectedValue)))
                 {
                     ddlprofissional.Items.Add(new ListItem(funcionario.Nome, funcionario.Email.ToString()));
                 }

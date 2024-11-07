@@ -3,14 +3,14 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<html lang="pt-br"/>
+
 <head runat="server">
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
     <link rel="stylesheet" href="../css/editarcliente.css"/>
     <link rel="stylesheet" href="../css/menu.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
@@ -19,20 +19,34 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+       
         <nav class="menu-lateral">
             <div class="btn-expandir">
                 <i class="bi bi-caret-left-fill" id="btn-exp"></i>
             </div>
 
-            <a href="meusAgendamentos.aspxl">
-                <img src="../images/logo-branca.png" alt="Logo" class="logo">
+            <a href="index.aspx">
+                <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
                 <li class="item-menu">
                     <a href="index.aspx">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
                         <span class="txt-link">Agenda</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+                   <li class="item-menu">
+                       <a href="Agendamentos.aspx">
+                        <span class="icon"><i class="bi bi-table"></i></span>
+                        <span class="txt-link">Agendar</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+            <li class="item-menu">
+                    <a href="Agendar.aspx">
+                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
+                        <span class="txt-link">Planilha</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
@@ -58,21 +72,22 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-                <li class="item-menu">
-                    <a href="feedback.aspx">
-                        <span class="icon"><i class="bi bi-star-fill"></i></span>
-                        <span class="txt-link">Feedback</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
-                <li class="item-menu">
+         
+                <li class="item-menu ativo">
                     <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
                         <span class="txt-link">Cliente</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-
+                <li class="item-menu" id="logout">
+                    <a href="index.aspx">
+                        <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                        <span class="txt-link">Sair</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+            </ul>
             </ul>
         </nav>
         <div class="conteudo">
@@ -92,12 +107,12 @@
 
      <p>
          <label for="txtNome">Nome:</label>
-         <asp:TextBox ID="txtNome" runat="server" placeholder="Digite o nome"  autofocus></asp:TextBox>
+         <asp:TextBox ID="txtNome" runat="server" placeholder="Digite o nome"  autofocus=""></asp:TextBox>
      </p>
 
     <p>
     <label for="txtEndereco">Senha:</label>
-    <asp:TextBox ID="txtSenha" runat="server" placeholder="Digite a senha" ReadOnly=true></asp:TextBox>
+    <asp:TextBox ID="txtSenha" runat="server" placeholder="Digite a senha" ReadOnly="true"></asp:TextBox>
 </p>
 
      <p>
@@ -117,16 +132,8 @@
        </p>
      <div class="rodape">
     <asp:Literal ID="litMsg" runat="server"></asp:Literal>
-    <%--<h2 class="aviso erro">Código Inválido</h2>--%>
     </div>
-<%-- 
-     <p> <%--  <asp:Button ID="btnSalvar" CssClass="botao" runat="server" Text="Salvar" OnClick="btnSalvar_Click" /> </p>--%>
-     
-              
-
-
  </section>
-
     <script src="javascript/menu.js"></script>
         
         </div>

@@ -5,8 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace prjGrowCoiffeur.Modelo
-{
+
     public class Usuario : Banco
     {
         private string _nome;
@@ -83,4 +82,3 @@ namespace prjGrowCoiffeur.Modelo
             }
         }
     }
-}

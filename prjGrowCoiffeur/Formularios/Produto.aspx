@@ -32,10 +32,17 @@
                 <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
-                <li class="item-menu">
-                    <a href="Agendamentos.aspx">
+                 <li class="item-menu">
+                       <a href="Agendamentos.aspx">
+                        <span class="icon"><i class="bi bi-table"></i></span>
+                        <span class="txt-link">Agendar</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
+            <li class="item-menu">
+                    <a href="Agendar.aspx">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Agenda</span>
+                        <span class="txt-link">Planilha</span>
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
@@ -61,13 +68,7 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-                <li class="item-menu">
-                    <a href="feedback.aspx">
-                        <span class="icon"><i class="bi bi-star-fill"></i></span>
-                        <span class="txt-link">Feedback</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
+             
                 <li class="item-menu">
                     <a href="ListarClientes.aspx">
                         <span class="icon"><i class="bi bi-person"></i></span>
@@ -75,35 +76,28 @@
                         <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                     </a>
                 </li>
-           
+                <li class="item-menu" id="logout">
+                    <a href="index.aspx">
+                        <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                        <span class="txt-link">Sair</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
             </ul>
         </nav>
          <div class="conteudo">
            <header>
-            <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                <img src="../images/procurar.png" id="btnBusca" alt="Buscar"/>
-                  </div>  
-                   <asp:Button ID="btnaddproduto" runat="server" OnClick="btnaddproduto_Click" Text="Adicionar Produto" />
-                 
+                <h1><strong> Produtos </strong></h1>
+                <asp:Button ID="btnaddproduto" runat="server" OnClick="btnaddproduto_Click" Text="Adicionar Produto" />
            </header>
            <section class="listadeprodutos">
              <div class="caixaprodutos">
                  <asp:Literal ID="litProdutos" runat="server" />
                  <asp:Literal ID="Literal1" runat="server"></asp:Literal>
-                
-    
-                 <%--   <p><strong>Categoria :</strong> <asp:Literal ID="litcategoriaproduto" runat="server"></asp:Literal></p>--%>
-           
-                
-                 
-           
              </div>
            </section>
-           
         </div>
-       
-     <script src="../javascript/menu.js"></script>    
+            <script src="../javascript/menu.js"></script>    
             </div>
 
         </form>
