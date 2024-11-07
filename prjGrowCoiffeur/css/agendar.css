@@ -1,42 +1,80 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #fde3e3;
-    color: #662549;
+* {
     margin: 0;
     padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAF8F8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
 .conteudo {
+    margin: 5% auto;
     padding: 20px;
-    margin-left: 27%;
-    margin-right: 27%;
-    margin-top: 2%;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E8BCB9;
 }
 
 h1 {
-    font-size: 24px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #662549;
+    flex: 1;
+    text-align: center;
 }
 
+
+/*h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #662549;
+    font-weight: 700;
+}*/
+
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
     .form-group label {
         display: block;
-        margin-bottom: 5px;
+        margin-bottom: 8px;
         font-weight: 600;
+        color: #4a4a4a;
     }
 
-    .form-group input,
-    .form-group select {
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        font-size: 14px;
-        font-family: 'Poppins', sans-serif;
-    }
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #662549;
+    outline: none;
+}
 
 .calendar {
     margin-left: 0;
@@ -44,13 +82,21 @@ h1 {
     margin-bottom: 3%;
 }
 
-
 #cmbMeses {
     width: 350px;
     display: block;
     margin: 20px auto;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+#cmbMeses:focus {
+    border-color: #662549;
+    outline: none;
 }
 
 #calendario {
@@ -58,92 +104,96 @@ h1 {
     flex-wrap: wrap;
     width: 350px;
     margin: auto;
-    gap: 5px;
+    gap: 8px;
 }
 
 .dia {
-    width: calc((100% / 7) - 5px);
-    height: 50px;
+    width: calc((100% / 7) - 8px);
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: rgb(255 255 255 / 20%);
-    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
     font-weight: bold;
-    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-.vazio {
+.dia.vazio {
     background-color: unset;
+    cursor: default;
 }
 
 .dia.predefinido {
-    background-color: #951299;
     background-color: #662549;
-    cursor: pointer;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
-.dias button,
-.horarios button {
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+.dia.predefinido:hover {
+    background-color: #4e1c37;
 }
-/*.dias button.active,
-.horarios button:hover {
+
+.dias button, .horarios button {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dias button:hover, .horarios button:hover {
     background-color: #662549;
     color: white;
-}*/
+    transform: translateY(-2px);
+}
+
 .agendar {
     display: block;
     width: 100%;
     background-color: #662549;
     color: white;
-    padding: 15px;
-    font-size: 16px;
+    padding: 16px;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    .agendar:hover {
-        background-color: #4e1c37;
-    }
+.agendar:hover {
+    background-color: #4e1c37;
+    transform: translateY(-2px);
+}
 
 .periodo-btn, .horario-btn {
-    margin: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    margin: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
     background-color: #f9f9f9;
     cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    .horario-btn.selected {
-        background-color: #4CAF50;
-        color: white;
-    }
+.periodo-btn.selecionado, .horario-btn.selecionado {
+    background-color: #662549;
+    color: white;
+}
+
+.periodo-btn:hover, .horario-btn:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
 
 .horarios-lista {
     display: flex;
     flex-wrap: wrap;
-}
-
-.periodo-btn.selecionado {
-    background-color: #662549;
-    color: white;
-}
-
-.horario-btn.selecionado {
-    background-color: #662549;
-    color: white;
 }
 
 .confirmation-box, .error-box {
@@ -153,78 +203,83 @@ h1 {
     margin-top: 10px;
     text-align: center;
     border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-    .confirmation-box h2 {
-        color: #4caf50;
-    }
+.confirmation-box h2 {
+    color: #4caf50;
+}
 
-    .error-box h2 {
-        color: #f44336;
-    }
+.error-box h2 {
+    color: #f44336;
+}
 
 .ok-button {
     background-color: #4caf50;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    .ok-button:hover {
-        background-color: #45a049;
-    }
+.ok-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
 
 .dias-da-semana {
     display: flex;
-    justify-content: space-around; 
-    margin-bottom: 10px; 
+    justify-content: space-around;
+    margin-bottom: 12px;
 }
 
 .dia-btn {
-    flex: 1; 
-    padding: 10px;
+    flex: 1;
+    padding: 12px;
     border: none;
     background-color: #f0f0f0;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-    .dia-btn:hover {
-        background-color: #d1d1d1; 
-    }
-
-
+.dia-btn:hover {
+    background-color: #ddd;
+    transform: translateY(-2px);
+}
 
 .slide-button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; 
-    color: white; 
-    border-radius: 5px;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s; 
-    position: fixed; 
+    transition: background-color 0.3s ease;
+    position: fixed;
     right: 20px;
-    bottom: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 100;
 }
 
-    .slide-button:hover {
-        background-color: #0056b3; 
-    }
+.slide-button:hover {
+    background-color: #0056b3;
+}
 
 .popup {
     display: none;
     position: fixed;
     z-index: 1000;
     top: 20%;
-    right: -300px;
-    width: 300px;
+    right: -350px;
+    width: 320px;
     background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: right 0.5s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s ease;
 }
 
 .popup-content {
@@ -236,14 +291,14 @@ h1 {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-    .close:hover,
-    .close:focus {
-        color: red;
-        text-decoration: none;
-        cursor: pointer;
-    }
+.close:hover, .close:focus {
+    color: #f44336;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 .mensagem-disponibilidade {
     margin-top: 15px;
@@ -252,9 +307,22 @@ h1 {
     text-align: center;
 }
 
-    .mensagem-disponibilidade p {
-        color: #662549;
-        font-weight: bold;
-        text-align: justify;
-        padding-bottom: 25px;
-    }
+.mensagem-disponibilidade p {
+    color: #662549;
+    font-weight: bold;
+    text-align: justify;
+    padding-bottom: 25px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E8BCB9;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F2F2F2;
+}

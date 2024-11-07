@@ -29,13 +29,6 @@
                 <img src="../images/logo-branca.png" alt="Logo" class="logo" />
             </a>
             <ul>
-                <li class="item-menu">
-                    <a href="index.aspx">
-                        <span class="icon"><i class="bi bi-calendar-date"></i></span>
-                        <span class="txt-link">Agenda</span>
-                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
-                    </a>
-                </li>
                    <li class="item-menu">
                        <a href="Agendamentos.aspx">
                         <span class="icon"><i class="bi bi-table"></i></span>

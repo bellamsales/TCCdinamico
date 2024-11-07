@@ -39,7 +39,7 @@ namespace prjGrowCoiffeur.Formularios
                                     "Cliente inativo");
                         string status = cliente.Ativo ? "Ativo" : "Inativo"; 
                         string acaoLink = cliente.Ativo ?
-                            $"<a href='editarCliente.aspx?s={cliente.Email}'><img src='../images/editar.svg' class='imgtabela'/></a>" :
+                            $"<a href='editarCliente.aspx?s={cliente.Email}'><img src='../images/editar.png' class='imgtabela'/></a>" :
                             "<span>Inativo</span>";
 
                         string rowClass = cliente.Ativo ? "" : "inativo";
@@ -50,7 +50,7 @@ namespace prjGrowCoiffeur.Formularios
                         <td>{cliente.Email}</td>
                         <td>{cliente.Endereco}</td>
                         <td class='alinhartabcentro'>{descricao}</td>
-                        <td class='alinhartabcentro'>{status}</td> <!-- New status column -->
+                        <td class='alinhartabcentro'>{status}</td> 
                         <td id='tdlinks'>{acaoLink}</td>
                     </tr>";
                     }

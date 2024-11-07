@@ -31,7 +31,6 @@
                 </a>
                 <ul>
 
-                    <li class="item-menu"><a href="index.aspx"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Agenda</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                      <li class="item-menu"><a href="Agendamentos.aspx"><span class="icon"><i class="bi bi-table"></i></span><span class="txt-link">Agendar</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                     <li class="item-menu"><a href="Agendar.aspx"><span class="icon"><i class="bi bi-calendar-date"></i></span><span class="txt-link">Planilha</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>
                     <li class="item-menu"><a href="funcionario.aspx"><span class="icon"><i class="bi bi-people"></i></span><span class="txt-link">Funcionário</span><span class="icon-seta"><i class="bi bi-caret-right"></i></span></a></li>

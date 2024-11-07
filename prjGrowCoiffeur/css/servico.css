@@ -32,6 +32,11 @@ h1 {
     text-align: center;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .categoria-servico {
     display: flex;
     flex-direction: column;
@@ -55,11 +60,17 @@ h1 {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    background-color: #E8BCB9;
+    color: #5A203F;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 13px;
 }
 
 .cabecalho-categoria h2 {
     font-size: 1.8rem;
-    color: #e8bcb9;
+    color: #5A203F;
+    font-weight: 600;
 }
 
 .cabecalho-categoria .icones i {
@@ -95,7 +106,15 @@ h1 {
     cursor: pointer;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #E8BCB9;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F2F2F2;
 }

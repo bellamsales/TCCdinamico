@@ -10,6 +10,13 @@ body {
     color: #333;
 }
 
+#tdlinks a {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
 .conteudo {
     margin-left: 70px;
     padding: 20px;
@@ -89,17 +96,10 @@ h1 {
 }
 
 .table td:last-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     width: 80px;
 }
 
 #tdlinks {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
 }
 
 .imgtabela {

@@ -1,3 +1,4 @@
+USE bancotcc04;
 
 DELIMITER $$
 

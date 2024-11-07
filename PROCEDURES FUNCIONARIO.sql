@@ -20,8 +20,6 @@ END $$
 
 DELIMITER $$
 
-DELIMITER $$
-
 DROP PROCEDURE IF EXISTS excluirFuncionario$$
 CREATE PROCEDURE excluirFuncionario(
     IN p_nm_email_funcionario VARCHAR(50)

@@ -72,6 +72,13 @@
                     <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                 </a>
             </li>
+                <li class="item-menu" id="logout">
+                    <a href="index.aspx">
+                        <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                        <span class="txt-link">Sair</span>
+                        <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
+                    </a>
+                </li>
         </ul>
     </nav>
 
@@ -95,14 +102,6 @@
                 <div class="categoria">
                     <div class="cabecalho-categoria">
                         <h2>Unha</h2>
-                        <%--<div class="icones">
-                            <i class="bi bi-pencil"></i>
-                            <i class="bi bi-plus"></i>
-                        </div>
-                    </div>
-                    <ul class="servicos">
-                        <asp:Literal ID="litServicosUnha" runat="server"></asp:Literal>
-                    </ul>--%>
                             <div class="icones">
                                 <i class="bi bi-pencil"></i>
                                 <a href="AdicionarServico.aspx"><i class="bi bi-plus"></i></a>

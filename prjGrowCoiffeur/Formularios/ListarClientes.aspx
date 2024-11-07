@@ -51,7 +51,7 @@
                                     <span class="icon-seta"><i class="bi bi-caret-right"></i></span>
                                 </a>
                 </li>
-                <li class="item-menu ativo">
+                <li class="item-menu">
                     <a href="produto.aspx">
                         <span class="icon"><i class="bi bi-archive"></i></span>
                         <span class="txt-link">Produto</span>

@@ -127,6 +127,9 @@
             <% } %>
         <% } %>
 
+           <header>
+                <h1> Novo agendamento </h1>
+           </header>
 
                <div class="conteudo">
                 
@@ -138,7 +141,6 @@
             <p id="errorMessages">Aqui aparecem os erros de HTML e CSS.</p>
         </div>
     </div>
-            <h1><strong>Novo agendamento</strong></h1>
             <asp:Panel ID="pnlCliente" CssClass="form-group" Visible="false" runat="server">
                 <label for="txtCliente">Email do Cliente:</label>
                 <asp:TextBox ID="txtCliente" runat="server"></asp:TextBox>
