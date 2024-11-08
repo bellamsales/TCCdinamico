@@ -98,7 +98,7 @@
                         <img src="../images/logo-branca.png" alt="Logo" class="logo" />
                     </a>
                     <ul>
-                        <li class="item-menu ativo">
+                        <li class="item-menu">
                             <a href="meusAgendamentos.aspx">
                                 <span class="icon"><i class="bi bi-calendar-check"></i></span>
                                 <span class="txt-link">Agenda</span>
@@ -106,7 +106,7 @@
                             </a>
                         </li>
                      
-            <li class="item-menu">
+            <li class="item-menu ativo">
                     <a href="Agendar.aspx">
                         <span class="icon"><i class="bi bi-calendar-date"></i></span>
                         <span class="txt-link">Planilha</span>

@@ -55,16 +55,11 @@
                             </a>
                         </li>
                     </ul>
-        </nav>   
+        </nav>  
           <div class="conteudo">
            <header>
-            <div id="divBusca">
-                <input type="text" id="txtBusca" placeholder="Buscar..."/>
-                <img src="../images/procurar.png" id="btnBusca" alt="Buscar"/>
-                  </div>  
-                 
-                 
-           </header>
+             <h1> Meus agendamentos </h1>
+            </header>
            <section class="listadeagendamentos">
              <div class="caixaagendamentos">
                  <asp:Literal ID="litAgendamentos" runat="server" />
